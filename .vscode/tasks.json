@@ -4,5 +4,5 @@
   "windows": {
     "command": "C:/Program Files/Google/Chrome/Application/chrome.exe"
   },
-     "args": ["${file}"]
+  "args": ["${file}"]
 }

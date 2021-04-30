@@ -1,0 +1,50 @@
+h1 {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 24px;
+  font-style: italic;
+}
+
+body {
+  font-size: 14px;
+  font-style: normal;
+}
+
+.clgreen {
+  color: #00ff00;
+}
+
+.clblue {
+  color: #00f;
+}
+
+ul.menu {
+  list-style: decimal;
+}
+
+.clbrown {
+  color: rgb(253, 211, 147);
+}
+
+.cllightblue {
+  color: #88e3ff;
+}
+
+.clwhite {
+  color: #ffffff;
+}
+
+.cllightgreen {
+  color: #ccffd7;
+}
+
+.clorange {
+  color: #ffa88e;
+}
+
+pre.bgblack {
+  background-color:rgb(27, 27, 27)
+}
