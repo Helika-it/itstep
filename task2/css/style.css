@@ -1,0 +1,44 @@
+p {
+  font-size: 30px;
+  color: #666666;
+  word-spacing: 30px;
+  letter-spacing: 2px;
+}
+
+ins+span {
+  text-decoration: overline;
+  }
+
+  .bolder {
+    font-weight: 900;
+  }
+
+ /*Тень*/
+  ins del {
+    text-shadow: 2px 2px 2px #ff8928;
+  }
+
+  ins.bolder del {
+    font-size: 35px;
+  }
+
+  .clpink {
+    color: rgba(255, 94, 220, 0.5);
+  }
+
+  /*Прозрачность+наведение*/
+  .transparency {
+    color: rgba(0, 0, 0, 0);
+  }
+
+  .transparency:hover {
+    color: rgb(0, 0, 0);
+  }
+
+  ins.transparency del {
+    text-shadow: none;
+  }
+
+  ins.transparency del:hover {
+    text-shadow: 2px 2px 2px #ff8928;
+  }
