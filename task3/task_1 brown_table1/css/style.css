@@ -1,0 +1,18 @@
+body {
+  color: white;
+}
+table {
+  margin-left: 20px;
+  margin-right: 20px;
+  border-collapse: collapse;
+  background-color: brown;
+}
+td {
+  width: 120px;
+  height: 60px;
+border: 1px solid black;
+}
+th {
+  border: 1px solid black;
+  }
+  

@@ -1,0 +1,43 @@
+body {
+  color: white;
+}
+table {
+  margin-left: 20px;
+  margin-right: 20px;
+  border-collapse: collapse;
+  background-color: brown;
+}
+td {
+  width: 120px;
+  height: 60px;
+border: 1px solid black;
+}
+th {
+  border: 1px solid black;
+  }
+
+  /*Выравнивание через селектор псевдоклассов nth-child*/
+
+tr:nth-child(1) {
+    text-align: left;
+}
+
+tr:nth-child(2) {
+  text-align: center;
+}
+
+tr:nth-child(3) {
+  text-align: right;
+}
+
+td:nth-child(1) {
+  vertical-align: top;
+}
+
+td:nth-child(2) {
+  vertical-align: center;
+}
+
+td:nth-child(3) {
+  vertical-align: bottom;
+}

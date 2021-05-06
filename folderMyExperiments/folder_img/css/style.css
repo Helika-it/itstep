@@ -1,0 +1,25 @@
+img.firstimg {
+	height: 200px;
+	width: 200px;
+	border: 1px solid #f00;
+	border-radius: 100px;
+}
+
+img.secondimg {
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+img.thirdimg {
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  border:blueviolet solid 3px;
+}
+
+img.fourthimg {
+  border-radius: 200px;
+}
+
+img.fourthimg:hover {
+  width: 410px;
+}

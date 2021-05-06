@@ -1,0 +1,53 @@
+table {
+  border-collapse: collapse;
+  }
+
+td {
+  border: 1px solid white;
+}
+
+th {
+  background-color:rgb(80, 80, 255);
+  color: white;
+  text-align: center;
+  border: 2px solid white;
+  }
+
+ 
+tr:nth-child(odd) {
+background: rgb(244, 248, 255);   
+}
+
+tr:nth-child(even) {
+  background: rgb(221, 231, 243);   
+}
+
+
+td:nth-child(1) {
+  text-align: center;
+  width: 30px;
+}
+
+td:nth-child(2) {
+  text-align: left;
+  width: 180px;
+}
+/* Каждый столбец отдельно? */
+td:nth-child(3) {
+  text-align: center;
+  width: 100px;
+}
+
+td:nth-child(4) {
+  text-align: center;
+  width: 100px;
+}
+
+td:nth-child(5) {
+  text-align: center;
+  width: 100px;
+}
+
+th:nth-child(2) {
+  text-align: left;
+}
