@@ -48,3 +48,8 @@ ul.menu {
 pre.bgblack {
   background-color:rgb(27, 27, 27)
 }
+
+ul { 
+	list-style-image: url(images/book.gif); 
+	list-style-position: outside; 
+ }
