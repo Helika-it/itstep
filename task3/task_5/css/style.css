@@ -8,3 +8,8 @@ td {
   height: 60px;
   border: 1px solid black;
 }
+
+tr:nth-child(2) td:nth-child(2) {
+  width: 120px;
+  height: 120px;
+}

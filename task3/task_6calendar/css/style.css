@@ -8,13 +8,51 @@ caption {
   color: rgb(24, 99, 8);
 }
 td {
-  width: 40px;
-  height: 20px;
+  width: 120px;
+  height: 120px;
   border: 1px solid black;
 }
 th {
   width: 40px;
   height: 20px;
   border: 1px solid black;
-  background-color: blanchedalmond;
+  background-color: rgb(229, 255, 205);
+}
+
+/*Выходные*/
+tr td:nth-child(n+6) {
+  background-color:rgba(255, 43, 43, 0.39)
+}
+
+/*Праздники*/
+tr:nth-child(3) td:nth-child(2) {
+  background-color:rgba(255, 43, 43, 0.39)
+}
+tr:nth-child(3) td:nth-child(3) {
+  background-color:rgba(255, 43, 43, 0.39)
+}
+
+/*Июнь*/
+tr:nth-child(2) td:nth-child(1) {
+  background-color:rgb(230, 230, 230)
+}
+tr:nth-child(2) td:nth-child(2) {
+  background-color:rgb(230, 230, 230)
+}
+tr:nth-child(2) td:nth-child(3) {
+  background-color:rgb(230, 230, 230)
+}
+tr:nth-child(6) td:nth-child(7) {
+  background-color:rgb(230, 230, 230)
+}
+
+/*Картинки*/
+.bg3jul {
+  background-image: url(../img/день-независимости_120.jpg);
+}
+.bg6jul {
+  background-image: url(../img/kupalleday_1_120.jpg);
+}
+.bg7jul {
+  background-image: url(../img/kupalleday_2_120.jpg);
 }

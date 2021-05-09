@@ -1,49 +1,50 @@
 table {
+  border-spacing: 0;
   border-collapse: collapse;
   }
 
-td {
-  border: 1px solid white;
-}
-
-th {
-  background-color:rgb(80, 80, 255);
-  color: white;
+td, th {
+  height: 30px;
+  vertical-align: middle;
   text-align: center;
-  border: 2px solid white;
+  border: 1px solid white;
   }
 
+  th {
+    color: #fff;
+    background-color:#5050ff;
+    border-bottom: 3px solid #fff;
+  }
  
-tr:nth-child(odd) {
+tr:nth-child(2n+3) td {
 background: rgb(244, 248, 255);   
 }
 
-tr:nth-child(even) {
+tr:nth-child(2n+2) td {
   background: rgb(221, 231, 243);   
 }
 
-
-td:nth-child(1) {
+tr td:nth-child(1) {
   text-align: center;
   width: 30px;
 }
 
-td:nth-child(2) {
+tr td:nth-child(2) {
   text-align: left;
   width: 180px;
 }
-/* Каждый столбец отдельно? */
-td:nth-child(3) {
+
+tr td:nth-child(3) {
   text-align: center;
   width: 100px;
 }
 
-td:nth-child(4) {
+tr td:nth-child(4) {
   text-align: center;
   width: 100px;
 }
 
-td:nth-child(5) {
+tr td:nth-child(5) {
   text-align: center;
   width: 100px;
 }
