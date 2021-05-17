@@ -63,7 +63,7 @@ p {
 .spasing {
   letter-spacing: 1px; /*разреженный шрифт*/
 }
-/*фиксированный фон
+/*фиксированный фон (подумать!)
 .scrolling_bg {
   height: 1000px;
   width: 100%;
