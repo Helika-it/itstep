@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control_work</title>
+    <link rel="stylesheet" type="text/css" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+<body>
+  <section class="sec1">
+
+  <h1></br>Язык программирования JavaScript</h1>
+
+  <p class="img1"><img class="img1" src="./img/1.jpeg" alt="Картинка с изображением JavaScript"/></p>
+
+  <ul class="menu">
+    <li class="menu"><a href="#menu1">История создания языка JavaScript</a></li>
+    <li class="menu"><a href="#menu2">Краткий обзор языка JavaScript</a></li>
+    <ul class="menu">
+      <li class="menu"><a href="#menu2.1">Особенности языка JS</a></li>
+      <li class="menu"><a href="#menu2.2">Сферы применения языка JS</a></li>
+      <li class="menu"><a href="#menu2.3">Преимущества и недостатки JS</a></li>
+    </ul>
+    <li class="menu"><a href="#menu3">Примеры кода</a></li>
+    <li class="menu"><a href="#menu4">Таблица</a></li>
+    <li class="menu"><a href="#menu5">Теги и CSS-свойства</a></li>
+    </ul>  
+</section>
+
+<div>
+<p> <dfn><strong><a href="https://ru.wikipedia.org/wiki/JavaScript" target="_blank" title="Ссылка на статью в wikipedia">JavaScript</a></strong></dfn> (<i>/ˈdʒɑːvɑːˌskrɪpt/; аббр. JS /ˈdʒeɪ.ɛs./</i>) — мультипарадигменный язык программирования. Поддерживает объектно-ориентированный, императивный и функциональный стили. Является реализацией спецификации ECMAScript (стандарт ECMA-262<sup>[7]</sup>).</p> 
+<p>Не следует путать с <a href="https://ru.wikipedia.org/wiki/Java" title="Ссылка на статью в wikipedia">Java</a>.</p>
+<p>Не следует путать с <a href="https://ru.wikipedia.org/wiki/JScript" title="Ссылка на статью в wikipedia">JScript</a>.</p>
+<p> Язык программирования <strong>JavaScript</strong> пользуется довольно высокой популярностью сегодня. Связано это с тем, что его можно использовать как для создания динамичности статических веб страниц, так и для написания полноценных приложений SPA и даже компьютерных игр. Правда, последнее сегодня реже встречается ввиду того, что игры пишутся на других языках.</p>
+
+<div class="scrolling_bg">
+
+<h2 id="menu1">Немного истории</h2>
+  
+<img class="img2" src="./img/BEich.jpg" alt="Фотография Брендана Эйха" title="Брендан Эйх"/>
+
+<p>Первые предпосылки для появления этого языка появились еще в 1992 году, когда была начата разработка скриптового встраиваемого языка <i>Cmm (Си минус минус)</i>. Позже он был переименован в <em>ScriptEase</em>, так как название Си минус минус имело негативный оттенок. В целом. Перед тем, как язык обрел свое современное имя, его название менялось еще несколько раз.</p>
+
+<p>В 1995 году <a href="https://ru.wikipedia.org/wiki/%D0%AD%D0%B9%D1%85,_%D0%91%D1%80%D0%B5%D0%BD%D0%B4%D0%B0%D0%BD" target="_blank" title="Ссылка на статью в wikipedia">Брендан Эйх</a> получил задачу внедрить язык программирования в браузер Netscape. Изначально язык назывался Mocha, затем LiveScript. Наконец, он получил свое современное имя – <strong>JavaScript</strong>. Здесь разработчики пошли на хитрость. В то время, когда они занимались улучшением LiveScript, довольно большой популярностью пользовался язык Java. Для того, чтобы привлечь больше разработчиков для работы с новым языком, было решено использовать в его названии Java. В итоге получился <strong>JavaScript</strong>.</p>
+
+<p>Последняя на сегодняшний день версия языка ES6 вышла в 2015 году. С ее появлением язык обрел вторую жизнь. Появились новые стандарты, а также возможность работы с константами. Претерпел изменения и сам код. Язык придерживается принципа сокращения кода при большей функциональности.</p>
+
+</div>
+
+<h2 id="menu2">Краткий обзор языка JavaScript</h2>
+
+<h3 id="menu2.1">Особенности языка JS</h3>
+
+<p>К основным особенностям этого языка программирования относятся:</p>
+<ul>
+<li>Динамическая типизация. То есть тип данных будет определяться только тогда, когда переменной или const будет присваиваться ее значение.</li>
+
+<li>Гибкая работа с функциями. В JS функции можно не только выполнять, но еще и возвращать функции из функций, передавать функции в качестве параметров другим функциями и присваивать функции в качестве значения переменных.</li>
+
+<li>JavaScript поддерживается всеми современным браузерами.</li>
+
+<li>Объектно-ориентированное программирование. То есть это такая методология программирования, в которой вся программа представляется в виде совокупности объектов.</li>
+</ul>
+
+<p>Помимо этого, важной особенностью <strong>JavaScript</strong> является его развитая инфраструктура. На сегодняшний день разработчики могут работать с большим количеством библиотек и фреймворков (наиболее популярными из них являются React, Angular и Vue), несколькими сборщиками, вспомогательными библиотеками (например, Lodash) и генераторами статических сайтов.</p>
+
+<h3 id="menu2.2">Сферы применения языка JS</h3>
+
+<p>Что касается сфер применения, в первую очередь, язык <strong>JavaScript</strong> широко используется в веб-разработке. Причем работает он в сочетании с HTML и CSS. С помощью JS можно создавать любые браузерные приложения. Например, калькулятор расчета кредита, который можно видеть на сайтах большинства банков, также создан с помощью JavaScript.</p>
+
+<p>Причем вся визуальная часть этого калькулятора – это сочетание HTML+CSS. То есть кнопки, диаграммы, ползунки – это статические элементы. С помощью JS все то анимируется, а также проводятся все основные расчеты.</p>
+
+<p>Еще один пример – форма подписки или регистрации. Она создана на HTML+CSS. Однако взаимодействие с сервером обеспечивается именно благодаря JS. Помимо этого, на языке JavaScript можно создавать следующие программы и приложения:</p>
+<ul class="immarker">
+<li>Разработка программного обеспечения для мобильных устройств (с помощью React Native).</li>
+
+<li>Разработка серверных решений с помощью Node.js.</li>
+
+<li>Создание десктопных приложений. JS используется, например, в приложениях, созданных компанией Adobe.</li>
+
+<li>Программирование бытовой техники и платежных терминалов.</li>
+</ul>
+
+<h3 id="menu2.3">Преимущества и недостатки JS</h3>
+<div class="frameblock">
+<p>Популярность JavaScript обусловлена множеством факторов, в том числе большим количеством <b class="spasing">преимуществ</b>, к которым относятся:</p>
+
+<ol>
+<li>Незаменимость при разработке веб сайтов и приложений. Как уже отмечалось выше, JS поддерживается всеми современными браузерами. Причем язык легко интегрируется с версткой и сервером.</li>
+
+<li>Высокая скорость работы и производительность. Этот язык позволяет частично обрабатывать веб страницы на стороне пользователя. Это позволяет тратить меньше времени на открытие, а также снижает нагрузку на серверы.</li>
+
+<li>Большое количество инструментов и богатая инфраструктура. Если в первое время многие работали исключительно с самим языком, сегодня благодаря наличию множества библиотек, появились удобные и доступные для всех инструменты.</li>
+
+<li>Относительная простота. Написание программ занимает обычно меньше времени. При этом, объем кода также обычно меньше, в сравнении со многими другими языками.</li>
+
+<li>Широкие возможности для веб-страниц. С помощью JS вы можете оживить любую страницу в сети Интернет. Помимо этого, JS значительно повышает уровень юзабилити приложений и сайтов.</li>
+
+<li>Относительная легкость изучения. Начать учиться JS можно даже тем, кто вообще до этого не сталкивался с программированием. Причем визуализация многих действий прибавляет обучающимся энтузиазма.</li>
+</ol>
+</div><br>
+<div class="frameblock">
+<p>Что касается <b class="spasing">недостатков</b>, к ним можно отнести следующие моменты:</p>
+
+<ol>
+<li>Отсутствует возможность загрузки и чтения файлов.
+
+<li>Нестрогая типизация. Все недостатки кода выявляются на этапе работы программы, что может быть неудобно в ряде случаев. К тому же, нестыковки, которые могут быть в коде JS игнорируются самим языком.</li>
+
+<li>Уровень безопасности. В такой язык программирования как JS достаточно просто внедрить вредоносный код.</li>
+</ol>
+</div>
+
+<section class="seccod">
+
+
+<h2 id="menu3">Примеры кода на JavaScript</h2>
+
+<p>Для того, чтобы оценить все прелести этого языка программирования, приведем простой пример кода на JS:</p>
+
+<pre class="clbackgr">
+
+  <span class="cllightblue">console</span><span class="cllightyellov">.log </span><span class="clyellov">(</span><span class="cllightblue">Привет, мир!</span><span class="clyellov">)</span>
+
+</pre>
+<img class="img3" src="./img/original3.jpg" alt="Картинка с изображением кода"/>
+<p>Что делает эта строка? С ее помощью вы сможете в консоли браузера или среды разработки вывести надпись <i>«Привет, мир!»</i>. Как видно, это очень простое решение, требующее всего одной строки кода. Такая простота отличает JS от многих других языков программирования, в которых для вывода этой надписи потребуется больше кода.</p>
+
+<p>Все переменные в JavaScript объявляются с помощью ключевого слова <b>var</b>. При объявлении тип переменной не указывается. Этот тип присваивается переменной только тогда, когда ей присваивается какое-либо значение.</p>
+
+<p>Например:</p>
+<pre class="clbackgr">
+
+  <span class="clblue">var</span> <span class="cllightblue">а</span><span class="clwhite">;</span>
+  <span class="clblue">var</span> <span class="cllightblue">а</span><span class="clwhite">=</span><span class="cllightgreen">13</span><span class="clwhite">,</span> <span class="cllightblue">A</span><span class="clwhite">=</span><span class="cllightgreen">22</span><span class="clwhite">,</span> <span class="cllightblue">b</span><span class="clwhite">=</span><span class="clred">"Строка"</span><span class="clwhite">;</span>
+
+</pre>
+</section>
+
+<h2 id="menu4">Версии:</h2>
+
+<table class="t1">
+  <thead>
+  <tr>
+    <th>JavaScript</th>
+    <th>Соответствующая версия JScript</th>
+    <th>Существенные изменения</th>
+  </tr>
+</thead>
+<tfoot>
+  <tr><th colspan="3">torrentfreak.com</th></tr>
+  </tfoot>
+</tfoot>
+<tbody>
+  <tr>
+    <td>1.0 (Netscape 2.0, март 1996)</td>
+    <td>1.0 (ранние версии IE 3.0, август 1996)</td>
+    <td>Оригинальная версия языка JavaScript.</td>
+  </tr>
+  <tr>
+    <td>1.1 (Netscape 3.0, август 1996)</td>
+    <td>2.0 (поздние версии IE 3.0, январь 1997)</td>
+    <td>В данной версии был реализован объект <span class="frame">Array</span> и устранены наиболее серьёзные ошибки.</td>
+  </tr>
+  <tr>
+    <td>1.2 (Netscape 4.0, июнь 1997)</td>
+    <td></td>
+    <td>Реализован переключатель <span class="frame">switch</span>, регулярные выражения. Практически приведён в соответствии с первой редакцией спецификации ECMA-262.</td>
+  </tr>
+  <tr>
+    <td>1.3 (Netscape 4.5, октябрь 1998)</td>
+    <td>3.0 (IE 4.0, октябрь 1997)</td>
+    <td>Совместим с первой редакцией ECMA-262.</td>
+  </tr>
+  <tr>
+    <td>1.4 (только Netscape Server)</td>
+    <td>4.0 (Visual Studio 6, нет версии IE)</td>
+    <td>Применяется только в серверных продуктах Netscape.</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>5.0 (IE 5.0, март 1999)</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>5.1 (IE 5.01)</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>1.5 (Netscape 6.0, ноябрь 2000; также
+      поздние версии Netscape и Mozilla)</td>
+    <td>5.5 (IE 5.5, июль 2000)</td>
+    <td>Редакция 3 (декабрь 1999). Совместим с третьей редакцией спецификации ECMA-262.</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>5.6 (IE 6.0, октябрь 2001)</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>1.6 (Gecko 1.8, Firefox 1.5, ноябрь 2005)</td>
+    <td></td>
+    <td>	Редакция 3 с некоторыми совместимыми улучшениями: E4X, дополнения к <span class="frame">Array</span> (например, Array.prototype.forEach), упрощения для <span class="frame">Array</span> и <span class="frame">String</span></td>
+  </tr>
+  <tr>
+    <td>1.7 (Gecko 1.8.1, Firefox 2.0, осень 2006), расширение JavaScript 1.6</td>
+    <td></td>
+    <td>Редакция 3, с добавлением всех улучшений из JavaScript 1.6, генераторов и списочных выражений (англ. list comprehensions, <span class="frame">[a*a for (a in iter)]</span>) из Python, блоковых областей с использованием <span class="frame">let</span> и деструктурирующего присваивания (<span class="frame">var [a, b] = [1, 2]</span>)</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>JScript .NET (ASP.NET; нет версии IE)</td>
+    <td>(Считается, что JScript .NET разработан при участии других членов ECMA)</td>
+  </tr>
+  <tr>
+    <td>1.8 (Gecko 1.9, Firefox 3.0, осень 2008), расширение JavaScript 1.7</td>
+    <td></td>
+    <td>Новая форма записи для функций, сходная с типичными лямбда-выражениями, генераторы, новые методы итеративной обработки массивов <span class="frame">reduce()</span> и <span class="frame">reduceRight()</span>.</td>
+  </tr>
+  <tr>
+    <td>1.8.1 (Gecko 1.9.1, Firefox 3.5)</td>
+    <td></td>
+    <td>	Встроенная поддержка JSON, метод <span class="frame">getPrototypeOf()</span> у <span class="frame">Object</span>, методы <span class="frame">trim()</span>, <span class="frame">trimLeft()</span>, <span class="frame">trimRight()</span> у <span class="frame">String</span></td>
+  </tr>
+  <tr>
+    <td>2.0</td>
+    <td></td>
+    <td>Редакция 4 (разработка не закончена, название зарезервировано ECMA, но не было использовано для публикации)</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td>Редакция 5 (ранее известная под названием ECMAScript 3.1. Финальная версия принята 3 декабря 2009 года.)</td>
+  </tr>
+</tbody>
+</table>
+<section class="secelements">
+<div class="elements">
+<h2 id="menu5">Теги</h2>
+<ol>
+  <li>&lt;!DOCTYPE html&gt;</li>
+  <li>&lt;html&gt;</li>
+  <li>&lt;head&gt;</li>
+  <li>&lt;meta&gt;</li>
+  <li>&lt;title&gt;</li>
+  <li>&lt;link&gt;</li>
+  <li>&lt;body&gt;</li>
+  <li>&lt;h1&gt;</li>
+  <li>&lt;h2&gt;</li>
+  <li>&lt;h3&gt;</li>
+  <li>&lt;p&gt;</li>
+  <li>&lt;ul&gt;</li>
+  <li>&lt;ol&gt;</li>
+  <li>&lt;li&gt;</li>
+  <li>&lt;a&gt;</li>
+  <li>&lt;strong&gt;</li>
+  <li>&lt;i&gt;</li>
+  <li>&lt;em&gt;</li>
+  <li>&lt;section&gt;</li>
+  <li>&lt;div&gt;</li>
+  <li>&lt;b&gt;</li>
+  <li>&lt;img&gt;</li>
+  <li>&lt;pre&gt;</li>
+  <li>&lt;span&gt;</li>
+  <li>&lt;table&gt;</li>
+  <li>&lt;thead&gt;</li>
+  <li>&lt;tfoot&gt;</li>
+  <li>&lt;tbody&gt;</li>
+  <li>&lt;tr&gt;</li>
+  <li>&lt;th&gt;</li>
+  <li>&lt;td&gt;</li>
+  <li>&lt;dfn&gt;</li>
+  <li>&lt;sup&gt;</li>
+ </ol>
+</div>
+ <div class="elements">
+<h2>CSS-свойства</h2>
+<ol>
+  <li>'background'</li>
+  <li>'background-color'</li>
+  <li>'background-image'</li> 
+  <li>'border'</li>
+  <li>'border-collapse'</li>
+  <li>'border-right'</li>
+  <li>'border-radius'</li>
+  <li>'border-top'</li>
+  <li>'border-top-style'</li>
+  <li>'border-bottom'</li>
+  <li>'border-bottom-style'</li>
+  <li>'box-shadow'</li>
+  <li>'color'</li>
+  <li>'display'</li>
+  <li>'font-family'</li>
+  <li>'font-weight'</li>
+  <li>'font-style'</li>
+  <li>'font-size'</li>
+  <li>'height'</li>
+  <li>'list-style-type'</li>
+  <li>'list-style-image'</li>
+  <li>'letter-spacing'</li>
+  <li>'line-height'</li>
+  <li>'margin'</li>
+  <li>'margin-top'</li>
+  <li>'margin-right'</li>
+  <li>'margin-bottom'</li>
+  <li>'margin-left'</li>
+  <li>'padding'</li>
+  <li>'padding-top'</li>
+  <li>'padding-bottom'</li>
+  <li>'padding-left'</li>
+  <li>'padding-right'</li>
+  <li>'src'</li>
+  <li>'text-align'</li>
+  <li>'text-transform'</li>
+  <li>'text-decoration'</li>
+  <li>'text-decoration-color'</li>
+  <li>'text-shadow'</li>
+  <li>'vertical-align'</li>
+  <li>'width'</li>
+  <li>'word-break'</li>
+</ol>
+ </div>
+ </section>
+   
+ </body>
+
+ <footer>
+    <p class="pfooter">
+   Статья подготовлена по <dfn><a href="D:\ЛЕНА\EXERCISES\itstep\tasks\Task 4. Control work\task.html">заданию</a></dfn>
+  </p>
+ </footer>
+</html>
