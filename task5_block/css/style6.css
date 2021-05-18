@@ -11,6 +11,7 @@ html, body{
   position: relative;
   top: calc(50% - 200px);
   left: calc(50% - 200px);
+  border-top: 1px solid #ccc;
 }
 .in{
   width: 100px;
@@ -21,4 +22,20 @@ html, body{
   color: #000;
   text-align: center;
   line-height: 100px;
+}
+.in-1 {
+  margin-top: 400px;
+  margin-left: -100px;
+}
+.in-2 {
+  margin-top: -600px;
+  margin-left: -100px;
+}
+.in-3 {
+  margin-top: -100px;
+  margin-left: 400px;
+}
+.in-4 {
+  margin-top: 400px;
+  margin-left: 400px;
 }

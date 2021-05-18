@@ -9,7 +9,8 @@ html {
   font-size: 14px;
   line-height: 22px;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  }
+  
+}
 h1 {
   line-height: normal;
   margin-top: 0px;
@@ -40,6 +41,7 @@ p {
   padding-bottom: 20px;
   padding-left: 20px;
   background-color: rgb(248, 248, 248);
+  background-image: url(../img/img_bg.jpg);
   height: auto;
 }
 .frame {
@@ -191,22 +193,18 @@ table.t1 {
 }
 
 /*Оформление списков тегов и свойств*/
-section.secelements {
+.secelements {
   width: 100%;
-	height: auto;
-  background-color: #F2F2F2;
+	background-color: #F2F2F2;
   margin-top: 0px;
-
+  background-image: url(../img/img_bg.jpg);
+  border-top: 1px;
+  border-bottom: 1px;
+  border-bottom-style: dotted;
+  border-top-style: dotted;
 }
 div.elements {
   float: left; /*Задаем обтекание*/
   width: 50%; /*Ширина блока*/
   height: auto;
-  }
-
-.pfooter {
-border-top: 2px;
-border-top-style: dotted;
-border-bottom: 2px;
-border-bottom-style: dotted;
-  }
+}
