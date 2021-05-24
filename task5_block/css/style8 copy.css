@@ -1,0 +1,55 @@
+div {
+position: relative;
+float: left;
+color: #fff;
+line-height: 100px;
+font-size: 30px;
+text-align: center;
+}
+.main {
+  height: 400px;
+  width: 400px;
+  position: absolute;
+  top: calc(50% - 200px);
+  left: calc(50% - 200px);
+}
+.h1 {
+  height: 100px;
+  width: 100px;
+  background-color: violet;
+}
+.h2 {
+  height: 100px;
+  width: 200px;
+  background-color:turquoise;
+}
+.posts {
+  width: 200px;
+  height: 300px;
+}
+.post {
+  height: 100px;
+  width: 100px;
+  background-color: thistle;
+}
+.menu1 {
+  height: 300px;
+  width: 100px;
+}
+.menu1_head {
+  height: 200px;
+  width: 100px;
+  background-color:sandybrown;
+  line-height: 200px;
+}
+.menu1_foot {
+  height: 100px;
+  width: 100px;
+  background-color: rgb(238, 107, 238);
+}
+.menu2 {
+  height: 300px;
+  width: 100px;
+  background-color: seagreen;
+  line-height: 300px;
+}
