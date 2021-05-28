@@ -9,7 +9,12 @@ html {
   font-size: 14px;
   line-height: 22px;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: rgb(248, 248, 248);
+  background-image: url(../img/img_bg.jpg);
+  background-repeat: no-repeat;
 }
 h1 {
   line-height: normal;
@@ -37,42 +42,20 @@ p {
   padding-left: 20px;
   padding-right: 20px;
 }
-.sec1 {
-  padding-bottom: 20px;
-  padding-left: 20px;
-  background-color: rgb(248, 248, 248);
-  background-image: url(../img/img_bg.jpg);
-  height: auto;
-}
+
 .frame {
   background: #f5f5f5;
   padding: 2px 6px;
   border-radius: 3px;
   font-size: 0.95em;
   font-family: "Courier New", monospace;
-  word-break: keep-all;
   border: 1px solid #e6e6e6; /*рамки для элементов*/
   text-shadow: 0 1px white;
 }
-.frameblock {
-  display: block;
-  border: 3px solid #e6e6e6; /*рамки для блоков*/
-  border-radius: 10px;
-  padding: 2px 6px;
-  width: 90%;
-  margin: 20px;
-}
+
 .spasing {
   letter-spacing: 1px; /*разреженный шрифт*/
 }
-/*фиксированный фон (подумать!)
-.scrolling_bg {
-  height: 1000px;
-  width: 100%;
-  background-color: #f2f2f2;
-  background-image: url(../img/kod3d.jpg);
-
-}*/
 
 /*Списки*/
 ul {
@@ -118,7 +101,6 @@ img.img3 {
 	height: 200px;
   float: right;
   margin-right: 20px;
-
   vertical-align: middle;
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
@@ -190,21 +172,4 @@ table.t1 {
 }
 .t1 tr *:nth-child(3), .t1 tr *:nth-child(4) {
   text-align: left;
-}
-
-/*Оформление списков тегов и свойств*/
-.secelements {
-  width: 100%;
-	background-color: #F2F2F2;
-  margin-top: 0px;
-  background-image: url(../img/img_bg.jpg);
-  border-top: 1px;
-  border-bottom: 1px;
-  border-bottom-style: dotted;
-  border-top-style: dotted;
-}
-div.elements {
-  float: left; /*Задаем обтекание*/
-  width: 50%; /*Ширина блока*/
-  height: auto;
 }
