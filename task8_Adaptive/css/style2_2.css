@@ -17,17 +17,17 @@ body, html {
 	line-height: 96px;
 	float: left;
 }
-.cl_blue {
+.box:nth-child(2n+1) {
 	background-color: blue;
 	display: none;
 }
-.cl_red {
+.box:nth-child(2n) {
 background-color: red;
 width: 100%;
 }
 
 @media (min-width: 768px) {
-.cl_blue {
+	.box:nth-child(2n+1) {
 	display: block;
 	width: 252px;
 	height: 252px;
@@ -35,7 +35,7 @@ width: 100%;
 	line-height: 250px;
 
 }
-.cl_red {
+.box:nth-child(2n) {
   display: none;
 	}
 .container{
@@ -44,14 +44,14 @@ width: 100%;
 }
 
 @media (min-width: 1280px) {
-	.cl_red {
+	.box:nth-child(2n) {
 		display: block;
 		width: 207px;
 		height: 207px;
 		margin: 3px;
 		line-height: 207px;
 	}
-	.cl_blue {
+	.box:nth-child(2n+1) {
 		display: block;
 		width: 207px;
 		height: 207px;
