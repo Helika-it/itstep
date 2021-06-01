@@ -134,7 +134,7 @@ pre.cl_backgr {
 
 /*Таблица*/
 .container_tabl {
-  overflow: auto;
+  overflow-x: scroll;
 }
 table.t1 {
   margin: 1em auto;
