@@ -8,6 +8,7 @@ div{
 	margin: 0 auto;
 	float: none;
 	background: #fff;
+	position: absolute;
 }
 .row{
 	float: none;
@@ -161,29 +162,35 @@ div{
     position: relative;
     float: left;
     width: 100%;
-    background: #f3f3f3;
+    background: #ffffff;
     border-radius: 10px;
-    box-shadow: 2px 2px 6px rgb(0 0 0 / 50%);
-		box-sizing: border-box;
-}
+    box-sizing: border-box;
+		padding: 48px 40px 36px;
+	}
 .form-label{
     float: right;
     padding: 15px 15px;
-}
-.form-label label {
 
 }
+.form-label label {
+	
+}
 .form-control {
-    padding: 10px 15px;
-    width: 75%;
+	
+    padding: 6px 8px;
+    width: 100%;
 }
 .form-control-check,
 .form-control-radio {
 	width: 100%;
+	font-size: 16px;
+	font-family: 'Roboto',
+	sans-serif;
+	cursor: pointer;
 }
 .form-control-check:first-child,
 .form-control-radio:first-child {
-	margin-top: 6px;
+	margin-top: 4px;
 }
 .form-control input[type="text"],
 .form-control input[type="password"],
@@ -196,11 +203,102 @@ select,
     border: 1px solid #bfbfbf;
 		box-sizing: border-box;
 }
-.form-control input[type="submit"] {
+.error input[type="password"],
+.error input[type="text"] {
+	border-color: red;
+}
+.error-text {
+	color: red;
+	padding: 5px 25px;
+	font-size: 12px;
+}
+.form-control button {
 	width: 50%;
-	padding: 5px 10px;
+	padding: 10px 10px;
 	border-radius: 5px;
 	border: 1px solid #bfbfbf;
 	box-sizing: border-box;
-	background: #97f39f;
+	background: #4688F1;
+	float: right;
+	color: #fff;
+	font: 14px Roboto;
+	cursor: pointer;
+}
+.form-control button:hover {
+	background: #3566B8;
+	
+}
+.form-control button:active {
+	background: red;
+}
+.form-control input[type="text"]:focus{
+	border: 1px solid rgb(219, 89, 180); 
+}
+.google {
+	font-size: 18px;
+	font-family: 'Open Sans',
+		sans-serif;
+	font-weight: bold;
+	padding: 6px;
+}
+.google-text {
+	font-size: 24px;
+	color: #202124;
+	font-family: 'Open Sans',
+	sans-serif;
+	padding: 16px 0px 24px 6px;
+}
+.google-text-2 {
+	font-size: 16px;
+	color: #202124;
+	font-family: 'Open Sans',
+		sans-serif;
+	padding: 16px 0px 24px 6px;
+	
+	text-align: center;
+}
+.cl_blue {
+	color: rgb(66, 133, 244);
+}
+.cl_red {
+	color: rgb(234, 67, 53);
+}
+.cl_yellow {
+	color: rgb(251, 188, 5);
+}
+.cl_green {
+	color: rgb(52, 168, 83);
+}
+.img {
+	width: 244px;
+	position: relative;
+}
+.current_email {
+	font-size: 14px;
+	color: rgb(66, 133, 244);
+	font-family: 'Open Sans',
+	sans-serif;
+	padding: 16px 0px 24px 6px;
+	text-decoration: none;
+}
+.col-lg-5 {
+	padding-left: 50px;
+	padding-top: 40px;
+}
+
+/*Доп.задание*/
+
+
+input::placeholder {
+	transition: 0.5s;	/* Время трансформации */
+	color: #202124;	/* Цвет подсказки */
+
+}
+input:focus::placeholder {
+	font-size: 10px;	/* Размер шрифта */
+	transform: translateY(-10px);	/* Сдвигаем вверх */
+		color: rgb(66, 133, 244);		/* Цвет подсказки */
+		z-index: 10;
+		background-color: #fff;
+
 }
