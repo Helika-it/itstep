@@ -1,0 +1,44 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: 200px;
+}
+.circle {
+    width: 100px;
+    height: 100px;
+    background: red;
+    border-radius: 50%;
+    position: relative;
+    
+}
+.triangle-down {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 60px solid transparent;
+    border-right: 60px solid transparent;
+    border-top: 79px solid red;
+    top: 59px;
+}
+
+.oval1 {
+    width: 200px;
+    height: 100px;
+    background: red;
+    border-radius: 100px / 50px;
+    position: absolute;
+    top: 102px;
+    left: 638px;
+}
+#rectangle {
+    width: 200px;
+    height: 100px;
+    background: red;
+}
