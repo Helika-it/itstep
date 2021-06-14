@@ -229,8 +229,15 @@ select,
 }
 .error-text {
 	color: red;
-	padding: 5px 25px;
+	padding: 3px 25px 3px 10px;
 	font-size: 12px;
+}
+.error-icon {
+	padding-right: 7px;
+}
+.error-text, .error-icon {
+	  display: inline-block;
+	  vertical-align: middle;
 }
 .form-control button {
 	width: 50%;
