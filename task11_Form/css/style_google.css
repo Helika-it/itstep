@@ -217,11 +217,11 @@ div{
 .form-control input[type="date"],
 select,
 .form-control input[type="file"] {
-    width: 100%;
-    padding: 5px 10px;
-    border-radius: 5px;
-    border: 1px solid #bfbfbf;
-		box-sizing: border-box;
+  width: 100%;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid #bfbfbf;
+	box-sizing: border-box;
 }
 .error input[type="password"],
 .error input[type="text"] {
@@ -311,6 +311,18 @@ select,
 .col-lg-5 {
 	padding-left: 50px;
 	padding-top: 40px;
+}
+.Username {
+	display: flex;
+	flex-flow: row nowrap;
+
+}
+.Username_gmail {
+box-sizing: inherit;
+direction: ltr;
+display: inline-block;
+text-align: end;
+border: 1px red;
 }
 
 /*Доп.задание*/
