@@ -1,0 +1,137 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: 200px;
+    position: relative;
+
+}
+.circle {
+    width: 100px;
+    height: 100px;
+    background: rgb(139, 138, 138);
+    position: absolute;
+    clip-path: circle(50% at 50% 50%);
+    
+}
+.triangle-down_ears {
+    position: absolute;
+    top: 59px;
+    clip-path: polygon(50% 100%, 0 0, 100% 0);
+    background: rgb(105 104 104);
+    height: 80px;
+    width: 123px;
+}
+
+.oval_body {
+    width: 200px;
+    height: 200px;
+    background: rgb(139, 138, 138);
+    position: absolute;
+    top: 54px;
+    left: 14px;
+    clip-path: ellipse(50% 25% at 50% 50%);
+}
+.oval_tail {
+    width: 215px;
+    height: 196px;
+    background: rgb(139, 138, 138);
+    position: absolute;
+    top: 64px;
+    left: 170px;
+    transform: rotate(39deg);
+    clip-path: ellipse(5% 45% at 10% 50%);
+}
+.oval_paw1 {
+    width: 180px;
+    height: 88px;
+    background: rgb(139, 138, 138);
+    position: absolute;
+    top: 152px;
+    left: -76px;
+    transform: rotate(35deg);
+    clip-path: ellipse(6% 40% at 50% 50%);
+}
+.oval_paw2 {
+    width: 180px;
+    height: 88px;
+    background: rgb(139, 138, 138);
+    position: absolute;
+    top: 162px;
+    left: -51px;
+    transform: rotate(8deg);
+    clip-path: ellipse(6% 40% at 50% 50%);
+}
+.oval_paw3 {
+    width: 180px;
+    height: 88px;
+    background: rgb(139, 138, 138);
+    position: absolute;
+    top: 166px;
+    left: 79px;
+    transform: rotate(8deg);
+    clip-path: ellipse(6% 40% at 50% 50%);
+}
+.oval_paw4 {
+    width: 180px;
+    height: 88px;
+    background: rgb(139, 138, 138);
+    position: absolute;
+    top: 166px;
+    left: 104px;
+    transform: rotate(-19deg);
+    clip-path: ellipse(6% 40% at 50% 50%);
+}
+.oval_eye_l {
+    width: 99px;
+    height: 23px;
+    background: white;
+    position: absolute;
+    top: 79px;
+    left: -73px;
+    transform: rotate(-90deg);
+    clip-path: ellipse(6% 40% at 50% 50%);
+}
+.oval_eye_ll {
+    width: 29px;
+    height: 15px;
+    background: rgb(104, 201, 77);
+    position: absolute;
+    top: 83px;
+    left: -38px;
+    transform: rotate(359deg);
+    clip-path: ellipse(6% 40% at 50% 50%);
+}
+.oval_eye_r {
+    width: 99px;
+    height: 23px;
+    background: white;
+    position: absolute;
+    top: 79px;
+    left: -30px;
+    transform: rotate(-90deg);
+    clip-path: ellipse(6% 40% at 50% 50%);
+}
+.oval_eye_rr {
+    width: 29px;
+    height: 15px;
+    background: rgb(104, 201, 77);
+    position: absolute;
+    top: 83px;
+    left: 5px;
+    transform: rotate(359deg);
+    clip-path: ellipse(6% 40% at 50% 50%);
+}
+.triangle-down_nose {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #383838;
+    top: 92px;
+    clip-path: polygon(51% 61%, 69% 64%, 85% 77%, 50% 100%, 17% 76%, 29% 64%);
