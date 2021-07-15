@@ -143,9 +143,11 @@ form > select > option {
 .main-slider .carousel-item{
     width: 100%;
     height: 350px;
-    background-size: cover;
-    background-position: center center;
-    background-size: 100% auto;
+    /*background-size: cover;
+    background-position: 50%;
+    background-size: 100% auto;*/
+    background: 50%/cover no-repeat;
+
 }
 
 .main-slider .carousel-indicators button{
@@ -407,6 +409,7 @@ i.fa.fa-search {
     color: #606060;
     font-size: 11px;
     margin-bottom: 30px;
+    text-align: left;
 }
 .form {
     margin-bottom: 50px;
@@ -542,7 +545,7 @@ ul.footer-menu li > a:hover {
     }
 }
 
-@media (max-width: 1600px) {
+@media (max-width: 1800px) {
     .container {
         max-width: 1200px;
     }
@@ -554,6 +557,31 @@ ul.footer-menu li > a:hover {
     .head-contact {
         text-align: right;
     }
+
+    menu {
+        float: left;
+        padding: 0;
+        margin: 0;
+    }
+    
+}
+@media (max-width: 1200px) {
+    .container {
+        max-width: 1200px;
+    }
+
+    .logo {
+        text-align: left;
+    }
+
+    .head-contact {
+        text-align: right;
+    }
+
+    menu {
+        float: left;
+    }
+
 }
 
 @media (max-width: 992px) {
@@ -574,17 +602,43 @@ ul.footer-menu li > a:hover {
     }
 
     menu {
-        padding-inline-start: 0px;
+        /*padding-inline-start: 0px;*/
+        float: none;
     }
 
     ul.main-menu {
         padding: 0;
+        text-align: left;
     }
 
     .title h2 {
         font-size: 25px;
     }
-}
+    
+     menu ul.footer-menu {
+         margin-left: 0;
+         float: left;
+         margin-top: 0;
+     }
+     .logo-footer > a > img {
+         padding: 43px 0 20px 0px;
+         float: left;
+     }
+     .privacy {
+         float: left;
+     }
+     .icons {
+         margin-right: 85px;
+         float: right;
+     }
+     .news-item-text {
+         text-align: left;
+         padding-left: 10px;
+     }
+     .all-news,
+     .btn-submit {
+         float: left;
+     }
 
 @media (max-width: 767px) {
     .container {
@@ -630,7 +684,34 @@ ul.footer-menu li > a:hover {
     .icon > a > img {
         padding-top: 10px;
     }
+    form {
+        margin-bottom: 20px;
+    }
+    
+    .icons {
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 0 20px 0;
+        padding: 0;
+        float: none;
+    }
     .privacy-policy {
-        padding: 0;;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        float: none;
+        align-self: center;
+    }
+    .logo-footer > a > img {
+        justify-content: center;
+        margin: 0 0 3px 0;
+        padding: 0;
+        float: none;
+        align-self: center;
+    }
+    .privacy {
+        float: none;
+        align-self: center;
+        }
     }
 }
