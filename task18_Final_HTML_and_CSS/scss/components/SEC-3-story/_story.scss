@@ -1,0 +1,39 @@
+/*=== SEC-3-story ===*/
+.story {
+  background-color: $blue4;
+  background: url("../img/shape_41.png");
+  background-repeat: no-repeat;
+  background-size:  cover;
+  background-position: center center;
+  position: relative;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  padding-bottom: 80px;
+  button {
+    margin: 0 auto;
+  }
+}
+.story-item-1 {
+  font-size: 49px;
+  line-height: 50px;
+  font-weight: 400;
+  font-style: italic;
+  color: #ffffff;
+  padding-top: 90px;
+  padding-bottom: 20px;
+}
+.story-item-2 {
+  font-size: 50px;
+  line-height: 52px;
+  font-weight: 600;
+  color: #ffffff;
+ padding-bottom: 25px;
+}
+.story-item-3 {
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 400;
+  color: #ffffff;
+  padding-bottom: 55px;
+}

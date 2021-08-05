@@ -1,0 +1,75 @@
+/*=== SEC-6-client_logo ===*/
+.client_logo {
+  width: 100%;
+  background-color: $blue2;
+  padding-top: 110px;
+  padding-bottom: 45px;
+
+  .client_logo-itoms {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    
+    padding-bottom: 65px;
+    
+    .client_logo-itom {
+      display: block;
+      position: relative;
+      text-align: center;
+      width: 260px;
+      height: 110px;    
+      background-position: center center;
+    }
+    .itom1 {
+      background: url('../img/logo_cisco.png') 50%/50% no-repeat;
+    }
+    .itom2 {
+      background: url('../img/logo_adidas.png') 50%/50% no-repeat;
+    }
+    .itom3 {
+      background: url('../img/logo_lenovo.png') 50%/50% no-repeat;
+    }
+    .itom4 {
+      background: url('../img/logo_disney.png') 50%/50% no-repeat;
+    }
+    .itom5 {
+      background: url('../img/logo_amazon.png') 50%/50% no-repeat;
+    }
+    .itom6 {
+      background: url('../img/logo_puma.png') 50%/50% no-repeat;
+    }
+    .itom7 {
+      background: url('../img/logo_apple.png') 50%/25% no-repeat;
+    }
+    .itom8 {
+      background: url('../img/logo_mini.png') 50%/50% no-repeat;
+    }
+  }
+}
+
+@media (max-width: 1199px) {
+  .client_logo {
+    .client_logo-itoms {
+      .client_logo-itom {
+        width: 230px;
+        height: 90px; 
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  
+}
+
+@media (max-width: 768px) {
+  .client_logo {
+    .client_logo-itoms {
+      .client_logo-itom {
+        width: 190px;
+        height: 90px; 
+      }
+    }
+  }
+}

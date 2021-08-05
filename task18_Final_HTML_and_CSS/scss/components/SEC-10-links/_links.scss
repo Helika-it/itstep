@@ -1,0 +1,82 @@
+/*=== SEC-10-links ===*/
+.links {
+  background: url("../img/World Map.png");
+  background-repeat: no-repeat;
+  background-size:  cover;
+  background-position: center center;
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding-top: 115px;
+  padding-bottom: 170px;
+  .links-companies {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .links-comp {
+      padding: 0 186px 95px 0;
+      
+      .links-title {
+        font-family: 'Poppins', sans-serif;
+        font-size: 25px;
+        line-height: 1.2;
+        font-weight: 700;
+        color: $blue2;
+        margin-bottom: 30px;
+        margin-left: -10px;
+      }
+      .links-item {
+        font-family: 'Poppins', sans-serif;
+        font-size: 15px;
+        line-height: 24px;
+        font-weight: 600;
+        color: $grey6;
+        margin-left: 10px;
+      }
+    }
+  }
+  .links-images {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-left: 24px;
+    .links-img {
+      padding: 0 25px 25px 0;
+    }
+  }
+}
+
+@media (max-width: 1199px) {
+  .links {
+    .links-companies {
+      margin: 0 185px;
+      .links-comp {
+        padding-right: 50px;
+        padding-left: 50px;
+      }
+    }
+    .links-images {
+      justify-content: space-evenly;
+    }
+  }
+}
+@media (max-width: 991px) {
+  
+}
+
+@media (max-width: 768px) {
+  .links {
+    padding-top: 70px;
+    .links-companies {
+      display: flex;
+      justify-content: center;
+      margin: 0 15px;
+      .links-comp {
+        padding: 0 50px 50px 50px;
+      }
+    }
+    .links-images {
+      justify-content: space-evenly;
+    }
+  }
+}

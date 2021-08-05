@@ -1,0 +1,49 @@
+/*=== SEC-9-social ===*/
+.social {
+  width: 100%;
+  background-color: $blue2;
+  padding-top: 80px;
+  padding-bottom: 70px;
+  .social-itoms {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-left: 140px;
+    padding-right: 140px;
+    h4 {
+      font-size: 27px;
+      line-height: 37px;
+      font-weight: 400;
+      color: $white;
+    }
+    p {
+      font-size: 27px;
+      line-height: 37px;
+      font-weight: 400;
+      color: $blue5;
+    }
+  }
+}
+
+@media (max-width: 1199px) {
+  
+}
+@media (max-width: 991px) {
+  
+}
+
+@media (max-width: 768px) {
+  .social {
+    .social-itoms {
+      justify-content: space-evenly;
+      padding-left: 20px;
+      padding-right: 20px;
+      h4 {
+        padding: 0 10px 41px;
+      }
+      p {
+        display: none;
+      }
+    }
+  }
+}

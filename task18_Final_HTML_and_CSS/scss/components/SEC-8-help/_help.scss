@@ -1,0 +1,90 @@
+/*=== SEC-8-help ===*/
+.help {
+  background: url("../img/help-shape.png");
+  background-repeat: no-repeat;
+  background-size:  cover;
+  background-position: center center;
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding-top: 70px;
+  padding-bottom: 80px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  h2 {
+    font-size: 50px;
+    line-height: 48px;
+    font-weight: 600;
+    color: $white;
+    margin-bottom: 30px;
+    }
+    h4 {
+    font-size: 30px;
+    line-height: 48px;
+    font-weight: 600;
+    color: $white;
+    margin-bottom: 30px;
+    }
+    p {
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: 400;
+    color: $white;
+    margin-bottom: 65px;
+    }
+  .help-form {
+    display: flex;
+    color: #fff;
+    justify-content: center;
+    .form-control {
+      width: 515px;
+      height: 55px;
+      border-radius: 12px;
+      margin-right: 20px;
+      background-color: $white;
+      opacity: 0.34;
+      input {
+        color: #fff !important;
+        border: none;
+        width: 100%;
+        padding: 11px 1px 12px 15px;
+        text-align: left;
+      }
+      input:active, input:hover, input:focus {
+        outline: 0;
+        outline-offset: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 1199px) {
+  .help {
+    .help-form {
+      margin: 0 210px;
+      .form-control {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+@media (max-width: 991px) {
+  
+}
+
+@media (max-width: 768px) {
+  .help {
+    .help-form {
+      display: flex;
+      justify-content: center;
+      margin: 0 5px;
+      .form-control {
+        display: flex;
+        justify-content: center;
+        width: 360px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

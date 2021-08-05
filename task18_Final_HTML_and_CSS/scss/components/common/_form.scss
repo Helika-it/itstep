@@ -1,0 +1,61 @@
+
+/*===Круглая кнопка===*/
+
+button {
+  display: block;
+  padding: 20px 40px;
+  text-decoration: none;
+  color: $white;
+  text-transform: uppercase;
+
+}
+.round-button {
+  width: 198px;
+  height: 60px;
+  border-radius: 30px;
+  opacity: 0.7;
+  transition: 0.4s ease;
+  z-index: 1;
+  border: 0px;
+  font-size: 16px;  
+}
+.pink-button {
+  background-color: $pink;
+}
+.blue-button {
+  background-color: $blue;
+}
+.round-button:hover {
+  opacity: 1;
+  box-shadow: 1px 4px 16px 0px rgba(1, 2, 2, 0.34);
+}
+
+
+/*===Квадратная кнопка===*/
+
+.square-button {
+  width: 146px;
+  height: 47px;
+  border-radius: 10px;
+  padding: 10px 20px;
+  border: 0px;
+  color: $white; 
+  transition: 0.4s ease;
+  opacity: 0.7;
+  font-size: 15px;  
+}
+.square-button-pink {
+  box-shadow: 0px 10px 0px 0px $pink2;
+  background-color: $pink;  
+}
+.square-button-blue {
+  box-shadow: 0px 10px 0px 0px $blue6;
+  background-color: $blue2;  
+}
+.square-button:hover {
+  opacity: 1;
+}
+
+/*=== Форма обратной связи ===*/
+
+.form-feedback {}
