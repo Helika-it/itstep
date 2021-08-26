@@ -1,0 +1,14 @@
+
+@each $social, $color in
+( fb: #3C5B9B,
+  in: #fcaf45,
+  li: #027ba5,
+  tw: #1DA1F2,
+  yt: #FF0000,
+  pt: #E60023
+)
+{
+  #{$social} {
+    background: $color !important;
+  }
+}

@@ -1,0 +1,42 @@
+$blue: #6C8CD5;
+$blue_2: #00294e;
+$grey: #989898;
+$grey_2: #333;
+$grey_3: #444;
+$grey_4: #c0c0c0;
+$grey_5: #1a1a1a;
+$grey_6: #ededed;
+$grey_7: #747474;
+$grey_8: #f8f8f8;
+$grey_9: #eee;
+$grey_10: #a7a7a7;
+$grey_11: #eaeaea;
+$grey_12: #aaaaaa;
+$grey_13: #e5e5e5;
+$grey_14: #999;
+$grey_15: #303030;
+$grey_16: #666;
+$grey_17: #222;
+$grey_18: #F2F2F2;
+$grey_19: #ddd;
+$black: #000;
+$white: #fff;
+$red: #f00;
+$red_2: #fd4f57;
+
+/* миксин для вставки иконочного шрифта */
+@mixin font($s,$w) {
+  content: $s;
+  font-family: "Font Awesome 5 Free";
+  font-weight: $w;
+}
+
+/* мапы для вывода цветов для социальных сетей */
+$social: (
+  fb: #3C5B9B,
+  in: #fcaf45,
+  li: #027ba5,
+  tw: #1DA1F2,
+  yt: #FF0000,
+  pt: #E60023
+);

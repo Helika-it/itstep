@@ -1,0 +1,44 @@
+/*
+Error: Inconsistent indentation: 5 spaces were used for indentation, but the rest of the document was indented using 2 spaces.
+        on line 427 of style.sass
+
+422:     }
+423:     .phone {
+424:       float: right;
+425:       padding-top: 15px;
+426:     }
+427:      .header-logo > a {
+428:         text-align: left;
+429:         margin-top: 20px;
+430:       }
+431:      menu > ul {
+432:       justify-content: center;
+
+Backtrace:
+style.sass:427
+C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/engine.rb:494:in `block in tabulate'
+C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/engine.rb:452:in `each'
+C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/engine.rb:452:in `each_with_index'
+C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/engine.rb:452:in `tabulate'
+C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/engine.rb:417:in `_to_tree'
+C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/engine.rb:307:in `render_with_sourcemap'
+C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
+C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:209:in `each'
+C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:443:in `on_file_changed'
+C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:320:in `block in watch'
+C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-listen-4.0.0/lib/sass-listen/event/config.rb:23:in `call'
+C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:115:in `_process_changes'
+C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:19:in `block in loop_for'
+C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop'
+C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop_for'
+C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:84:in `_wait_for_changes'
+C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:42:in `block in setup'
+C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-listen-4.0.0/lib/sass-listen/internals/thread_pool.rb:6:in `block in add'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Inconsistent indentation: 5 spaces were used for indentation, but the rest of the document was indented using 2 spaces.\A         on line 427 of style.sass\A \A 422:     }\A 423:     .phone {\A 424:       float: right;\A 425:       padding-top: 15px;\A 426:     }\A 427:      .header-logo > a {\A 428:         text-align: left;\A 429:         margin-top: 20px;\A 430:       }\A 431:      menu > ul {\A 432:       justify-content: center;"; }
