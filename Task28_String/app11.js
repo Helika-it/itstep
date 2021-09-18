@@ -1,0 +1,11 @@
+// 11. Дан массив ['я', 'учу', 'javascript', '!']. С помощью метода join преобразуйте массив в строку 'я+учу+javascript+!'.
+console.log("11. Дан массив ['я', 'учу', 'javascript', '!']. С помощью метода join преобразуйте массив в строку 'я+учу+javascript+!'.")
+
+
+let arr = ['я', 'учу', 'javascript', '!'];
+
+console.log(arr);
+
+let a = arr.join('+');
+
+console.log(`Получили стороку: ${a}`);
