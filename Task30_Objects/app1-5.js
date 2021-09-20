@@ -20,26 +20,3 @@ console.log(user);
 
 //-----------------------------------------
 
-/*
-6. Пусть дан объект с зарплатами сотрудников
-let salaries = {
-  John: 100,
-  Ann: 160,
-  Pete: 130
-}
-Найти сумму зарплат с использованием for..in.
-*/
-
-let salaries = {
-  John: 100,
-  Ann: 160,
-  Pete: 130
-};
-
-let sum = 0;
-for(let key in salaries) {
-  sum += key;
-  return sum;
-}
-
-console.log(sum);
