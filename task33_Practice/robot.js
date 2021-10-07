@@ -3,7 +3,7 @@ import {Field} from "./field.js"
 class Robot {
   x = 0;
   y = 0;
-  direction = 0; // 0 - вверх, 1 - право, 2 - низ, 3 - лево
+  direction = 0; //! 0 - вверх, 1 - право, 2 - низ, 3 - лево
   field;
   
   constructor(field, x, y, direction){
