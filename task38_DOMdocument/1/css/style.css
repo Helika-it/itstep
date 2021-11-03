@@ -1,0 +1,8 @@
+
+li :nth-child(4n+3){
+  color: #f00;
+}
+
+.red {
+  color: #f00;
+}

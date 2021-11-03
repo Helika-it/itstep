@@ -1,0 +1,19 @@
+.box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 80px;
+  width: 80px;
+}
+
+.black {
+   height: 10px;
+   width: 10px;
+   background-color: #000;
+ }
+ .white {
+  height: 10px;
+  width: 10px;
+  background-color: #fff;
+}
+
