@@ -6,7 +6,7 @@ console.log(elements.length);
 
 let sections = document.getElementsByClassName("first-section");
 
-let section = sections.item(0);// sections[0];
+let section = sections.item(0); // sections[0];
 
 let sectionDivs = section.getElementsByTagName("div");
 
@@ -91,7 +91,7 @@ let secondElement = document.getElementById("second-element");
 
 let ul = document.createElement('ul');
 
-for(let i = 1; i <= 10; i++) {
+for (let i = 1; i <= 10; i++) {
   let li = document.createElement('li');
   li.innerHTML = `Пункт №${i}`;
   ul.appendChild(li);
@@ -142,7 +142,7 @@ secondElement = document.getElementById("second-element");
 
 elementsLi = secondElement.getElementsByTagName('li');
 
-for (let i = 0; i <= elementsLi.length-1; i++) {
+for (let i = 0; i <= elementsLi.length - 1; i++) {
   if (i % 2 == 0) {
     elementsLi[i].classList.add("odd-element");
   }
@@ -163,13 +163,13 @@ secondElement = document.getElementById("second-element");
 
 elementsLi = secondElement.getElementsByTagName('li');
 
-for (let i = 2; i <= elementsLi.length-1; i+=3) {
-  
-  if (elementsLi[i].classList.contains("odd-element")){
+for (let i = 2; i <= elementsLi.length - 1; i += 3) {
+
+  if (elementsLi[i].classList.contains("odd-element")) {
     elementsLi[i].style.fontSize = "32px";
   }
 
-}  
+}
 
 //!или:
 /*
@@ -200,7 +200,7 @@ let tagsB = thirdElement.getElementsByTagName("b");
 let x = tagsB.length;
 
 for (let i = 0; i < x; i++) {
-  
+
   tagsB[0].outerHTML = `<strong>${tagsB[0].innerHTML}</strong>`;
   //tagsB.item(0).outerHTML = `<strong>${tagsB.item(0).innerHTML}</strong>`;  
 
@@ -225,7 +225,7 @@ for (let i = 0; i < tagsStrong.length; i++) {
 
     for (let i = 0; i < tagsStrongWidautTags.length; i++) {
 
-      tagsStrongWidautTags[i].outerHTML = `${tagsStrongWidautTags[i].innerHTML}` 
+      tagsStrongWidautTags[i].outerHTML = `${tagsStrongWidautTags[i].innerHTML}`
 
     }
   }
@@ -236,7 +236,7 @@ for (let i = 0; i < tagsStrong.length; i++) {
 
     for (let i = 0; i < tagsStrongWidautTags.length; i++) {
 
-      tagsStrongWidautTags[i].outerHTML = `${tagsStrongWidautTags[i].innerHTML}` 
+      tagsStrongWidautTags[i].outerHTML = `${tagsStrongWidautTags[i].innerHTML}`
 
     }
   }
@@ -291,12 +291,12 @@ thirdElement = document.getElementById("third-element");
 tagsStrong = thirdElement.getElementsByTagName("strong");
 
 for (let i = 0; i < tagsStrong.length; i++) {
-  let words = tagsStrong.item(i).textContent.split(' ');//вынесли в массив слова (сплит по пробелу)
+  let words = tagsStrong.item(i).textContent.split(' '); //вынесли в массив слова (сплит по пробелу)
   tagsStrong.item(i).innerHTML = ''; //очистили содержимое стронга
-  words.forEach(function(word){ // для каждого слова
-    let span = document.createElement('span');// создаем спан
+  words.forEach(function (word) { // для каждого слова
+    let span = document.createElement('span'); // создаем спан
     span.textContent = ` ${word}`; // в спан вставляем контент: слово
-    tagsStrong.item(i).appendChild(span);//  в хтмл в стронг добавляем дочерний элемент спан уже с контентом
+    tagsStrong.item(i).appendChild(span); //  в хтмл в стронг добавляем дочерний элемент спан уже с контентом
   });
 }
 
@@ -324,19 +324,19 @@ console.log(divElements.length);
 
 let divElements = fourthElement.parentElement.getElementsByTagName("div");
 
-for(let i = 0; i < divElements.length; i++){
-    console.log(divElements.item(i).textContent);
+for (let i = 0; i < divElements.length; i++) {
+  console.log(divElements.item(i).textContent);
 }
 
 
 //! 4.2 Поменяйте местами содержимое тегов div в обратном порядке, при этом теги остаются на месте, меняется только текст
 
 let texts = [];
-for(let i = 0; i < divElements.length; i++){
-    texts.push(divElements.item(i).textContent);
+for (let i = 0; i < divElements.length; i++) {
+  texts.push(divElements.item(i).textContent);
 }
 texts.reverse();
-for(let i = 0; i < divElements.length; i++){
+for (let i = 0; i < divElements.length; i++) {
   divElements.item(i).textContent = texts[i];
 }
 
@@ -365,13 +365,13 @@ let newDiv1 = document.createElement('div');
 newDiv1.textContent = 'Я сосед';
 newDiv1.classList.add("first-neighbor");
 newDiv1.classList.add("neighbor");
-fifthElements.parentElement.parentElement.append(newDiv1);
+fifthElements.parentElement.parentElement.prepend(newDiv1);
 
 let newDiv2 = document.createElement('div');
 newDiv2.textContent = 'Я сосед';
 newDiv2.classList.add("second-neighbor");
 newDiv2.classList.add("neighbor");
-fifthElements.parentElement.parentElement.append(newDiv2);
+fifthElements.parentElement.parentElement.prepend(newDiv2);
 
 let newDiv3 = document.createElement('div');
 newDiv3.textContent = 'Я сосед';
@@ -388,13 +388,13 @@ fifthElements.parentElement.parentElement.append(newDiv4);
 // выношу элемент из дива
 fifthElements.parentElement.outerHTML = `${fifthElements.outerHTML}`;
 
-// расставляю по местам
-let itemListParent = document.getElementById("fifth-element").parentNode;
-console.log(itemListParent);
-let itemList = itemListParent.getElementsByTagName('div');
+//? расставляю по местам если не стоят там, где нужно:
+//let itemListParent = document.getElementById("fifth-element").parentNode;
+//console.log(itemListParent);
+//let itemList = itemListParent.getElementsByTagName('div');
 
-itemListParent.insertBefore(itemList[0], itemList[3]);
+//itemListParent.insertBefore(itemList[0], itemList[3]);
 
-// можно было таким способом:
+
+//? можно было вставлять элементы таким способом:
 //fifthElements.parentElement.insertAdjacentHTML("beforebegin", "<div class="first-neighbor neighbor">Я сосед</div>")
-
