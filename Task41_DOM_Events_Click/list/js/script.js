@@ -1,8 +1,8 @@
-document.getElementById('сreate').onclick = function(){
+document.getElementById('сreate').onclick = function () {
   let uls = document.getElementsByTagName('ul');
   let ul;
 
-  if (uls.length == 0){
+  if (uls.length == 0) {
     ul = document.createElement('ul');
     document.getElementById('result').appendChild(ul);
   } else {
@@ -10,13 +10,13 @@ document.getElementById('сreate').onclick = function(){
   }
   let x = +document.getElementById('num').value;
 
-  if(isNaN(x))
+  if (isNaN(x))
     return;
 
-    let countLi = document.getElementsByTagName("li").length;
-    for(let i = countLi; i < x+countLi;i++){
-      let li = document.createElement('li');
-      li.innerHTML = `Пункт ${i}`;
-      ul.appendChild(li);
-    }
+  let countLi = document.getElementsByTagName("li").length;
+  for (let i = countLi; i < x + countLi; i++) {
+    let li = document.createElement('li');
+    li.innerHTML = `Пункт ${i}`;
+    ul.appendChild(li);
+  }
 }
