@@ -87,17 +87,17 @@ secondElement.insertAdjacentHTML('beforeend', out);
 
 //! или:
 
-let secondElement = document.getElementById("second-element");
+let secondElement = document.getElementById("second-element"); //нашли эл-т с id="second-element"
 
-let ul = document.createElement('ul');
+let ul = document.createElement('ul'); //создали элемент <ul>
 
 for (let i = 1; i <= 10; i++) {
-  let li = document.createElement('li');
-  li.innerHTML = `Пункт №${i}`;
-  ul.appendChild(li);
+  let li = document.createElement('li'); //создали элемент <li>
+  li.innerHTML = `Пункт №${i}`; // вставили текст в элемент <li>
+  ul.appendChild(li); //добавили созданный элемент <li> в элемент <ul> как дочерний
 }
 
-secondElement.appendChild(ul);
+secondElement.appendChild(ul); //добавили дочерний элемент <ul> элементу с id="second-element"
 
 
 
