@@ -1,0 +1,91 @@
+body {
+  font-family: "Open Sans",
+  sans-serif;
+}
+.container {
+}
+.form__begining {
+}
+
+.form-buttons {
+  display: flex;
+  flex-direction: column;
+}
+.game {
+}
+.stats {
+  margin-top: 70px;
+}
+.form__users {
+}
+.form-user{
+  margin-left: 20px;
+  text-transform: uppercase;
+  color:rgb(45, 118, 98);
+}
+.form-input {
+  font-size: 20px;
+}
+.form-button {
+}
+.start {
+  margin-top: 70px;
+}
+
+/*===ФОРМЫ===*/
+
+.form {
+  background: #e7e9ea;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items:center;
+  
+}
+.form-body__users {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  align-items: center;
+}
+.form-body {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 100px;
+  padding-bottom: 170px;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 40px;
+}
+.form-text {
+  font-size: 36px;
+  font-weight: 700;
+  color: #a1a9ac;
+}
+.form-input {
+  font-stretch: 100%;
+  font-size: 25px;
+  font-weight: 400;
+  margin: 0 0 0 36px;
+  padding: 0;
+  position: relative;
+  display: inline-block;
+  background: #fff;
+  border: none;
+}
+input {
+  border: none;
+  cursor: pointer;
+}
+.form-button button{
+  text-transform: uppercase;
+  color: #fff;
+  padding: 25px 10px 27px;
+  min-width: 240px;
+  font-size: 20px;
+  border: none;
+  background-color: rgb(45, 118, 98);
+  border-radius: 10px;
+}
+
