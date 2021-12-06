@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/script.js" defer></script>
+  <title>5</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <form action="" method="post" name="reg_form" class="reg-form">
+
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="form-label">
+                <label for="FIO">Имя:</label>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="form-control">
+                <input type="text" name="name" id="name" value="" placeholder="Введите имя">
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="form-label">
+                <label for="email">Email:</label>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="form-control">
+                <input type="text" name="email" id="email" value="" placeholder="Введите Email">
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="form-label">
+                <label for="sex">Пол:</label>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="form-control">
+                <div class="form-control-radio">
+                  <input type="radio" name="sex" id="sex-1" value="sex-1"><label for="sex-1">Не выбран</label>
+                </div>
+                <div class="form-control-radio">
+                  <input type="radio" name="sex" id="sex-2" value="sex-2"><label for="sex-2">Женский</label>
+                </div>
+                <div class="form-control-radio">
+                  <input type="radio" name="sex" id="sex-3" value="sex-3"><label for="sex-3">Мужской</label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="form-label">
+                <label for="language">Языки программирования</label>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="form-control">
+                <select name="language" id="language">
+                  <option value="0">HTML</option>
+                  <option value="1">CSS</option>
+                  <option value="2">JS</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="form-label">
+                <label for="date">Я не робот:</label>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="form-control">
+                <div class="form-control-check">
+                  <input type="checkbox" name="robot" id="robot" value="robot"><label for="robot"></label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-6"></div>
+            <div class="col-lg-6">
+              <div class="form-control">
+                <button type="submit" name="submit" id="submit">Отправить</button>
+              </div>
+            </div>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

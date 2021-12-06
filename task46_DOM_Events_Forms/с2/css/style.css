@@ -1,0 +1,6 @@
+.focused {
+  background: #f00;
+}
+.error {
+  outline: 1px solid #f00;
+}
