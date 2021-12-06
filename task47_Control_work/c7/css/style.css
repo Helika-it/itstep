@@ -1,0 +1,31 @@
+html{
+  height: 100%;
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100%;
+}
+h4 {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+table {
+  border-collapse: collapse;
+}
+  
+td {
+  width: 20px; 
+  height: 20px;
+  border: 1px solid black;
+  padding: 3px;
+  text-align: center;
+}
+
+.highlight {
+  background:lightgreen;
+}

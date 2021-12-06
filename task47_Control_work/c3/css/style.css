@@ -1,0 +1,33 @@
+html{
+  height: 100%;
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+  flex-direction: column;
+}
+.parentElement{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.childElement{
+  margin: 5px;
+  display: flex;
+  width: 100px;
+  height: 100px;
+  align-items: center;
+  justify-content: center;
+  color: black;
+}
+
+.bg-blue{
+  background: blue;
+}
+.bg-transparent{
+  background: rgba(0, 0, 255, 0.359);
+}
