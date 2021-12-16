@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CatTable</title>
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <div class="page__form container">
+    <form id="mainForm" name="mainForm">
+      <div class="col-12">
+        <form action="">
+          <div class="row align-items-center">
+            <div class="col-3"></div>
+            <div class="col-3">
+              <label for="inputName" class="col-form-label">Кличка</label>
+            </div>
+            <div class="col-3">
+              <input type="name" id="inputName" class="form-control" aria-describedby="nameHelpInline">
+            </div>
+
+          </div>
+        </form>
+      </div>
+
+
+
+
+      <div class="col-12">
+        <form action="">
+          <div class="row align-items-center">
+            <div class="col-3"></div>
+            <div class="col-3">
+              <label for="exampleColorInput" class="form-label">Окрас</label>
+            </div>
+            <div class="col-6">
+              <input type="color" class="form-control form-control-color" id="exampleColorInput" value="#000000"
+                title="Выберите цвет">
+            </div>
+          </div>
+        </form>
+      </div>
+
+
+      <div class="col-9">
+        <div class="row align-items-center">
+
+          <div class="col-12">
+            <select class="form-select" aria-label="Default select example">
+              <option value="Беспородный">Беспородный</option>
+              <option value="Сиамский">Сиамский</option>
+              <option value="Британский">Британский</option>
+              <option value="Сфинкс">Сфинкс</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <div class="col-12">
+        <div class="row align-items-center">
+          <div class="col-3"></div>
+          <div class="col-3">
+            <label for="inputSex" class="col-form-label">Пол</label>
+          </div>
+          <div class="col-6">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+              <label class="form-check-label" for="flexRadioDefault1">
+                муж
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+              <label class="form-check-label" for="flexRadioDefault2">
+                жен
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-9 btn-block align-items-center">
+        <button class="btn btn-primary" name="start_game">Добавить</button>
+      </div>
+
+    </form>
+
+  </div>
+
+  <div class="page__table">
+    <table>
+      <tr>
+        <th>№пп</th>
+        <th>Кличка</th>
+        <th>Окрас</th>
+        <th>Порода</th>
+        <th>Пол</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </table>
+  </div>
+
+  <script src="./js/main.js"></script>
+</body>
+
+</html>

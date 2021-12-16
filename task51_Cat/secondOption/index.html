@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cat</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <form action="" method="" name="user" class="reg-form">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="form-label">
+                <label for="name">Кличка:</label>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="form-control">
+                <input type="text" name="name" id="name" value="" placeholder="Введите кличку">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="form-label">
+                <label for="color">Окрас:</label>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="form-control">
+                <input type="color" name="color" id="color" value="#000000" placeholder="Введите окрас">
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="form-label">
+                <label for="breed">Порода:</label>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="form-control">
+                <select name="breed" id="breed">
+                  <option value="0">Выберите породу</option>
+                  <option value="беспородный">Беспородный</option>
+                  <option value="сибирская">Сибирская</option>
+                  <option value="сфинкс">Сфинкс</option>
+                  <option value="сиамская">Сиамская</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="form-label">
+                <label>Пол:</label>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="form-control">
+                <div class="form-control-radio">
+                  <input type="radio" name="sex" id="sex_m" value="кот"><label for="sex_m">Кот</label>
+                </div>
+                <div class="form-control-radio">
+                  <input type="radio" name="sex" id="sex_f" value="кошка"><label for="sex_f">Кошка</label>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+
+          <div class="row">
+            <div class="col-lg-6">
+            </div>
+            <div class="col-lg-6">
+              <div class="form-control">
+                <button>Добавить</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="tab">
+          <h3>Кошки</h3>
+          <table id="mytab">
+            <tr>
+              <th>№</th>
+              <th>Кличка</th>
+              <th>Окрас</th>
+              <th>Порода</th>
+              <th>Пол</th>
+              <th></th>
+              <th></th>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./js/main.js"></script>
+</body>
+
+</html>
