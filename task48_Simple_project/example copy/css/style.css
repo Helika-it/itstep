@@ -9,11 +9,18 @@ body{
     background: url(../img/main-bg.jpg);
 }
 .game{
-    width: 340px;
-    height: 300px;
+  width: 1020px;
+  height: 300px;
     background: wheat;
     display: flex;
     justify-content: center;
+}
+.page2{
+  width: 1020px;
+  height: 300px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 .start_form, .login_form{
     display: flex;
@@ -21,14 +28,16 @@ body{
     justify-content: center;
     align-items: center;
 }
-/*
-.login_form{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+
+.stat1{
+  background: wheat;
+  width: 340px;
+  height: 300px;
+flex-direction: row;
 }
-*/
+.user1, .user2{
+
+}
 .login_form > div{
     padding: 10px 20px;
 }
@@ -43,6 +52,11 @@ input{
 .btn-block button{
     width: 100%;
     min-width: 200px;
+}
+.continue {
+  color: #fff;
+  background-color: #41fd0d;
+  border-color: #41fd0d;
 }
 .current,.result{
     padding: 10px 20px;

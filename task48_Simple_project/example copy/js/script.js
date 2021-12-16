@@ -13,7 +13,7 @@ var field = [
 //клик по кнопке Играть
 document.forms.start_form.start_play.onclick = function () { // при клике на кнопку start_play из формы start_form
   document.forms.start_form.classList.add("d-none"); // форме start_form добавляем класс d-none (не отображается)
-  document.forms.login_form.classList.remove("d-none"); // у формы login_form удаляем класс d-none (отображается)
+  document.querySelector('.page2').classList.remove("d-none"); // у формы login_form удаляем класс d-none (отображается)
   // чтобы исключить перезагрузку можно дополнительно прописать:
   /*
     event.preventDefault();
@@ -47,10 +47,10 @@ document.forms.login_form.start_game.onclick = function () { // при клик�
         let data = document.createElement("td"); // создаем 3 столбца
         row.append(data) // вставляем в создаваемые строки
       }
-      table.append(row); // строки вобавляем в таблицу
+      table.append(row); // строки добавляем в таблицу
     }
 
-    table.addEventListener("click", play, false); //! таким образом получаем созданную таблицу(которой изначально нет в HTML) тут не все понятно
+    table.addEventListener("click", play, false); //! таким образом можем получить созданную таблицу(которой изначально нет в HTML)
 
     document.querySelector(".field").append(table); // в div c классом ".field" вставляем таблицу
     document.querySelector(".current").innerHTML = `Ходит игрок <b>${player[current]}</b>`; // в div c классом ".current" вставляем текст с именем игрока 
@@ -60,6 +60,7 @@ document.forms.login_form.start_game.onclick = function () { // при клик�
 }
 
 function play(event) { // функция логики игры 
+  let progress = document.querySelector('.gameProgress');
 
   let td = event.target; // переменная td это ячейка в которой произошло событие
 
@@ -75,25 +76,38 @@ function play(event) { // функция логики игры
   if (current == 1) { // если ход игрока 1
     td.classList.add("k"); // то ячейке добавляется класс "k"(т.е свойство с background крестик)
     current = 2; // меняем значение current на 2, т.е предаем ход 
-    field[x][y] = 1 // в массиве меняем по координатам 0 на 1
+    field[x][y] = 1 // в массиве меняем по координатам содержимое 0 на 1
+
+
+    let itemLi = document.createElement('li');
+    itemLi.textContent = `Игрок ${player[current]}: (${x+1},${y+1})`;
+    progress.append(itemLi);
+
+    //console.log(`Ход игрока ${player[current]}: (${x+1},${y+1})`); //! выводы в консоль
   } else { // если ход игрока 2
     td.classList.add("n"); // то ячейке добавляется класс "n"(т.е свойство с background нолик)
     current = 1; // меняем значение current на 1, т.е предаем ход 
-    field[x][y] = -1; // в массиве меняем по координатам 0 на -1
+    field[x][y] = -1; // в массиве меняем по координатам содержимое 0 на -1
+
+    let itemLi = document.createElement('li');
+    itemLi.textContent = `Игрок ${player[current]}: (${x+1},${y+1})`;
+    progress.append(itemLi);
+
+    //console.log(`Ход игрока ${player[current]}: (${x+1},${y+1})`); //!
   }
 
-  let winner = checkWinner(); // (2) вывод победителя(или ничья)
+  let winner = checkWinner(); //? (2) вывод победителя(или ничья)
   if (winner > 0) { // если результат функции(2) больше 0:
     // в div ".result" выводим имя победителя (1-первый, 2-второй)
     document.querySelector(".result").innerHTML = `Победил игрок <b>${player[winner]}</b>`;
     document.querySelector(".current").innerHTML = ``; // очистка значения (номер игрока)
-    document.querySelector(".field table").removeEventListener("click", play, false); // удаляем обработчик события в div с классом".field table"
+    document.querySelector(".field table").removeEventListener("click", play, false); // удаляем обработчик события в div с классом".field table" чтобы не могли больше ничего кликать
   } else if (checkDraw()) { // проверяем, если остались ячейки со значением 0 (значит ничья) 
     document.querySelector(".current").innerHTML = ``; // очистка значения (номер игрока)
-    document.querySelector(".field table").removeEventListener("click", play, false); // удаляем обработчик события в div с классом".field table"
+    document.querySelector(".field table").removeEventListener("click", play, false); // удаляем обработчик события в div с классом".field table" чтобы не могли больше ничего кликать
     // в div ".result" выводим результат игры: ничья
     document.querySelector(".result").innerHTML = `Ничья`;
-  } else { // иначе продолжам
+  } else { // иначе продолжаем
     document.querySelector(".current").innerHTML = `Ходит игрок <b>${player[current]}</b>`;
   }
 
@@ -133,7 +147,7 @@ function checkWinner() { // функция (2) подсчета результа
   }
   result[7] = sum; // (7 индекс) 8 элемент
 
-  let resK = Math.max.apply(null, result); //! (что здесь значит null?) максимальный элемент в массиве result
+  let resK = Math.max.apply(null, result); //! (null - c чем начинается сравнение?) максимальный элемент в массиве result
   let resN = Math.min.apply(null, result); // минимальный элемент в массиве result
 
   if (resK == 3) // если результат 3 - функция выводит 1
