@@ -12,11 +12,11 @@ growth = 180, weightCentner = 0.89;
 var oldWeightCentner = weightCentner;
 
 //используя описанные переменные вывести в консоль надпись: Меня зовут Вася Пупкин. Я вешу 0.89 ц. Мой рост - 180 см.
-console.log("Меня зовут " + firstName + " " + surName + ". Я вешу " + weightCentner + " ц. Мой рост - "  + growth + " см.")
+console.log("Меня зовут " + firstName + " " + surName + ". Я вешу " + weightCentner + " ц. Мой рост - " + growth + " см.")
 
 //увеличить вес Васи на 10 кг, а рост уменьшить на 2 см.
-weightCentner = weightCentner + 10/100;
-growth -=2;
+weightCentner = weightCentner + 10 / 100;
+growth -= 2;
 
 //используя описанные переменные вывести в консоль надпись: Вася Пупкин потолстел и стоптался.
 console.log(firstName + " " + surName + " потолстел и стоптался.");
@@ -26,4 +26,4 @@ firstName = "Петя";
 weightCentner *= 2;
 
 //используя описанные переменные вывести в консоль надпись: Теперь я Петя Пупкин и вешу в (столько-то раз больше, рассчитать) больше, чем в молодости.
-console.log("Теперь я " + firstName + " " + surName + " и вешу в " + weightCentner/oldWeightCentner + " больше, чем я в молодости.");
+console.log("Теперь я " + firstName + " " + surName + " и вешу в " + weightCentner / oldWeightCentner + " больше, чем я в молодости.");

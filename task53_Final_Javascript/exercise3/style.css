@@ -1,0 +1,70 @@
+/*---html,body------------------------------------------------*/
+html,
+body {
+  height: 100%;
+  line-height: 1; 
+}
+
+body {
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+  color: #000; 
+}
+
+/*---------------------------------------------------*/
+.wrapper {
+  /*обёртка*/
+  min-height: 100%;
+  overflow: hidden;
+  /*чтобы небыло горизонтального скрола*/
+  display: flex;
+  flex-direction: column; 
+  align-items:center;
+  justify-content: center;
+}
+
+/*---------------------------------------------------*/
+._container {
+  /*технический класс*/
+  max-width: 1214px;
+  /*из макета - ширина контейнера*/
+  margin: 0 auto;
+  /*выстраивает контейнер по центру*/
+  padding: 0 60px;
+  /*предотвращает "прилипание" контента (обычно хватает 15px здесь больше для точек скрола)*/
+  box-sizing: content-box;
+  /*либо включаем content-box, либо увеличиваем max-width: 1214px +15*2 */ 
+  display: flex;
+  min-height: 102px;
+  align-items:center;
+  justify-content: center;
+}
+
+.table {
+  flex: 1 1 auto; 
+  width: 100%;
+  align-items:center;
+  justify-content: center;
+  border-spacing: 0;
+  border-collapse: collapse;
+  border: 1px solid grey;
+}
+
+th, td{
+  margin: 5px;
+  padding-right: 30px;
+  border: 1px solid grey;
+}
+
+td{
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  background-color:#fff;
+  margin: 5px;
+  padding: 5px;
+
+}
+.ship{
+  background-color: #000;
+}

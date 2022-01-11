@@ -1,0 +1,181 @@
+/*---html,body------------------------------------------------*/
+html,
+body {
+  height: 100%;
+  line-height: 1; 
+}
+
+body {
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+  color: #000; 
+}
+
+/*---------------------------------------------------*/
+.wrapper {
+  /*обёртка*/
+  min-height: 100%;
+  overflow: hidden;
+  /*чтобы небыло горизонтального скрола*/
+  display: flex;
+  flex-direction: column; 
+
+}
+
+/*---------------------------------------------------*/
+._container {
+  /*технический класс*/
+  max-width: 1214px;
+  /*из макета - ширина контейнера*/
+  margin: 0 auto;
+  /*выстраивает контейнер по центру*/
+  padding: 0 60px;
+  /*предотвращает "прилипание" контента (обычно хватает 15px здесь больше для точек скрола)*/
+  box-sizing: content-box;
+  /*либо включаем content-box, либо увеличиваем max-width: 1214px +15*2 */ 
+  display: flex;
+  min-height: 102px;
+  align-items:center;
+  justify-content: center;
+}
+
+  /*--main-------------------------------------------------*/
+.page {
+  display: flex;
+  flex: 1 1 auto; 
+  width: 100%;
+  align-items:center;
+  justify-content: center;
+}
+  /*---------------------------------------------------*/
+
+
+.reg-form{
+    border: 1px solid #eee;
+    width: 100%;
+    background: #f3f3f3;
+    border-radius: 10px;
+    box-shadow: 2px 2px 6px rgb(0 0 0 / 50%);
+    
+}
+.item_form{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.form-label{
+  width:40%;
+  padding: 15px 15px;
+}
+
+.form-control{
+    padding: 10px 15px;
+    width: 50%;
+}
+
+
+.form-control input[type="text"], .form-control input[type="password"], .form-control input[type="date"], 
+select,.form-control input[type="file"]{
+    width: 100%;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #bfbfbf;
+    box-sizing: border-box;
+}
+.error input[type="password"]{
+    border-color: red;
+}
+.error-text{
+    color: red;
+    padding: 5px 25px;
+    font-size: 12px;
+}
+.form-control button{
+    width: 50%;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #bfbfbf;
+    box-sizing: border-box;
+    background: #b8fef7;   
+}
+.form-control button:hover{
+    background: #0075FF;
+}
+
+.form-control button:active{
+    background: red;
+}
+.form-control input[type="text"]:focus{
+    border:1px solid rgb(219, 89, 180);
+}
+
+div.d-none {
+  display: none;
+}
+
+h3{
+  margin: 20px;
+}
+th, td{
+  margin: 5px;
+  padding-right: 30px;
+}
+
+.table{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 50px;
+}
+.close, .edit {
+  cursor: pointer;
+  padding: 12px 16px 12px 16px;
+}
+.edit{
+  right: 45px;
+  padding: 11px 16px 10px 16px;
+}
+.close:hover, .edit:hover {
+
+  background-color: #b8fef7;
+  color: white;
+}
+
+.highlight {
+  background-color:chartreuse;
+}
+
+.d-none{
+  display: none;
+}
+
+  /*---------------------------------------------------*/
+
+.table {
+  flex: 1 1 auto; 
+  width: 100%;
+  align-items:center;
+  justify-content: center;
+  
+}
+td{
+  width: 60px;
+  text-align: center;
+  background-color:rgb(176, 254, 254);
+  margin: 5px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.result{
+  font-size: 24px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+.pressed{
+  background-color: rgb(100, 254, 254);
+}
+  

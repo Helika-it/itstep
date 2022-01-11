@@ -199,10 +199,10 @@ select,.form-control input[type="file"]{
     border-radius: 5px;
     border: 1px solid #bfbfbf;
     box-sizing: border-box;
-    background: #97f39f;   
+    background: #b8fef7;   
 }
 .form-control button:hover{
-    background: green;
+    background: #0075FF;
 }
 
 .form-control button:active{
@@ -247,4 +247,8 @@ th, td{
 
 .highlight {
   background-color:chartreuse;
+}
+
+.d-none{
+  display: none;
 }

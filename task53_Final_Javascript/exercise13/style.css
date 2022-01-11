@@ -1,0 +1,73 @@
+/*---html,body------------------------------------------------*/
+html,
+body {
+  height: 100%;
+  line-height: 1; }
+
+body {
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+  color: #000; }
+
+/*---------------------------------------------------*/
+.wrapper {
+  /*обёртка*/
+  min-height: 100%;
+  overflow: hidden;
+  /*чтобы небыло горизонтального скрола*/
+  display: flex;
+  flex-direction: column; 
+
+}
+
+/*---------------------------------------------------*/
+._container {
+  /*технический класс*/
+  max-width: 1214px;
+  /*из макета - ширина контейнера*/
+  margin: 0 auto;
+  /*выстраивает контейнер по центру*/
+  padding: 0 60px;
+  /*предотвращает "прилипание" контента (обычно хватает 15px здесь больше для точек скрола)*/
+  box-sizing: content-box;
+  /*либо включаем content-box, либо увеличиваем max-width: 1214px +15*2 */ 
+  display: flex;
+  min-height: 102px;
+  align-items:center;
+  justify-content: center;
+}
+
+  /*--main-------------------------------------------------*/
+.page {
+  display: flex;
+  flex: 1 1 auto; 
+  width: 100%;
+  align-items:center;
+  justify-content: center;
+}
+.table {
+  flex: 1 1 auto; 
+  width: 100%;
+  align-items:center;
+  justify-content: center;
+  
+}
+td{
+  width: 60px;
+  text-align: center;
+background-color:rgb(176, 254, 254);
+margin: 5px;
+padding: 5px;
+cursor: pointer;
+}
+
+.result{
+  font-size: 24px;
+  margin-bottom: 60px;
+  padding: 10px;
+  border: 1px solid black;
+}
+.pressed{
+  background-color: rgb(100, 254, 254);
+}
+  
