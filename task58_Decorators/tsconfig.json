@@ -4,7 +4,7 @@
         "experimentalDecorators": true
     },
     "files":[
-      /*
+      
         "example1.ts",
         "example2.ts",
         "example3.ts",
@@ -13,7 +13,7 @@
         "example6.ts",
         "example7.ts",
         "example8.ts",
-        */
+        
         "t1.ts"
     ]
 }

@@ -1,3 +1,4 @@
+//! для декорирования параметров (т.е можно напр. использовать: автоматически отправлять письмо на адрес указанный при регистрации)
 function logParameter(target: any, key : string, index : number) {
     var metadataKey = `__log_${key}_parameters`;
      

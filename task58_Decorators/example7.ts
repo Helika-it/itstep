@@ -1,3 +1,4 @@
+//! для проверки напр.: если пользователь "admin" то поменять имя не может
 function validator(target: any, propertyKey: string, descriptor: PropertyDescriptor) {
     const oldSet = descriptor.set;
   
@@ -19,7 +20,7 @@ class User {
         return this._name;
     }
     
-    @validator
+    @validator //! @validator
     public set name(n: string) {
         this._name = n;
     }

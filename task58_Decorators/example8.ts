@@ -1,3 +1,5 @@
+//! декоратор добавляет регулярное выражение в наше поле и проверяет подходит ли (сами выражения копируем в интернете) например являются ли введённые данные email / phone / ...
+//! декоратор с параметром
 function regex(pattern: string){
     let expression = new RegExp(pattern);
     return function regex(target: Object, propertyName: string){
@@ -31,10 +33,10 @@ function regex(pattern: string){
 }
 class Account{
  
-    @regex("^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$")
+    @regex("^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$") //! @regex проверка на email / декоратор с параметром
     email: string;
  
-    @regex("^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$")
+    @regex("^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$") //! @regex проверка на phone / декоратор с параметром
     phone: string;
  
     constructor(email: string, phone: string){

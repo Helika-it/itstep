@@ -1,6 +1,8 @@
+//! декоратор полей (в этом только 2 параметра)
+//! format напр. для добавления  перед именем "Mr./Ms." 
 function format(target: Object, propertyKey: string){
      
-    let _val = this[propertyKey];   // получаем значение свойства
+    let _val = this[propertyKey];   //! получаем значение свойства
  
 
     var f1 = function () {
@@ -12,10 +14,10 @@ function format(target: Object, propertyKey: string){
         _val = newVal;
     };
   
-    // удаляем свойство
+    //! удаляем свойство
     if (delete this[propertyKey]) {
   
-        // И создаем новое свойство с геттером и сеттером
+        //! И создаем новое свойство с геттером и сеттером
         Object.defineProperty(target, propertyKey, {
             get: f1,
             set: f2
@@ -25,7 +27,7 @@ function format(target: Object, propertyKey: string){
  
 class User {
  
-    @format
+    @format //! @format
     name: string;
     
     constructor(name: string){

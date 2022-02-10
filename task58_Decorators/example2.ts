@@ -1,4 +1,4 @@
-function readable (target: Object, propertyKey: string, descriptor: PropertyDescriptor) {
+function readable (target: Object, propertyKey: string, descriptor: PropertyDescriptor) { //! декоратор readable (аннотация) / (ссылка на конструктор, название метода с которым работает, что с этим методом можно сделать(см.документацию напр: PropertyDescriptor - можно ли изменять метод))
     descriptor.writable = false;
 };
  
@@ -9,7 +9,7 @@ class User {
         this.name = name;
     }
  
-    @readable
+    @readable //! декоратор метода
     print():void{
         console.log(this.name);
     }

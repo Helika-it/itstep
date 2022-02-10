@@ -1,6 +1,6 @@
-function readable(onlyRead : boolean){
+function readable(onlyRead : boolean){ //! как у декоратора можно исп-вать параметры / dekorator readable
  
-    return function (target: Object, propertyKey: string, descriptor: PropertyDescriptor) {
+    return function (target: Object, propertyKey: string, descriptor: PropertyDescriptor) { //! / (ссылка на конструктор, название метода с которым работает, что с этим методом можно сделать(см.документацию напр: PropertyDescriptor - можно ли изменять метод))
         descriptor.writable = !onlyRead;
     };
 }
@@ -12,7 +12,7 @@ class User {
         this.name = name;
     }
  
-    @readable(false)
+    @readable(false) //! запретит редактирование метода
     print():void{
         console.log(this.name);
     }
