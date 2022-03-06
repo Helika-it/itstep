@@ -1,20 +1,23 @@
 <div class="col-8 user-input">
-  <form>
-    <div class="col-12 mb-6">
-      <label for="formGroupExampleInput" class="form-label">Название</label>
-      <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Название"
-        (onClick)="enterSticker($event)">
-    </div>
-    <div class="mb-6">
-      <label for="formGroupExampleInput" class="form-label">Содержание</label>
-      <textarea type="text" class="form-control" id="formGroupExampleInput" placeholder="Содержание"
-        (onClick)="enterSticker($event)"></textarea>
-    </div>
-    <div class="mb-6">
-      <label for="formGroupExampleInput" class="form-label">Дата</label>
-      <input type="date" class="form-control" id="formGroupExampleInput" placeholder="Дата"
-        (onClick)="enterSticker($event)">
-    </div>
-    <button type="submit" class="btn btn-primary" (onClick)="enterSticker($event)">Сохранить</button>
-  </form>
+
+
+  <div class="col-12 mb-6">
+    <label for="formGroupExampleInput" class="form-label">Название</label>
+    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Название" [(ngModel)]="name" />
+  </div>
+
+  <div class="mb-6">
+    <label for="formGroupExampleInput" class="form-label">Содержание</label>
+    <textarea type="text" class="form-control" id="formGroupExampleInput" placeholder="Содержание"
+      [(ngModel)]="text"></textarea>
+  </div>
+
+  <div class="mb-6">
+    <label for="formGroupExampleInput" class="form-label">Дата</label>
+    <input type="date" class="form-control" id="formGroupExampleInput" placeholder="Дата" [(ngModel)]="date" />
+  </div>
+
+  <button type="submit" class="btn btn-primary" (onClick)="enterSticker($event)">Сохранить</button>
+
+
 </div>

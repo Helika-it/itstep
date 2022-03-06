@@ -1,4 +1,5 @@
 import { Component, Input, OnInit, Output,EventEmitter } from '@angular/core';
+
 import { Data } from '@angular/router';
 
 
@@ -21,12 +22,11 @@ export class FormComponent implements OnInit{
       console.log(this.date);
       console.log(this.name);
       console.log(this.text); 
-      
+
       if(this.name == "" || this.text == "" || this.date == "")
           return;
 
       let data: any = {date: this.date, name: this.name, text: this.text}; //!
-
 
       this.onClick.emit(data); //!
 
