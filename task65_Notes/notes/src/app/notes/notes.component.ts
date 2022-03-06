@@ -12,7 +12,7 @@ export class NotesComponent implements OnInit {
   @Input()
   stickers: Sticker[] = [];
 
-  deleteItem(i:number):void{
+  deleteSticker(i:number):void{
     this.stickers.splice(i,1);
   }
 

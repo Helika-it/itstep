@@ -17,6 +17,9 @@ export class AppComponent {
   ];
 
   addSticker(data: any):void{
-    this.stickers.push(new Sticker(data.date, data.name, data.text))
+    this.stickers.push(new Sticker(data.date, data.name, data.text));
+    console.log(data.date);
+    console.log(data.name);
+    console.log(data.text); 
 }
 }

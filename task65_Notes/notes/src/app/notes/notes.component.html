@@ -4,7 +4,7 @@
     <div class="col-12 stickers">
 
       <div *ngFor="let sticker of stickers; let i = index" class="col-3 sticker">
-        <div class="closes" (click)="deleteItem(i)">×</div>
+        <div class="closes" (click)="deleteSticker(i)">×</div>
         <p class="sticker-data">{{sticker.date}}</p>
         <h5 class="sticker-name">{{sticker.name}}</h5>
         <p class="sticker-text">{{sticker.text}}</p>
