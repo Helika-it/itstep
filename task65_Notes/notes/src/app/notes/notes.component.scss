@@ -21,3 +21,16 @@ h3 {
 .sticker-data {
   right: 0px;
 }
+.closes {
+  position: relative;
+  text-align: center;
+  width: 25px;
+  right: -205px;
+
+}
+
+.closes:hover {
+  background-color: #f7786e;
+  color: white;
+  cursor: pointer;
+}

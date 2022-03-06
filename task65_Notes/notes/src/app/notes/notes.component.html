@@ -1,30 +1,14 @@
 <div class="notes">
   <h3>Мои заметки</h3>
   <div class="row">
-    <div *ngFor="let sticker of stickers" class="col-12 stickers">
+    <div class="col-12 stickers">
 
-      <div class="col-3 sticker">
+      <div *ngFor="let sticker of stickers; let i = index" class="col-3 sticker">
+        <div class="closes" (click)="deleteItem(i)">×</div>
         <p class="sticker-data">{{sticker.date}}</p>
         <h5 class="sticker-name">{{sticker.name}}</h5>
         <p class="sticker-text">{{sticker.text}}</p>
-      </div>
 
-      <div class="col-3 sticker">
-        <p class="sticker-data">01.01.2022</p>
-        <h5 class="sticker-name">Новый год</h5>
-        <p class="sticker-text">Навестить родственников...</p>
-      </div>
-
-      <div class="col-3 sticker">
-        <p class="sticker-data">23.02.2022</p>
-        <h5 class="sticker-name">23-е февраля</h5>
-        <p class="sticker-text">Навестить родственников...</p>
-      </div>
-
-      <div class="col-3 sticker">
-        <p class="sticker-data">08.03.2020</p>
-        <h5 class="sticker-name">8-е марта</h5>
-        <p class="sticker-text">Навестить родственников...</p>
       </div>
 
     </div>

@@ -11,7 +11,11 @@ export class NotesComponent implements OnInit {
   constructor() { }
   @Input()
   stickers: Sticker[] = [];
-  
+
+  deleteItem(i:number):void{
+    this.stickers.splice(i,1);
+  }
+
   ngOnInit(): void {
   }
 
