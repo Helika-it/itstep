@@ -1,0 +1,23 @@
+h3 {
+  display: flex;
+  align-items:center;
+  justify-content: center;
+}
+.stickers {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.sticker {
+  width: 250px;
+  height: 250px;
+  margin: 10px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, .6);
+  background: linear-gradient(rgb(255, 255, 255), rgb(223, 223, 206));
+  border-radius: 5px;
+  padding: .6em;
+}
+.sticker-data {
+  right: 0px;
+}
