@@ -1,0 +1,16 @@
+<div class="container">
+
+  <div class="blog-header col-12">
+    <h1>Blog</h1>
+  </div>
+  <div class="row">
+    <app-blogform (onClick)="addCard($event)"></app-blogform>
+  </div>
+
+  <div class="blog-body col-12">
+    <div class="row">
+      <app-bloglist [cards]="cards"></app-bloglist>
+    </div>
+  </div>
+
+</div>

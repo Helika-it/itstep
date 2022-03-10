@@ -1,0 +1,40 @@
+<div class="col-8 user-input">
+  <div class="form">
+
+    <div class="col-12 mb-6">
+      <label for="formGroupExampleInput" class="form-label">Изображение</label>
+      <input type="url" class="form-control" id="formGroupExampleInput" placeholder="Ссылка на изображение"
+        [attr.url]="link" />
+    </div>
+
+    <div class="col-12 mb-6">
+      <label for="formGroupExampleInput" class="form-label">Заголовок поста</label>
+      <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Заголовок" [(ngModel)]="title" />
+    </div>
+
+    <div class="mb-6">
+      <label for="formGroupExampleInput" class="form-label">Дата поста</label>
+      <input type="date" class="form-control" id="formGroupExampleInput" placeholder="Дата" [(ngModel)]="date" />
+    </div>
+
+    <div class="col-12 mb-6">
+      <label for="formGroupExampleInput" class="form-label">Превью поста</label>
+      <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Превью" [(ngModel)]="preview" />
+    </div>
+
+    <div class="mb-6">
+      <label for="formGroupExampleInput" class="form-label">Текст поста</label>
+      <textarea type="text" class="form-control" id="formGroupExampleInput" placeholder="Текст"
+        [(ngModel)]="text"></textarea>
+    </div>
+
+    <div class="col-12 mb-6">
+      <label for="formGroupExampleInput" class="form-label">Автор поста</label>
+      <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Автор" [(ngModel)]="user" />
+    </div>
+
+    <button type="submit" class="btn btn-primary" (click)="enterPost($event)">Сохранить</button>
+
+  </div>
+
+</div>
