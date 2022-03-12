@@ -1,7 +1,5 @@
 import { Component, Input, OnInit, Output,EventEmitter } from '@angular/core';
 
-import { Data } from '@angular/router';
-
 
 @Component({
   selector: 'app-form',
@@ -10,7 +8,7 @@ import { Data } from '@angular/router';
 })
 export class FormComponent implements OnInit{
 
-  @Input()
+  
   date: string = "";
   name: string = "";
   text: string = "";
@@ -19,9 +17,7 @@ export class FormComponent implements OnInit{
   onClick = new EventEmitter<{date: string, name: string, text: string}>();
   
   enterSticker($event: any) {
-      console.log(this.date);
-      console.log(this.name);
-      console.log(this.text); 
+
 
       if(this.name == "" || this.text == "" || this.date == "")
           return;

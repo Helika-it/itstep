@@ -35,9 +35,8 @@ body{
   height: 300px;
 flex-direction: row;
 }
-.user1, .user2{
+.user1, .user2{}
 
-}
 .login_form > div{
     padding: 10px 20px;
 }

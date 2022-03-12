@@ -1,0 +1,27 @@
+<!--интерполяция-->
+<h1>{{title}}</h1>
+<h4>{{growth}}</h4>
+<p>{{age}}</p>
+
+<!--привязка к атрибуту-->
+<img [src]="link" />
+
+<!--интерполяция-->
+<img src="{{link}}" />
+
+<!--привязка св-в эл-тов html-->
+<p [textContent]="title"></p>
+
+<p [innerHTML]="title"></p>
+
+<input type="text" [value]="age">
+
+
+<!--привязка к событию-->
+<button (click)="subAge($event)">Уменьшить возраст на 1</button>
+
+<button class="{{red}}" (click)="addAge($event)" (mouseover)="addClass()" (mouseout)="removeClass()">Увеличить возраст
+  на 1</button>
+
+<!--двухстороннее связывание-->
+<input type='text' [(ngModel)]="age">

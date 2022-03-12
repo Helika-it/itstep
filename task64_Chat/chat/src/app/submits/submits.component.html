@@ -1,0 +1,7 @@
+<div *ngFor="let message of messages">
+  <div class="massage-body">
+    <strong class="me-auto">{{message.user}}</strong>
+    {{message.text}}
+    <small>{{message.date.toLocaleString()}}</small>
+  </div>
+</div>

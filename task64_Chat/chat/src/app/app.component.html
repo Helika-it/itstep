@@ -1,0 +1,35 @@
+<div class="container">
+  <h1>Чат</h1>
+  <div class="chats">
+
+    <div class="row">
+      <div class="col-4">
+        <h4>{{user1.name}}</h4>
+        <div class="user1">
+          <app-users [users]="user1"></app-users>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-4">
+      <div class="messages">
+        <app-submits [submits]="user1.message"></app-submits>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-4">
+      <div class="second">
+        <h4>{{user2.name}}</h4>
+        <div class="user2">
+          <app-users [users]="user2"></app-users>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>

@@ -1,0 +1,12 @@
+<div class="form-group">
+  <div>
+    <input type="number" #newNum1 class="form-control" [(ngModel)]="num1" placeholder="Число1" />
+  </div>
+  <div>
+    <input type="number" #newNum2 class="form-control" [(ngModel)]="num2" placeholder="Число2" />
+  </div>
+  <p>Сумма {{num1}} + {{num2}} = {{num1 + num2}}</p>
+  <p>Разность {{num1}} - {{num2}} = {{num1 - num2}}</p>
+  <p>Произведение {{num1}} * {{num2}} = {{num1 * num2}}</p>
+  <p>Частное {{num1}} / {{num2}} = {{getDiv()}}</p>
+</div>

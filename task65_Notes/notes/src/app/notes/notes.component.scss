@@ -5,7 +5,7 @@ h3 {
 }
 .stickers {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
   flex-direction: row;
 }
@@ -14,7 +14,7 @@ h3 {
   height: 250px;
   margin: 10px;
   box-shadow: 0 0 4px rgba(0, 0, 0, .6);
-  background: linear-gradient(rgb(255, 255, 255), rgb(223, 223, 206));
+  background: linear-gradient(rgb(251, 255, 247), rgb(202, 255, 155));
   border-radius: 5px;
   padding: .6em;
 }

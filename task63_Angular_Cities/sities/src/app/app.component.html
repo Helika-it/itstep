@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="content">
+    <h2>Игра ГОРОДА</h2>
+    <p>Вводите по очереди названия городов:</p>
+    <h4>Следующий ход на букву <b>"{{letter}}"</b></h4>
+    <div>
+      <input class="form-control" [(ngModel)]="city" placeholder="Введите город" (keyup)="addCity($event)" type="text">
+    </div>
+  </div>
+
+
+  <div class="users">
+    <div class="first">
+      <h4 [class.active]="current1">{{player1.name}}</h4>
+      <div class="cities">
+        <app-list [list]="player1.cities"></app-list>
+      </div>
+    </div>
+    <div class="second">
+      <h4 [class.active]="current2">{{player2.name}}</h4>
+      <div class="cities">
+        <app-list [list]="player2.cities"></app-list>
+      </div>
+    </div>
+  </div>
+
+</div>

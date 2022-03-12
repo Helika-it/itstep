@@ -10,7 +10,7 @@ var field = [
   [0, 0, 0]
 ]; // создаем массив массивов (изначально все = 0) (это для подсчета? х = 1, о = -1, пусто = 0)
 
-//клик по кнопке Играть
+//!клик по кнопке Играть
 document.forms.start_form.start_play.onclick = function () { // при клике на кнопку start_play из формы start_form
   document.forms.start_form.classList.add("d-none"); // форме start_form добавляем класс d-none (не отображается)
   document.querySelector('.page2').classList.remove("d-none"); // у формы login_form удаляем класс d-none (отображается)

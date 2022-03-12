@@ -1,0 +1,15 @@
+.form-inline{
+  margin-bottom: 20px;
+}
+/*.close - bootstrap перебивает свойства!*/
+  .closes, .edit {
+    position: relative;
+    left: 0px;
+    top: 0;
+  }
+
+  .closes:hover, .edit:hover {
+    background-color: #f44336;
+    color: white;
+    cursor: pointer;
+  }
