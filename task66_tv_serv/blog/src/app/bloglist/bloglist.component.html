@@ -1,31 +1,5 @@
-<div class="cards col-12">
-  <div class="row">
-
-    <div *ngFor="let card of cards; let i = index" class="card col-md-12">
-      <div class="row ">
-        <div class="card-img col-md-4">
-          <img src="{{card.link}}" alt="Картинка">
-        </div>
-
-        <div class="card-info col-md-8">
-          <div class="row">
-            <div class="col-md-10">
-              <h5 class="card-title">{{card.title}}
-              </h5>
-            </div>
-            <div class="col-md-2">
-              <div class="card-date ">{{card.date}}</div>
-            </div>
-          </div>
-
-          <p class="card-info_preview">{{card.preview}}</p>
-          <p class="card-info_user">{{card.user}} </p>
-
-        </div>
-
-      </div>
-    </div>
-
-
+<div class="row">
+  <div *ngFor="let article of articles" class="article col-12">
+    <app-article [article]="article"></app-article>
   </div>
 </div>
