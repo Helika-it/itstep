@@ -1,4 +1,6 @@
-import { Component, Input, OnInit, Output,EventEmitter } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
+import { Article } from '../article.model';
+import { ArticleService } from '../article.service';
 
 
 @Component({
@@ -15,18 +17,25 @@ export class BlogformComponent implements OnInit {
   text: string = "";
   user: string = "";
 
-  @Output() 
-  onClick = new EventEmitter<{link: string, title: string, date: string, preview: string, user: string}>();
+  constructor(private articleService: ArticleService) { }
+
+  ngOnInit(): void {
+
+  }
   
-  enterPost($event: any) {
-
-
+  enterPost():void {
       if(this.link == "" || this.title == "" || this.preview == "" || this.date == "" || this.text == "" || this.user == "")
           return;
 
-      let data: any = {link: this.link, title: this.title, date: this.date, preview: this.preview, text: this.text, user: this.user}; //!
-
-      this.onClick.emit(data); //!
+      let article = new Article(
+            this.link,
+            this.title,
+            this.date,
+            this.preview,
+            this.text,
+            this.user,
+            false
+          );
 
       this.link = "";
       this.title = "";
@@ -34,11 +43,9 @@ export class BlogformComponent implements OnInit {
       this.preview = "";
       this.text = "";
       this.user = "";
-  }
+  
 
-  constructor() { }
-
-  ngOnInit(): void {
+  this.articleService.addData(article);
 
   }
 

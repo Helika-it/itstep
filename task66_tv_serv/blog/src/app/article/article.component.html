@@ -6,10 +6,15 @@
       </div>
       <div class="col-md-8">
         <div class="card-body">
+
           <h5 class="card-title">{{article.title}}</h5>
-          <div class="card-date "><small class="text-muted">{{article.date | date:'dd.MM.yyyy'}}</small></div>
+          <p class="card-info_user"><span class="text-muted">{{article.user}}</span></p>
+
+
           <p class="card-info_preview">{{article.preview}}</p>
-          <p class="card-info_user"><small class="text-muted">{{article.user}}</small></p>
+
+          <div class="card-date "><span class="text-muted">{{article.date | date:'dd.MM.yyyy'}}</span></div>
+
           <div class="favorite">
             <i (click)="changeStatus()" class="bi" [class.bi-star]="!article.favorite"
               [class.bi-star-fill]="article.favorite"></i>
