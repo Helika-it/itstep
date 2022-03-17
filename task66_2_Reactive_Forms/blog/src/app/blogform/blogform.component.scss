@@ -1,0 +1,22 @@
+form{
+  background-color:rgb(228, 255, 245);
+  padding: 10px;
+}
+.form-label {
+  margin-top: 10px;
+}
+input, textarea {
+  cursor: pointer;
+}
+.btn-primary {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background: #f0efef;
+  color: black;
+  border-color: #e1e1e1;
+  transition-property: background;
+  transition-duration: 0.2s;
+}
+.btn-primary:hover {
+  background: #e1e1e1;
+}
