@@ -1,0 +1,70 @@
+<form [formGroup]="myForm" novalidate (ngSubmit)="enterPost()">
+  <div class="row">
+    <div class="col-6">
+      <div class="mb-3">
+        <label for="article_link" class="form-label">Изображение</label>
+        <input type="text" link="link" formControlName="link" class="form-control" id="article_link"
+          placeholder="Ссылка на изображение" [src]="link" />
+        <div class="alert alert-danger" *ngIf="myForm.controls['link'].invalid && myForm.controls['link'].touched">Не
+          указана ссылка
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6">
+      <div class="mb-3">
+        <label for="article_title" class="form-label">Заголовок поста</label>
+        <input type="text" class="form-control" id="article_title" placeholder="Заголовок" title="title"
+          formControlName="title" />
+        <div class="alert alert-danger" *ngIf="myForm.controls['title'].invalid && myForm.controls['title'].touched">Не
+          указан заголовок
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6">
+      <div class="mb-3">
+        <label for="article_date" class="form-label">Дата поста</label>
+        <input type="date" class="form-control" id="article_date" placeholder="Дата" date="date"
+          formControlName="date" />
+        <div class="alert alert-danger" *ngIf="myForm.controls['date'].invalid && myForm.controls['date'].touched">Не
+          указана дата
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6">
+      <div class="mb-3">
+        <label for="article_preview" class="form-label">Превью поста</label>
+        <input type="text" class="form-control" id="article_preview" placeholder="Превью" preview="preview"
+          formControlName="preview" />
+        <div class="alert alert-danger"
+          *ngIf="myForm.controls['preview'].invalid && myForm.controls['preview'].touched">Не указано превью
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6">
+      <div class="mb-3">
+        <label for="article_user" class="form-label">Автор поста</label>
+        <input type="text" class="form-control" id="article_text" placeholder="Автор" user="user"
+          formControlName="user" />
+        <div class="alert alert-danger" *ngIf="myForm.controls['user'].invalid && myForm.controls['user'].touched">Не
+          указан автор поста
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6">
+      <div class="mb-3">
+        <label for="article_text" class="form-label">Текст поста</label>
+        <textarea type="text" class="form-control" id="article_text" placeholder="Текст" text="text"
+          formControlName="text"></textarea>
+      </div>
+    </div>
+
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary btn-default" [disabled]="myForm.invalid">Сохранить</button>
+    </div>
+  </div>
+</form>

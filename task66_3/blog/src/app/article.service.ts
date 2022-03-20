@@ -1,5 +1,6 @@
 import { Article } from './article.model';
 
+
 export class ArticleService {
 
   constructor() { }
@@ -9,11 +10,9 @@ export class ArticleService {
     title: "Вышел тизер сиквела «Кота в сапогах» с датой релиза трейлера", 
     date: "2022-03-03", 
     preview: "Через восемь дней ждите трейлер «Кота в сапогах 2: Последнее желание», — сказано в описании к ролику. ...", text: "Через восемь дней ждите трейлер «Кота в сапогах 2: Последнее желание», — сказано в описании к ролику. ...", 
-    author: "Канобу",
+    user: "Автор поста",
     favorite: false
   }];
-
-  users: Array<string> = ["Иван", "Роман", "Степан"];
 
   addData(article:Article) {
     this.data.push(article);
@@ -36,9 +35,4 @@ export class ArticleService {
   update(article: Article):void{
       //
   }
-
-  getUsers(): Array<string>{
-    return this.users;
-  }
-
 }

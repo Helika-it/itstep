@@ -1,7 +1,8 @@
 import { Component, OnInit} from '@angular/core';
+import { FormGroup, FormControl, Validators} from '@angular/forms';
 import { Article } from '../article.model';
 import { ArticleService } from '../article.service';
-import { FormGroup, FormControl, Validators} from '@angular/forms';
+
 
 
 @Component({
@@ -10,55 +11,59 @@ import { FormGroup, FormControl, Validators} from '@angular/forms';
   styleUrls: ['./blogform.component.scss']
 })
 
-
-
 export class BlogformComponent implements OnInit {
 
   myForm : FormGroup;
+  users: Array<string>;
 
   constructor(private articleService: ArticleService) {
     this.myForm = new FormGroup({
           
-        "link": new FormControl("", Validators.required),
-        "title": new FormControl("", Validators.required),
-        "date": new FormControl("", Validators.required),
-        "preview": new FormControl("", Validators.required),
-        "user": new FormControl("", Validators.required),
-        "text": new FormControl("", Validators.required)
-    });
+        "link": new FormControl("", [Validators.required, this.checkField]),
+        "title": new FormControl("", [Validators.required, Validators.maxLength(100), Validators.minLength(10)]),
+        "date": new FormControl(new Date(), [Validators.required]),
+        "preview": new FormControl("", [Validators.required]),
+        "author": new FormControl("Выберите автора", [Validators.required]),
+        "text": new FormControl("", [Validators.required])
+    })
+    this.users = articleService.getUsers();
    }
-
-  link: string = "";
-  title: string = "";
-  date: string = "";
-  preview: string = "";
-  text: string = "";
-  user: string = "";
-
-
 
   ngOnInit(): void {
 
   }
   
-  enterPost():void {
+  addPost():void {
       
-      let article = new Article(
-        this.myForm.value.link,
-        this.myForm.value.title,
-        this.myForm.value.date,
-        this.myForm.value.preview,
-        this.myForm.value.text,
-        this.myForm.value.user,
-        false
-          );
+    if(this.myForm.invalid)
+      return;
 
+      let article:Article = {
+        link: this.myForm.value.link,
+        title: this.myForm.value.title,
+        date: this.myForm.value.date,
+        preview: this.myForm.value.preview,
+        text: this.myForm.value.text,
+        author: this.myForm.value.author,
+        favorite: false
+      };
+          this.articleService.addData(article);
           this.myForm.reset();
-  
-
-  this.articleService.addData(article);
+          
 
   }
+
+  // свой валидатор:
+
+      checkField(control: FormControl): {[s:string]: boolean}|null{
+
+        if(control.value == "no"){
+            return {"check": true};
+        }
+
+        return null;
+    }
+
 
 }
 
