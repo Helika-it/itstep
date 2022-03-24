@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { FormGroup, FormControl, Validators} from '@angular/forms';
-
 
 @Component({
   selector: 'app-root',
@@ -9,8 +7,4 @@ import { FormGroup, FormControl, Validators} from '@angular/forms';
 })
 export class AppComponent {
   title = 'blog';
-
-
-      
- 
 }

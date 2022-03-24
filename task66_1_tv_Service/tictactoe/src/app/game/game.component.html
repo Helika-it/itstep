@@ -1,1 +1,21 @@
-<p>game works!</p>
+<div class="page2">
+  <div class="stat1 col-4">
+    <p>Ход игры:</p>
+    <ul class="gameProgress">
+    </ul>
+  </div>
+
+  <form action="" name="login_form" class="login_form col-4">
+    <div class="col-12">
+      <label for="player1_name" class="form-label" N>Игрок 1</label>
+      <input type="text" class="form-control" id="player1_name" name="player1_name" required>
+    </div>
+    <div class="col-12">
+      <label for="player2_name" class="form-label">Игрок 2</label>
+      <input type="text" class="form-control" id="player2_name" name="player2_name" required>
+    </div>
+    <div class="col-12 btn-block">
+      <button class="btn btn-primary" (click)="openBoardPage()" name="start_game">Начать</button>
+    </div>
+  </form>
+</div>

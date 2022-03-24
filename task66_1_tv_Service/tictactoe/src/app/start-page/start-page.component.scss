@@ -1,0 +1,24 @@
+  .start_form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .btn-block, .login_form > .btn-block{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+  input{
+    width: 230px;
+  }
+  .btn-block button{
+    width: 100%;
+    min-width: 200px;
+  }
+  
+a {
+  text-decoration:none;
+  color: white;
+}

@@ -8,6 +8,11 @@ import { FooterComponent } from './footer/footer.component';
 import { BoardComponent } from './board/board.component';
 import { GameComponent } from './game/game.component';
 import { SquareComponent } from './square/square.component';
+import { StartPageComponent } from './start-page/start-page.component';
+import {AppRoutingModule} from './app-routing.module';
+
+
+
 
 @NgModule({
   declarations: [
@@ -17,10 +22,12 @@ import { SquareComponent } from './square/square.component';
     FooterComponent,
     BoardComponent,
     GameComponent,
-    SquareComponent
+    SquareComponent,
+    StartPageComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

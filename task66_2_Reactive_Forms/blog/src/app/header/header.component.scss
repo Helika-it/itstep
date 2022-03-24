@@ -8,3 +8,24 @@ h1 {
   align-items: center;
   background-color:rgb(228, 255, 245);
 }
+.navbar-nav{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  
+}
+a {
+  text-decoration:none;
+  color:black;
+  .active{
+    text-decoration:underline;
+    }
+}
+li {
+  margin: 5px;
+  padding: 5px;
+}
+li.active {
+    background-color:rgb(182, 255, 228);
+}

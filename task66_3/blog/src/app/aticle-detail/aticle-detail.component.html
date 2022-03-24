@@ -1,0 +1,12 @@
+<div class="container">
+  <p>{{article.id}}</p>
+  <h2>{{article.title}}</h2>
+  <p><small class="text-muted">{{article.date | date:'dd.MM.yyyy'}}</small></p>
+  <p><small class="text-muted">{{article.author}}</small></p>
+  <img [src]="article.link" [alt]="article.title">
+  <p>{{article.text}}</p>
+  <div>
+    <a [routerLink]="['/list']">Назад</a>
+  </div>
+
+</div>
