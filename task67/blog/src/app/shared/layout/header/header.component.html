@@ -1,0 +1,26 @@
+<header class="blog-header col-12">
+  <div class="rov">
+
+    <div class=" blog-header blog-header_title col-12">
+      <h1>Blog</h1>
+    </div>
+
+    <div class=" blog-header blog-header_user col-12">
+      <p>{{user.name}}</p>
+    </div>
+
+    <div class="blog-header_nav col-12">
+      <nav class="navbar navbar-default">
+        <div class="container-fluid container">
+          <ul class="nav navbar-nav">
+            <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a routerLink="/">Главная</a></li>
+            <li routerLinkActive="active"><a [routerLink]="'/post'">Блог</a></li>
+            <li routerLinkActive="active"><a [routerLink]="'/post/form'">Форма</a></li>
+            <li routerLinkActive="active"><a [routerLink]="'/user'">Пользователи</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+  </div>
+</header>

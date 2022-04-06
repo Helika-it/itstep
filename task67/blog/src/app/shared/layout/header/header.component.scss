@@ -1,0 +1,59 @@
+@import "src/assets/styles/index";
+
+
+h1 {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.blog-header {
+  
+  justify-content: center;
+  background-color: $backgroundApp;
+  .blog-header_title{
+    display: flex;
+    padding: 10px;
+  }
+  .blog-header_user{
+    display: flex;
+    justify-content: right;
+    padding: 10px;
+    color: $cyanDark;
+    font-weight: bold;
+  }
+}
+.navbar {
+  padding-bottom: 0px;
+  padding-top: 0;
+  background-color: $backgroundNav;
+}
+.container-fluid {
+  display: flex;
+  justify-content: center;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.navbar-nav{
+  display: flex;
+  flex-direction: row;
+}
+a {
+  font-size: 24px;
+  text-decoration:none;
+  color:black;
+  text-align: center;
+  .active{
+    text-decoration:underline;
+    }
+}
+li {
+  padding: 15px;
+  width: 190px;
+  
+  text-align: center;
+}
+li.active {
+  //border-top: solid 1px #aba9a9;
+  //border-left: solid 1px #aba9a9;
+  //border-right: solid 1px #aba9a9;
+  background-color:$backgroundNavActive;
+}

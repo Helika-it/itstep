@@ -1,0 +1,23 @@
+<div class="container">
+  <table class="table-reflow">
+    <tr>
+      <td>#</td>
+      <td><b>{{user.id}}</b></td>
+    </tr>
+    <tr>
+      <td>Имя:</td>
+      <td><b>{{user.name}}</b></td>
+
+    </tr>
+    <tr>
+      <td>Логин:</td>
+      <td><b>{{user.login}}</b></td>
+    </tr>
+    <tr>
+      <td>Пароль:</td>
+      <td><b>{{user.password}}</b></td>
+    </tr>
+  </table>
+
+  <a [routerLink]="['/user']" class="user_btn">Назад</a>
+</div>

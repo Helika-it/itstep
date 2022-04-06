@@ -1,0 +1,42 @@
+.post {
+  margin-top: 10px;
+}
+.card {
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 10%);
+}
+.card-img {
+  margin: 10px;
+  width: 160px;
+  height: 160px;
+  img {
+    width: 160px;
+    height: 160px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    object-fit: cover;
+    background: #eee no-repeat center center;
+  }
+}
+.favorite{
+  position: absolute;
+  top: 15px; 
+  right: 15px;
+  cursor: pointer;
+}
+
+a {
+  text-decoration:none;
+  color:black;
+  text-align: center;
+  display: block;
+  padding: 8px;
+  width: 170px;
+  background-color:#e7f4f4;
+  text-align: center;
+  
+}
+a:hover{
+  display: block;
+  background-color:#d1dede;
+  }

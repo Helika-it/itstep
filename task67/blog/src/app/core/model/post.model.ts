@@ -1,11 +1,9 @@
-export interface Article {
+export interface Post {
   id: number;
   link: string;
   title: string;
   date: string;
   preview: string;
   text: string;
-  author: string;
-  favorite: boolean;
-  
+  userId: number;
 }
