@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { UserService } from 'src/app/core';
 
@@ -20,6 +20,8 @@ export class PostDetailComponent implements OnInit {
     })
   }
 
+  @Input() //! не помню как используется @Input()
+  
   post: any;
   comments: any;
 

@@ -64,4 +64,9 @@ export class UserService {
     return this.data[index];
   }
 
+  signUp(){
+    return this.getById(this.currentUserId);
+  };
+  signIn(){};
+
 }

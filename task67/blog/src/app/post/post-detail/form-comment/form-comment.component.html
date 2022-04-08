@@ -1,1 +1,27 @@
-<p>form-comment works!</p>
+<div class="container">
+  <div class="comment-form">
+    <h4>Оставить комментарий</h4>
+    <form [formGroup]="myForm" novalidate (ngSubmit)="addComment()">
+      <div class="row">
+
+
+
+        <div class="col-4">
+          <div class="mb-3">
+
+            <textarea #newComment [class.error]="myForm.controls['text'].invalid && myForm.controls['text'].touched"
+              type="text" class="form-control" id="comment_text" placeholder="Текст комментария" name="text"
+              formControlName="text"></textarea>
+          </div>
+          <div *ngIf="myForm.controls['text'].invalid && myForm.controls['text'].touched" class="alert alert-danger">
+            <span *ngIf="myForm.controls['text'].errors?.['required']">Поле должно быть непустым</span>
+          </div>
+        </div>
+
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary btn-default" [disabled]="myForm.invalid">Сохранить</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

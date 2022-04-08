@@ -11,18 +11,11 @@
 
     <hr>
 
-    <h5>Comments:</h5>
 
-    <app-form-comment></app-form-comment>
+    <app-form-comment [postId]="post.id"></app-form-comment>
 
     <app-comment-list></app-comment-list>
 
-    <div *ngFor="let comment of comments" class="comments">
-      <hr>
-      <h6>{{getUserName(comment.userId)}}</h6>
-      <p><span class="text-muted">{{comment.date | date:'dd.MM.yyyy'}}</span></p>
-      <p>{{comment.text}}</p>
-    </div>
 
   </div>
 

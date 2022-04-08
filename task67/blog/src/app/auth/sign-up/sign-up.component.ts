@@ -4,13 +4,11 @@ import { Router } from '@angular/router';
 import { User, UserService } from 'src/app/core';
 
 @Component({
-  selector: 'app-formuser',
-  templateUrl: './formuser.component.html',
-  styleUrls: ['./formuser.component.scss']
+  selector: 'app-sign-up',
+  templateUrl: './sign-up.component.html',
+  styleUrls: ['./sign-up.component.scss']
 })
-
-
-export class FormUserComponent implements OnInit {
+export class SignUpComponent implements OnInit {
 
   myForm: FormGroup; //определяем тип формы
   user: User = {} as User;
@@ -45,8 +43,7 @@ ngOnInit(): void {
 
     this.userService.create(this.user);
     this.myForm.reset();
-    this.router.navigate(["/user"]);
+    this.router.navigate(["/"]);
 
   }
 }
-

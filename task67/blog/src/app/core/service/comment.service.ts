@@ -43,4 +43,9 @@ export class CommentService {
     return this.newCommentId;
 }
 
+  // получать (массив постов)
+  get():Array<Comment>{ 
+    return this.data;
+  }
+
 }
