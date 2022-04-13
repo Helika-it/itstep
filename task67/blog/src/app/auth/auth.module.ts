@@ -5,6 +5,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { AuthRoutingModule } from './auth-routing.module';
+import { HomeModule } from '../home/home.module';
 
 
 
@@ -18,7 +19,8 @@ import { AuthRoutingModule } from './auth-routing.module';
     RouterModule,
     FormsModule,
     ReactiveFormsModule,
-    AuthRoutingModule
+    AuthRoutingModule, 
+    HomeModule
   ]
 })
 export class AuthModule { }

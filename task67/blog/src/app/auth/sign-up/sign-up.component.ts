@@ -29,7 +29,7 @@ ngOnInit(): void {
   }
 
 
-  addUser(){
+  signUp(){
     if(this.myForm.invalid)
             return;
             
@@ -38,10 +38,11 @@ ngOnInit(): void {
       id: newUserId,
       name: this.myForm.controls["name"].value,
       login: this.myForm.controls["login"].value,
-      password: this.myForm.controls["password"].value
+      password: this.myForm.controls["password"].value,
+      role: "user"
     }
 
-    this.userService.create(this.user);
+    this.userService.signUp(this.user);
     this.myForm.reset();
     this.router.navigate(["/"]);
 

@@ -8,10 +8,12 @@ import { User, UserService } from 'src/app/core';
   templateUrl: './sign-in.component.html',
   styleUrls: ['./sign-in.component.scss']
 })
+
 export class SignInComponent implements OnInit {
 
   myForm: FormGroup; //определение типа формы
-  user: User = {} as User
+  //user: User = {} as User
+  isAuth: boolean = false;
 
   constructor(private userService: UserService, private router: Router) { 
 
@@ -20,22 +22,25 @@ export class SignInComponent implements OnInit {
     "login": new FormControl("", [Validators.required]),
     "password": new FormControl("", [Validators.required]),
 
-  })
+    });
   }
 
   ngOnInit(): void {
   }
 
-  chekUser(){
+  checkUser(){
     if(this.myForm.invalid){
       return;
     }
-    
-    let chekLogin = this.myForm.controls["login"].value;
-    let chekPassword = this.myForm.controls["password"].value;
-
-    
-    
+    if(this.userService.signIn(this.myForm.controls["login"].value, this.myForm.controls["passvord"].value)){
+      
+      this.myForm.reset(); // очистка формы
+      this.isAuth = true;
+      this.router.navigate(["/"]);
+      return;
+    }
+    this.isAuth = false;
+    return;
   }
 
 }

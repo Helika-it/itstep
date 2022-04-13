@@ -1,5 +1,7 @@
+@import "src/assets/styles/index";
+
 .user-form{
-  background-color:rgb(242, 252, 249);
+  background-color:rgb(255, 255, 255);
   padding: 10px;
   box-shadow: 0 1px 3px 0 rgb(0 0 0 / 10%);
 }
@@ -9,18 +11,7 @@
 input, textarea {
   cursor: pointer;
 }
-.btn-primary {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  background: #f0efef;
-  color: black;
-  border-color: #e1e1e1;
-  transition-property: background;
-  transition-duration: 0.2s;
-}
-.btn-primary:hover {
-  background: #e1e1e1;
-}
+
 .error{
   border: 1px solid #842029;
 }
@@ -42,21 +33,3 @@ input, textarea {
   color: white;
   cursor: pointer;
 }
-
-
-  .user_btn {
-    text-decoration:none;
-    color:black;
-    text-align: center;
-    display: block;
-    padding: 8px;
-    width: 170px;
-    background-color:#e7f4f4;
-    text-align: center;
-    
-  }
-  .user_btn:hover{
-    display: block;
-    background-color:#d1dede;
-    }
-

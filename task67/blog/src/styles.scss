@@ -11,10 +11,11 @@ body {
   padding: 0;
   display: flex;
   flex-direction: column;
+  background: url(../src/assets/img/background.png) center center repeat;
 }
 
-.wrapper{
-  min-height: 100%;
+main{
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }

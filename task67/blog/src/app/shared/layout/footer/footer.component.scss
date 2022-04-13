@@ -1,6 +1,8 @@
+@import "src/assets/styles/index";
+
 .blog-footer {
   display: flex;
   
   align-items: center;
-  background-color:rgb(242, 252, 249);
+  background-color:$backgroundApp;
 }

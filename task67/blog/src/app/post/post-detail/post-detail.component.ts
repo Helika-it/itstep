@@ -19,8 +19,6 @@ export class PostDetailComponent implements OnInit {
         this.comments = data['comments'];
     })
   }
-
-  @Input() //! не помню как используется @Input()
   
   post: any;
   comments: any;

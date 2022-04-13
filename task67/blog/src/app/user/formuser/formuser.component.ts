@@ -22,6 +22,7 @@ export class FormUserComponent implements OnInit {
       "name": new FormControl("", [Validators.required]),
       "login": new FormControl("", [Validators.required]),
       "password": new FormControl("", [Validators.required]),
+      "role": new FormControl("user"),
   })
   
    }
@@ -40,7 +41,8 @@ ngOnInit(): void {
       id: newUserId,
       name: this.myForm.controls["name"].value,
       login: this.myForm.controls["login"].value,
-      password: this.myForm.controls["password"].value
+      password: this.myForm.controls["password"].value,
+      role: this.myForm.controls["role"].value
     }
 
     this.userService.create(this.user);

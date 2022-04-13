@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { AdminGuard } from './core/guard/admin.guard';
+import { AuthGuard } from './core/guard/auth.guard';
 import { NotFoundComponent } from './shared';
 
 const routes: Routes = [
@@ -9,15 +11,19 @@ const routes: Routes = [
   },
   {
     path: "post",
-    loadChildren: () => import ('./post/post.module').then(module => module.PostModule)
+    loadChildren: () => import ('./post/post.module').then(module => module.PostModule), canActivate: [AuthGuard]
   },
   {
     path: "profile",
-    loadChildren: () => import ('./profile/profile.module').then(module => module.ProfileModule)
+    loadChildren: () => import ('./profile/profile.module').then(module => module.ProfileModule), canActivate: [AuthGuard]
   },
   {
     path: "user",
-    loadChildren: () => import ('./user/user.module').then(module => module.UserModule)
+    loadChildren: () => import ('./user/user.module').then(module => module.UserModule), canActivate: [AdminGuard]
+  },
+  {
+    path: "auth",
+    loadChildren: () => import ('./auth/auth.module').then(module => module.AuthModule)
   },
   {
     path: "**", component: NotFoundComponent

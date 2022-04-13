@@ -9,20 +9,22 @@ export class UserService {
     {
       id: 1,
       name: 'Макс',
-      login: "admin",
+      login: "Maks111",
       password: "12345",
+      role: 'admin',
     },
     {
       id: 2,
       name: 'Ангелина',
-      login: "user",
+      login: "Angel222",
       password: "23456",
+      role: "user",
     },
   ]
 
   newUserId = 3; // ID нового пользователя
 
-  currentUserId = 2; //ID активного пользователя
+  currentUserId = 0; //ID активного пользователя
 
   getCurrentUserId(){
     return this.currentUserId; // метод выводит id активного пользователя
@@ -64,9 +66,24 @@ export class UserService {
     return this.data[index];
   }
 
-  signUp(){
-    return this.getById(this.currentUserId);
+  //!Регистрация
+signUp(user: User){
+     this.create(user);
+
+ };
+
+  //!Авторизация
+  signIn(login:string, password:string):boolean{
+    let index = this.data.findIndex(function(item:User){
+      return item.login == login && item.password == password;
+    });
+
+  if(index != -1){
+    this.currentUserId = this.data[index].id;
+    return true;
+  }
+
+  return false;
   };
-  signIn(){};
 
 }

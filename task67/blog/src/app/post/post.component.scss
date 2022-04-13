@@ -1,3 +1,5 @@
+@import "src/assets/styles/index";
+
 .post {
   margin-top: 10px;
 }
@@ -25,18 +27,3 @@
   cursor: pointer;
 }
 
-a {
-  text-decoration:none;
-  color:black;
-  text-align: center;
-  display: block;
-  padding: 8px;
-  width: 170px;
-  background-color:#e7f4f4;
-  text-align: center;
-  
-}
-a:hover{
-  display: block;
-  background-color:#d1dede;
-  }

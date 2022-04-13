@@ -17,7 +17,11 @@
       <td>Пароль:</td>
       <td><b>{{user.password}}</b></td>
     </tr>
+    <tr>
+      <td>Роль:</td>
+      <td><b>{{user.role}}</b></td>
+    </tr>
   </table>
 
-  <a [routerLink]="['/user']" class="user_btn">Назад</a>
+  <a [routerLink]="['/user']" class="user_btn btn-default">Назад</a>
 </div>
