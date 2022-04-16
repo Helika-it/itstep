@@ -17,7 +17,6 @@ constructor(private userService: UserService, private router: Router){}
       if(this.userService.getCurrentUserId() > 0){
     return true
       } else {
-        alert("Отказано в доступе. Необходима авторизация");
         this.router.navigate(["/auth/signIn"])
         return false;
       }

@@ -1,16 +1,15 @@
 <div class="container">
   <div class="user-form">
     <h4>Редактирование профиля</h4>
-    <form [formGroup]="myForm" novalidate (ngSubmit)="editUser()">
+    <form [formGroup]="myForm" novalidate (ngSubmit)="editUser(id, name, login, password, role)">
       <div class="row">
-
 
         <div class="col-4">
           <div class="mb-3">
             <label for="user_name" class="form-label">Имя пользователя</label>
             <input #newName [class.error]="myForm.controls['name'].invalid && myForm.controls['name'].touched"
               type="text" class="form-control" id="user_name" placeholder="Имя" name="name" formControlName="name"
-              value="{{user.name}}" />
+              value={{name}} />
           </div>
           <div *ngIf="myForm.controls['name'].invalid && myForm.controls['name'].touched" class="alert alert-danger">
             <span *ngIf="myForm.controls['name'].errors?.['required']">Поле должно быть непустым</span>
@@ -22,7 +21,7 @@
             <label for="user_login" class="form-label">Логин</label>
             <input #newLogin [class.error]="myForm.controls['login'].invalid && myForm.controls['login'].touched"
               type="text" class="form-control" id="user_login" placeholder="Логин" name="login" formControlName="login"
-              value="{{user.login}}" />
+              value={{login}} />
           </div>
           <div *ngIf="myForm.controls['login'].invalid && myForm.controls['login'].touched" class="alert alert-danger">
             <span *ngIf="myForm.controls['login'].errors?.['required']">Поле должно быть непустым</span>
@@ -35,14 +34,14 @@
             <input #newPassword
               [class.error]="myForm.controls['password'].invalid && myForm.controls['password'].touched" type="text"
               class="form-control" id="user_password" placeholder="Пароль" name="password" formControlName="password"
-              value="{{user.password}}" />
+              value={{password}} />
           </div>
           <div *ngIf="myForm.controls['password'].invalid && myForm.controls['password'].touched"
             class="alert alert-danger">
             <span *ngIf="myForm.controls['password'].errors?.['required']">Поле должно быть непустым</span>
           </div>
         </div>
-        <p>Роль: user</p>
+        <p>Роль: {{role}}</p>
         <div class="col-12">
           <button type="submit" class="btn btn-default" [disabled]="myForm.invalid">Сохранить изменения</button>
         </div>

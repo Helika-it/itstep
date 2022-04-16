@@ -18,3 +18,18 @@
   box-shadow: 0 5px 10px 0px rgb(0 0 0 / 10%);
   border-radius: 10px;
 }
+
+.password {
+	position: relative;
+}
+.password-control {
+	position: absolute;
+	top: 42px;
+	right: 6px;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+}
+i {
+  display: block;
+}

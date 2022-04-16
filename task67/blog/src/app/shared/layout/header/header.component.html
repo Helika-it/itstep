@@ -5,12 +5,12 @@
       <h1>Blog</h1>
     </div>
 
-    <div class=" blog-header blog-header_user col-12" (ngOnInit)="authUser()">
-      <div *ngIf="isAuth">
+    <div class=" blog-header blog-header_user col-12">
+      <div *ngIf="!isAuth" class="blog-header_user-auth">
         <a class="btn-auth" [routerLink]="'/auth/signIn'">Вход</a>
         <a class="btn-auth" [routerLink]="'/auth/signUp'">Регистрация</a>
       </div>
-      <div *ngIf="!isAuth">
+      <div *ngIf="isAuth">
         <p>{{user.name}}</p>
       </div>
     </div>

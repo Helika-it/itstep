@@ -23,13 +23,11 @@ export class CommentListComponent implements OnInit {
   post: any;
   comments: any;
 
-
   constructor(private postService: PostService, private route: ActivatedRoute, private userService: UserService, private router: Router ) { 
   }
 
-      
-      getUserName(userId: number): string{
-        return this.userService.getById(userId)?.name;
-      }  
+    getUserName(userId: number): string{
+      return this.userService.getById(userId)?.name;
+    } 
 
   }

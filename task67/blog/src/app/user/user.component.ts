@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { User, UserService } from '../core';
 
+
 @Component({
   selector: 'app-user',
   templateUrl: './user.component.html',
@@ -20,6 +21,5 @@ export class UserComponent implements OnInit {
   delete(id: number){
     this.userService.remove(id);
   }
-
 
 }

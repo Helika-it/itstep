@@ -17,8 +17,7 @@ export class AdminGuard implements CanActivate {
       if(this.userService.getCurrentUser().role == "admin"){
         return true
       } else {
-        alert("Отказано в доступе");
-        this.router.navigate(["/**"])
+        this.router.navigate(["/access"])
         return false;
       }
     

@@ -9,28 +9,40 @@ import { User, UserService } from 'src/app/core';
 })
 
 export class HeaderComponent implements OnInit {
-  
-  isAuth: boolean = false;
+
 
   constructor(private userService: UserService) { 
-    this.user = userService.getCurrentUser()
-    
+    //this.user = userService.getCurrentUser() //не нужно при подписке
   }
 
-    authUser(){
-      if(this.userService.getCurrentUserId() > 0){
-      this.isAuth = false;
-      return;
-    } else {
-      this.isAuth = true;
-      return;
-    }
-    }
+    // authUser(){
+    //   if(this.userService.getCurrentUserId() > 0){
+    //   this.isAuth = false;
+    //   return;
+    // } else {
+    //   this.isAuth = true;
+    //   return;
+    // }
+    // }
     
 
-  user: User;
+  user: User = {} as User;
+  isAuth: boolean = false;
 
   ngOnInit(): void {
+
+    this.userService.currentUser.subscribe(
+      (userData) => {
+        this.user = userData;
+      }
+    )
+
+    this.userService.isAuth.subscribe(
+      (isAuth) => {
+        this.isAuth = isAuth;
+      }
+    
+    )
   }
 
 }

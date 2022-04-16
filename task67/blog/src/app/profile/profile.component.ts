@@ -13,13 +13,21 @@ export class ProfileComponent implements OnInit {
   myForm: FormGroup; //определяем тип формы
   user: User = {} as User;
 
+  id = this.userService.getCurrentUserId();
+  name = this.userService.getCurrentUser().name;
+  login = this.userService.getCurrentUser().login;
+  password = this.userService.getCurrentUser().password;
+  role = this.userService.getCurrentUser().role;
+
   constructor(private userService: UserService, private router: Router) { 
     this.myForm = new FormGroup({
+
+      
             
-      "name": new FormControl("", [Validators.required]),
-      "login": new FormControl("", [Validators.required]),
-      "password": new FormControl("", [Validators.required]),
-      "role": new FormControl("user"),
+      "name": new FormControl(this.name, [Validators.required]),
+      "login": new FormControl(this.login, [Validators.required]),
+      "password": new FormControl(this.password, [Validators.required]),
+      "role": new FormControl(this.role),
   })
   
    }
@@ -28,7 +36,8 @@ export class ProfileComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  editUser(){
+
+  editUser(id:number, name:string, login:string, password:string, role:string){
     if(this.myForm.invalid)
             return;
             
@@ -39,11 +48,12 @@ export class ProfileComponent implements OnInit {
       password: this.myForm.controls["password"].value,
       role: this.myForm.controls["role"].value
     }
-
-    this.userService.create(this.user);
+    
+    this.userService.update(this.user);
     this.myForm.reset();
     this.router.navigate(["/user"]);
 
   }
+
 
 }

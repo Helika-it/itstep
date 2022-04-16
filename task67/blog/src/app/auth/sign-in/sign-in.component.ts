@@ -13,7 +13,9 @@ export class SignInComponent implements OnInit {
 
   myForm: FormGroup; //определение типа формы
   //user: User = {} as User
-  isAuth: boolean = false;
+  isAuth: boolean = true;
+
+
 
   constructor(private userService: UserService, private router: Router) { 
 
@@ -32,7 +34,7 @@ export class SignInComponent implements OnInit {
     if(this.myForm.invalid){
       return;
     }
-    if(this.userService.signIn(this.myForm.controls["login"].value, this.myForm.controls["passvord"].value)){
+    if(this.userService.signIn(this.myForm.controls["login"].value, this.myForm.controls["password"].value)){
       
       this.myForm.reset(); // очистка формы
       this.isAuth = true;
@@ -41,6 +43,28 @@ export class SignInComponent implements OnInit {
     }
     this.isAuth = false;
     return;
+  }
+
+  eyeToggle: boolean = true;
+  typePass:string = 'password';
+  classEye:string = 'bi-eye';
+
+  showPassword():void{
+    console.log("click");
+    
+    if (this.eyeToggle == true){
+      this.typePass = 'text';
+      this.classEye = 'bi-eye-slash';
+      this.eyeToggle = false;
+      console.log("false");
+      return
+    } else {
+      this.typePass = 'password';
+      this.classEye = 'bi-eye';
+      this.eyeToggle = true;
+      console.log("true");
+      return
+    }
   }
 
 }

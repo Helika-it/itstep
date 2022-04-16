@@ -34,7 +34,7 @@ ngOnInit(): void {
 
   addUser(){
     if(this.myForm.invalid)
-            return;
+      return;
             
     let newUserId = this.userService.getNewUserId();
     this.user = {
@@ -46,6 +46,24 @@ ngOnInit(): void {
     }
 
     this.userService.create(this.user);
+    this.myForm.reset();
+    this.router.navigate(["/user"]);
+
+  }
+
+  editUser(id:number, name:string, login:string, password:string, role:string){
+    if(this.myForm.invalid)
+      return;
+            
+    this.user = {
+      id: this.userService.getCurrentUserId(),
+      name: this.myForm.controls["name"].value,
+      login: this.myForm.controls["login"].value,
+      password: this.myForm.controls["password"].value,
+      role: this.myForm.controls["role"].value
+    }
+    
+    this.userService.update(this.user);
     this.myForm.reset();
     this.router.navigate(["/user"]);
 

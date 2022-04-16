@@ -3,6 +3,8 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { AdminGuard } from './core/guard/admin.guard';
 import { AuthGuard } from './core/guard/auth.guard';
 import { NotFoundComponent } from './shared';
+import { AccessDeniedComponent } from './shared/access-denied/access-denied.component';
+
 
 const routes: Routes = [
   {
@@ -11,7 +13,7 @@ const routes: Routes = [
   },
   {
     path: "post",
-    loadChildren: () => import ('./post/post.module').then(module => module.PostModule), canActivate: [AuthGuard]
+    loadChildren: () => import ('./post/post.module').then(module => module.PostModule)
   },
   {
     path: "profile",
@@ -19,11 +21,15 @@ const routes: Routes = [
   },
   {
     path: "user",
-    loadChildren: () => import ('./user/user.module').then(module => module.UserModule), canActivate: [AdminGuard]
+    loadChildren: () => import ('./user/user.module').then(module => module.UserModule), canActivate: [AuthGuard, AdminGuard]
   },
   {
     path: "auth",
     loadChildren: () => import ('./auth/auth.module').then(module => module.AuthModule)
+  },
+  {
+    path: "access",
+    component: AccessDeniedComponent
   },
   {
     path: "**", component: NotFoundComponent
