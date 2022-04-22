@@ -47,4 +47,27 @@ ngOnInit(): void {
     this.router.navigate(["/"]);
 
   }
+
+  //просмотр пароля
+  eyeToggle: boolean = true;
+  typePass:string = 'password';
+  classEye:string = 'bi-eye';
+
+  showPassword():void{
+    console.log("click");
+    
+    if (this.eyeToggle == true){
+      this.typePass = 'text';
+      this.classEye = 'bi-eye-slash';
+      this.eyeToggle = false;
+      console.log("false");
+      return
+    } else {
+      this.typePass = 'password';
+      this.classEye = 'bi-eye';
+      this.eyeToggle = true;
+      console.log("true");
+      return
+    }
+  }
 }

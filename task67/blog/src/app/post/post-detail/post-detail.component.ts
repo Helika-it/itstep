@@ -11,30 +11,37 @@ import { UserService } from 'src/app/core';
 
 export class PostDetailComponent implements OnInit {
 
+  isAuth: boolean = false;
+
   ngOnInit(): void {
+
     this.route.data.subscribe(data =>{
       if(data["post"])
         this.post = data['post'];
       if(data['comments'])
         this.comments = data['comments'];
+
     })
+
+// скрывает форму ввода комментариев если не авторизован:
+    this.userService.isAuth.subscribe(
+      (isAuth) => {
+        this.isAuth = isAuth;
+      }
+    )
+    
   }
   
   post: any;
   comments: any;
 
-  //private PostSubcription: Subscription; //! подписка (для динамической загрузки при изменении id)
+  //private PostSubcription: Subscription; // подписка (для динамической загрузки при изменении id)
 
   constructor(private route: ActivatedRoute, private userService: UserService, private router: Router ) { 
   }
-
       
       getUserName(userId: number): string{
         return this.userService.getById(userId)?.name;
       }  
 
   }
-
-
-
-

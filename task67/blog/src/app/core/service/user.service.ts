@@ -1,10 +1,15 @@
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { User } from '../model';
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
 
+@Injectable({
+  providedIn: 'root'
+})
 
 export class UserService {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   data: Array<User> = [
     {
@@ -42,51 +47,71 @@ export class UserService {
   getCurrentUser(){
     return this.getById(this.currentUserId); // метод выводит объект с id активного пользователя
 }
-
+//! переписать и удалить 
   getNewUserId(){
     return this.newUserId;
 }
-  get(): Array<User>{
-    return this.data;
+
+  // get(): Array<User>{
+  //   return this.data;
+  // }
+  get():Observable<any>{
+    return this.http​.get("/api/users")
   }
 
 //добавление
-  create(user: User){
-    this.data.push(user);
-    this.newUserId++;
-  }
+  // create(user: User){
+  //   this.data.push(user);
+  //   this.newUserId++;
+  // }
+
+create(user: any): Observable<any>{
+  console.log(user);
+  return this.http.post("/api/users",
+  JSON.stringify(user),
+  {'headers':{'content-type': 'application/json'}  });
+}
 
 //удаление
-  remove(id: number):boolean{
+  // remove(id: number):boolean{
 
-    let index = this.data.findIndex(function(item:User){
-      return item.id == id;
-    });
+  //   let index = this.data.findIndex(function(item:User){
+  //     return item.id == id;
+  //   });
   
-    if(index !== -1)
-        return Boolean(this.data.splice(index, 1));
+  //   if(index !== -1)
+  //       return Boolean(this.data.splice(index, 1));
   
-    return false;
-  }
+  //   return false;
+  // }
+
+  remove(id: number): Observable<any>{
+    return this.http.delete("/api/users/"+id);
+}
 
 //обновление
-  update(user: User):void{
-    let index = this.data.findIndex(function(item:User){
-      return item.id == user.id;
-  });
-    this.data[index].name=user.name;
-    this.data[index].login=user.login;
-    this.data[index].password=user.password;
+  // edit(user: User):void{
+  //   let index = this.data.findIndex(function(item:User){
+  //     return item.id == user.id;
+  // });
+  //   this.data[index].name=user.name;
+  //   this.data[index].login=user.login;
+  //   this.data[index].password=user.password;
+  // }
+
+  edit(user: User):Observable<any>{
+    return this.http.put(
+      "/api/users/" + user.id,
+      JSON.stringify(user),
+      {'headers':{'content-type': 'application/json'}}
+    );
   }
 
 
-  getById(id: number): User{
-    let index = this.data.findIndex(function(item:User){
-        return item.id == id;
-    });
+  getById(id: number):Observable<any>{
+        return this.http.get("/api/users/"+id);
+    };
 
-    return this.data[index];
-  }
 
   //!Регистрация
 signUp(user: User){
@@ -100,10 +125,10 @@ signUp(user: User){
       return item.login == login && item.password == password;
     });
 
-  if(index != -1){
+  if(index !== -1){
     this.currentUserId = this.data[index].id;
-    this.currentUserSubject.next(this.data[index]);//обновление данных в хранилище
-    this.isAuthSubject.next(true);//обновление данных в хранилище
+    this.currentUserSubject.next(this.data[index]);//!обновление данных в хранилище
+    this.isAuthSubject.next(true);//!обновление данных в хранилище
     return true;
   }
 

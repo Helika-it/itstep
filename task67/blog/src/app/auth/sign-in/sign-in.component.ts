@@ -45,6 +45,7 @@ export class SignInComponent implements OnInit {
     return;
   }
 
+  //просмотр пароля
   eyeToggle: boolean = true;
   typePass:string = 'password';
   classEye:string = 'bi-eye';

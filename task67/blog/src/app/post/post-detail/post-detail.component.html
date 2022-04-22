@@ -12,7 +12,9 @@
     <hr>
 
 
-    <app-form-comment [postId]="post.id"></app-form-comment>
+    <div *ngIf="isAuth">
+      <app-form-comment [postId]="post.id"></app-form-comment>
+    </div>
 
     <app-comment-list></app-comment-list>
 

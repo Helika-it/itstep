@@ -26,14 +26,12 @@
             type="{{typePass}}" class="form-control" id="user_password" placeholder="Пароль" name="password"
             formControlName="password" />
           <div (click)="showPassword()" class="bi {{classEye}} password-control"></div>
-
         </div>
+
         <div *ngIf="myForm.controls['password'].invalid && myForm.controls['password'].touched"
           class="alert alert-danger">
           <span *ngIf="myForm.controls['password'].errors?.['required']">Поле должно быть непустым</span>
-
         </div>
-
       </div>
 
       <div *ngIf="!isAuth" class="alert alert-danger">

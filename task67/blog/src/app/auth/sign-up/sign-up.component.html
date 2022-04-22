@@ -27,12 +27,14 @@
       </div>
 
       <div class="col-12">
-        <div class="mb-4">
+        <div class="mb-4 password">
           <label for="user_password" class="form-label">Пароль</label>
           <input #newPassword [class.error]="myForm.controls['password'].invalid && myForm.controls['password'].touched"
-            type="text" class="form-control" id="user_password" placeholder="Пароль" name="password"
+            type="{{typePass}}" class="form-control" id="user_password" placeholder="Пароль" name="password"
             formControlName="password" />
+            <div (click)="showPassword()" class="bi {{classEye}} password-control"></div>
         </div>
+
         <div *ngIf="myForm.controls['password'].invalid && myForm.controls['password'].touched"
           class="alert alert-danger">
           <span *ngIf="myForm.controls['password'].errors?.['required']">Поле должно быть непустым</span>

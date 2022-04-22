@@ -8,9 +8,11 @@ h1 {
 .blog-header {
   justify-content: center;
   background-color: $backgroundApp;
+  
   .blog-header_title{
     display: flex;
     padding: 10px;
+    
   }
   .blog-header_user{
     display: flex;
@@ -19,6 +21,7 @@ h1 {
     padding: 10px;
     color: $cyanDark;
     font-size: 24px;
+    background: url(../../../../assets/img/sample_feature_img_2.png) center center repeat;
     p {
       display: block;
       align-self: center;

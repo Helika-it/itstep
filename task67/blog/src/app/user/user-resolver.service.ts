@@ -10,6 +10,6 @@ export class UserResolverService implements Resolve<User>{
   constructor(private userService: UserService, route: Router) { }
 
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): User {
-    return this.userService.getById(route.params["id"]);
+    return this.userService.getById(route.params["id"]).subscribe((data) => this.users = data);
   }
 }

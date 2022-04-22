@@ -25,7 +25,7 @@ export class FormUserComponent implements OnInit {
       "role": new FormControl("user"),
   })
   
-   }
+  }
   
 
 ngOnInit(): void {
@@ -36,16 +36,18 @@ ngOnInit(): void {
     if(this.myForm.invalid)
       return;
             
-    let newUserId = this.userService.getNewUserId();
-    this.user = {
-      id: newUserId,
+    let data = {
       name: this.myForm.controls["name"].value,
       login: this.myForm.controls["login"].value,
       password: this.myForm.controls["password"].value,
-      role: this.myForm.controls["role"].value
-    }
+      role: this.myForm.controls["role"].value //! ?
+    } 
 
-    this.userService.create(this.user);
+    this.userService.create(data).subscribe(
+      data => {
+        console.log(data)
+      }
+    );
     this.myForm.reset();
     this.router.navigate(["/user"]);
 
@@ -63,7 +65,7 @@ ngOnInit(): void {
       role: this.myForm.controls["role"].value
     }
     
-    this.userService.update(this.user);
+    this.userService.edit(this.user);
     this.myForm.reset();
     this.router.navigate(["/user"]);
 

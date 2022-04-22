@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -9,7 +10,6 @@ import { FooterComponent } from './shared/layout/footer/footer.component';
 import { HeaderComponent } from './shared/layout/header/header.component';
 import { SharedModule } from './shared/shared.module';
 import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
-import { PostService } from './core';
 import { PostModule } from './post/post.module';
 
 
@@ -22,6 +22,7 @@ import { PostModule } from './post/post.module';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     CoreModule, 
     SharedModule,

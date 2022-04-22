@@ -49,11 +49,10 @@ export class ProfileComponent implements OnInit {
       role: this.myForm.controls["role"].value
     }
     
-    this.userService.update(this.user);
+    this.userService.edit(this.user);
     this.myForm.reset();
     this.router.navigate(["/user"]);
 
   }
-
 
 }
