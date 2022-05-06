@@ -10,7 +10,7 @@ const routes: Routes = [
     path: "", component: FilmComponent, pathMatch: 'full'
   },
   {
-    path: "form", component: FilmFormComponent, pathMatch: 'full'
+    path: "add", component: FilmFormComponent, pathMatch: 'full'
   },
   {
     path: ":id", component: FilmDetailComponent

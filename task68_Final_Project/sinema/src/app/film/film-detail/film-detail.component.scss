@@ -1,0 +1,139 @@
+@import "src/assets/styles/index";
+
+.film {
+  padding: 10px 0px 40px 0px;
+}
+
+.film__header {
+  margin: 0px 0px 60px 0px;
+}
+.film__body {
+  display: flex;
+  align-items: flex-start;
+}
+.film__contant {
+  flex: 1 1 auto;
+  padding: 0px 20px 0px 0px;
+}
+
+.film-title {
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 142%;       /*57/40=142%*/
+  letter-spacing: 0.2px;
+}
+.film-title:not(:last-child) {
+  margin: 0px 0px 30px 0px;
+}
+.film-text {
+  font-size: 16px;
+  line-height: 150%;
+  max-width: 560px;
+}
+
+.film-details {
+  margin-top: 51px;
+  display: flex;
+  align-items: center;
+  color: $greyText;
+}
+.genre {
+  display: flex;
+  align-items: center;
+  margin-right: 14px;
+}
+.genre-text {
+  font-size: 18px;
+  line-height: 150%;
+  margin: 0;
+}
+.time {
+  display: flex;
+  align-items: center;
+}
+.time-icon {
+  margin-right: 14px;
+  width: 25px;
+  color: $greyText;
+}
+.age {
+  display: flex;
+  align-items: center;
+  margin-left: 34px;
+}
+.age-counter {
+  font-size: 24px;
+  line-height: 150%;
+}
+
+.film_img {
+  flex: 0 0 40%;   
+  position: relative;
+  padding: 0px 0px 0px 0px;
+  box-shadow: rgb(0 0 0 / 50%) 0px 10px 30px;
+  iframe{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover; 
+  }
+}
+
+
+/*===медиа===*/
+
+@media (max-width: 1200px) {
+  .film__content {
+    padding: 0px 0px 0px 50px;
+  }
+}
+@media (max-width: 992px) {
+  .film {
+    padding: 50px 0px 50px 0px;
+  }  
+  .film__body {
+    flex-direction: column-reverse;
+    align-items: center;
+  } 
+  .film__title {
+    font-size: 24px;
+    margin-top: 20px;
+  }
+  .film__contant {
+    padding: 0px 0px 0px 0px;
+    padding-top: 30px;
+  }
+  .film__img {
+    margin: 0;
+    margin-bottom: 30px;
+  }
+  .film__img:not(:last-child) {
+    margin: 50px 0px 0px 0px;
+  }
+  .film__header {
+    margin: 0px 0px 30px 0px;
+  }
+}
+@media (max-width: 768px) {  
+  .film {
+    padding: 20px 0px 50px 0px;
+  } 
+  .film__top:not(:last-child) {
+    margin: 0px 0px 30px 0px;
+  }
+  .film__video:not(:last-child) {
+    margin: 30px 0px 0px 0px;
+  }
+}
+@media (max-width: 470px) {
+  .film-prewiev {
+    width: 420px;
+  }
+}
+@media (max-width: 420px) {
+  .film-prewiev {
+    width: 320px;
+  }
+}

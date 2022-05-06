@@ -11,13 +11,22 @@ const routes: Routes = [
     path: "film",
     loadChildren: () => import ('./film/film.module').then(module => module.FilmModule)
   },
+
   {
+    path: "user",
+    loadChildren: () => import ('./user/user.module').then(module => module.UserModule)
+  },
+    {
     path: "profile",
     loadChildren: () => import ('./profile/profile.module').then(module => module.ProfileModule)
   },
   {
-    path: "user",
-    loadChildren: () => import ('./user/user.module').then(module => module.UserModule)
+    path: "auth",
+    loadChildren: () => import ('./auth/auth.module').then(module => module.AuthModule)
+  },
+  {
+    path: "order",
+    loadChildren: () => import ('./order/order.module').then(module => module.OrderModule)
   },
 
   {

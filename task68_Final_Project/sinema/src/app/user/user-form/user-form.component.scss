@@ -1,0 +1,65 @@
+@import "src/assets/styles/index";
+
+.user-form{
+  padding: 20px 0px 100px 0px;
+}
+
+.user-form__header {
+  margin-bottom: 40px;
+}
+
+.user-form_edit .user-form_add{
+  padding: 30px 0px 80px 0px;
+  padding: 10px;
+  box-shadow: rgb(0 0 0 / 50%) 0px 10px 30px;
+}
+@media (max-width: 993px) {
+  .user-form_edit .user-form_add {
+    padding: 40px 0px 80px 0px;
+  }
+}
+@media (max-width: 767px) {
+  .user-form_edit .user-form_add {
+    padding: 0px 0px 40px 0px;
+  }
+}
+
+
+.form-label {
+  margin-top: 10px;
+}
+input, textarea {
+  cursor: pointer;
+}
+
+.error{
+  border: 1px solid #842029;
+}
+.user {
+  margin-top: 30px;
+  margin-bottom: 80px;
+}
+
+/*.close - bootstrap перебивает свойства!*/
+.closes, .edit, .viev {
+  position: relative;
+  left: 0px;
+  top: 0;
+  text-align: center;
+}
+
+.closes:hover, .edit:hover, .viev:hover {
+  background-color: #f9a9a3;
+  color: white;
+  cursor: pointer;
+}
+
+.block-role_items {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 40px;
+}
+
+.block-role_item {
+  padding-right: 20px;
+}

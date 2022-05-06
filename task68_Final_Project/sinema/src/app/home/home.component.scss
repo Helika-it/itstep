@@ -1,0 +1,138 @@
+@import "src/assets/styles/index";
+
+.home {
+  padding: 10px 0px 40px 0px;
+}
+
+.home__header {
+  margin: 0px 0px 60px 0px;
+}
+.home__body {
+  display: flex;
+  align-items: flex-start;
+}
+.home__content {
+  flex: 1 1 auto;
+  padding: 0px 20px 0px 0px;
+}
+
+.home-title {
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 142%;       /*57/40=142%*/
+  letter-spacing: 0.2px;
+}
+.home-title:not(:last-child) {
+  margin: 0px 0px 30px 0px;
+}
+.home-text {
+  font-size: 16px;
+  line-height: 150%;
+  
+}
+
+.home-details {
+  margin-top: 51px;
+  display: flex;
+  align-items: center;
+  color: $greyText;
+}
+.genre {
+  display: flex;
+  align-items: center;
+  margin-right: 14px;
+}
+.genre-text {
+  font-size: 18px;
+  line-height: 150%;
+  margin: 0;
+}
+.time {
+  display: flex;
+  align-items: center;
+}
+.time-icon {
+  margin-right: 14px;
+  width: 25px;
+  color: $greyText;
+}
+.age {
+  display: flex;
+  align-items: center;
+  margin-left: 34px;
+}
+.age-counter {
+  font-size: 24px;
+  line-height: 150%;
+}
+
+.home_video {
+  flex: 0 0 55%;   
+  position: relative;
+  padding: 0px 0px 40% 0px;
+  box-shadow: rgb(0 0 0 / 50%) 0px 10px 30px;
+  iframe{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover; 
+  }
+}
+
+
+/*===медиа===*/
+
+@media (max-width: 1200px) {
+  .home__content {
+    padding: 0px 20px 0px 0px;
+  }
+}
+@media (max-width: 992px) {
+  .home {
+    padding: 50px 0px 50px 0px;
+  }  
+  .home__body {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  } 
+  .home__title {
+    font-size: 24px;
+  }
+
+  
+  .home__content {
+    padding: 30px 0px 0px 0px;
+  }
+  .home__video {
+    margin: 0px 0px 56.25% 0px;
+  }
+  .home__video:not(:last-child) {
+    margin: 50px 0px 0px 0px;
+  }
+  .home__header {
+    margin: 0px 0px 30px 0px;
+  }
+}
+@media (max-width: 768px) {  
+  .home {
+    padding: 20px 0px 50px 0px;
+  } 
+  .home__top:not(:last-child) {
+    margin: 0px 0px 30px 0px;
+  }
+  .home__video:not(:last-child) {
+    margin: 30px 0px 0px 0px;
+  }
+}
+@media (max-width: 470px) {
+  .home-prewiev {
+    width: 420px;
+  }
+}
+@media (max-width: 420px) {
+  .home-prewiev {
+    width: 320px;
+  }
+}

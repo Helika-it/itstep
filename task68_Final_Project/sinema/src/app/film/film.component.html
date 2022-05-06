@@ -1,1 +1,31 @@
-<p>film works!</p>
+<div class="page__films films">
+  <div class="films__container _container">
+    <div class="films__header header-block">
+      <h2 class="header-block__title">Афиша кино</h2>
+      <div class="header-block__sub-title">
+        Сейчас в кино
+      </div>
+    </div>
+    <div class="films__body" >
+      <div class="films__column" *ngFor="let film of films">
+        <article class="films__item item-films">
+          <div class="item-films__content">
+            <a [routerLink]="['/film', film.id]" class="item-films__link">
+              <h3 class="item-films__title">
+                {{film.title}}</h3>
+            </a>
+            <div class="item-films__text">
+              {{film.genre}}  <br>   {{film.duration}} / {{film.age}} 
+            </div>
+          </div>
+          <a [routerLink]="['/film', film.id]" class="item-films__image _ibg">
+            <img src="{{film.picture}}" alt="Первый Оскар">
+          </a>
+        </article>
+      </div>
+
+
+
+    </div>
+  </div>
+</div>

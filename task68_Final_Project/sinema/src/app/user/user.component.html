@@ -1,1 +1,36 @@
-<p>user works!</p>
+<div class="container _container">
+  <div class="user col-12">
+    <a class="user_btn btn-default" [routerLink]="['/user', 'add']">Добавить</a>
+  </div>
+  <div class="user">
+    <table class="table ">
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>Имя пользователя</th>
+          <th>login</th>
+          <th>password</th>
+          <th>role</th>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users">
+          <td>{{user.id}}</td>
+          <td>{{user.name}}</td>
+          <td>{{user.login}}</td>
+          <td>{{user.password}}</td>
+          <td>{{user.role}}</td>
+          <td class="viev"><a [routerLink]="['/user', user.id]"><i class="bi bi-eye"></i></a></td>
+          <td class="edit"><a [routerLink]="['/user','edit', user.id]"><i class="bi bi-pencil"></i></a></td>
+          <td class="closes">
+            <a (click)="delete(user.id)"><i class="bi bi-trash"></i></a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>

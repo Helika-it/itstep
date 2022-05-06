@@ -1,0 +1,30 @@
+/*===Вuttons===*/
+.btn-default  {
+  text-decoration:none;
+  color:black;
+  text-align: center;
+  display: block;
+  padding: 8px;
+  width: 170px;
+  background-color:$backgroundBtn;
+}
+.btn-default:hover{
+  cursor: pointer;
+  display: block;
+  background-color:$backgroundBtnActive;
+}
+
+.btn-auth {
+  margin: 5px;
+  padding-right: 5px;
+  font-size: 18px;
+  text-decoration:none;
+  display: block;
+  
+  color: $white;
+}
+.btn-auth:hover{
+  cursor: pointer;
+  display: block;
+  text-decoration-line: underline;
+}

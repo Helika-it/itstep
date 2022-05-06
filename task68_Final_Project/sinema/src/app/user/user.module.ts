@@ -5,6 +5,9 @@ import { UserDetailComponent } from './user-detail/user-detail.component';
 import { UserFormComponent } from './user-form/user-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { UserRoutingModule } from './user-routing.module';
+import { FilmRoutingModule } from '../film/film-routing.module';
+//import { UserResolverService } from './user-resolver.service';
 
 
 
@@ -16,9 +19,14 @@ import { RouterModule } from '@angular/router';
   ],
   imports: [
     CommonModule,
+    UserRoutingModule,
+    FilmRoutingModule,
+    RouterModule,
     ReactiveFormsModule,
-    FormsModule,
-    RouterModule
+    FormsModule    
+  ],
+  providers:[
+    
   ]
 })
 export class UserModule { }

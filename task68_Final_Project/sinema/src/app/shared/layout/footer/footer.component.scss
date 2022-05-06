@@ -1,0 +1,22 @@
+@import "src/assets/styles/index";
+
+.footer{
+  position: relative;
+  width: 100%;
+  left: 0;
+  top: 0;
+
+}
+.footer-container {
+  display: flex;
+  min-height: 104px;
+  align-items: center;
+}
+.icon {
+  a{
+    img{
+      width: 40px;
+      padding-right: 10px;
+    }
+  }
+}

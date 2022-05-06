@@ -1,0 +1,87 @@
+@import "src/assets/styles/index";
+
+
+.films {
+  padding: 30px 0px 80px 0px;
+}
+@media (max-width: 993px) {
+  .films {
+    padding: 40px 0px 80px 0px;
+  }
+}
+@media (max-width: 767px) {
+  .films {
+    padding: 0px 0px 40px 0px;
+  }
+}
+.films__container {
+}
+
+.films__header {
+  margin: 0px 0px 45px 0px;
+}
+@media (max-width: 767px) {
+  .films__header {
+    margin: 0px 0px 25px 0px;
+  }
+}
+.films__body {
+  margin: 0px -20px -30px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.films__column {
+  padding: 0px 20px;
+  margin: 0px 0px 30px 0px;
+  flex: 0 1 25%;
+}
+@media (max-width: 1040px) {
+  .films__column {
+    flex: 0 1 50%;
+  }
+}
+@media (max-width: 630px) {
+  .films__column {
+    flex: 0 1 100%;
+  }
+}
+.films__item {
+}
+.item-films {
+  
+  display: flex;   /*чтобы карточки при разной длине текста выглядели одинаково делаем (1)*/
+  height: 100%;    /*(1)*/
+  flex-direction: column;  /*(1)*/
+}
+.item-films__content {
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  flex: 1 1 auto;   /*(1)*/
+}
+.item-films__link {
+  color: $appText;
+  display: inline-block;
+  text-decoration: none;
+}
+.item-films__link:hover {
+  text-decoration: underline;
+}
+.item-films__link:not(:last-child) {
+  margin: 0px 0px 15px 0px;
+}
+.item-films__title {
+  letter-spacing: 0.1px;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 150%;
+}
+.item-films__text {
+  color: $greyText;
+  line-height: 142%;
+}
+.item-films__image { /*_ibg влияет на картинку, п.э для ссылки:(display: block;) и делаем нижний отступ в % от размера картинки*/
+  display: block;
+  padding: 0px 0px 150% 0px;    /* h138 / w230 * 100 = 60%*/
+  box-shadow: rgb(0 0 0 / 50%) 0px 10px 30px;
+}

@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Film, FilmService, OrderService, SessionService } from 'src/app/core';
 
 @Component({
   selector: 'app-film-detail',
@@ -7,9 +9,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FilmDetailComponent implements OnInit {
 
-  constructor() { }
+  film: Film = {} as Film
+
+  constructor(private route: ActivatedRoute, private filmService: FilmService, private sessionService: SessionService, private orderService: OrderService, private router: Router) { }
+
 
   ngOnInit(): void {
+    this.filmService.getById(this.route.snapshot.params["id"]).subscribe(
+      (data) => {
+      this.film = data;
+      console.log(this.film);
+    }
+    );
   }
+
+
+
+  get(filmId: number): any{
+    return this.filmService.getById(filmId);
+  } 
 
 }

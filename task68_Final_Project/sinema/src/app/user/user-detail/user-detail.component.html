@@ -1,1 +1,35 @@
-<p>user-detail works!</p>
+<div class="page__user-list user-list">
+  <div class="user-list__container _container">
+
+    <div class="user-list__header header-block">
+      <h4 class=" header-block__title">Карточка пользователя</h4>
+      <div class="header-block__sub-title">Вход от имени администратора</div>
+    </div>
+
+    <div class="user-list__cards">
+      <div class="user_element ">
+        <p class="title">#</p>
+        <p class="value">{{user.id}}</p>
+      </div>
+      <div class="user_element">
+        <p class="title">Имя:</p>
+        <p class="value">{{user.name}}</p>
+      </div>
+      <div class="user_element">
+        <p class="title">Логин:</p>
+        <p class="value">{{user.login}}</p>
+      </div>
+      <div class="user_element">
+        <p class="title">Пароль:</p>
+        <p class="value">{{user.password}}</p>
+      </div>
+      <div class="user_element">
+        <p class="title">Роль:</p>
+        <p class="value">{{user.role}}</p>
+      </div>
+    </div>
+
+    <a [routerLink]="['/user']" class="user_btn btn-default">Назад</a>
+</div>
+</div>
+

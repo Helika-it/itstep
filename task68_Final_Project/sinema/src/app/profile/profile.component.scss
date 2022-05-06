@@ -1,0 +1,74 @@
+@import "src/assets/styles/index";
+
+.profile{
+  padding: 80px 0px 100px 0px;
+}
+
+.profile_edit{
+  padding: 30px;
+  box-shadow: rgb(0 0 0 / 50%) 0px 10px 30px;
+}
+.profile-form {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+ 
+}
+
+@media (max-width: 993px) {
+  .profile_edit {
+    padding: 40px 30px 80px 30px;
+  }
+  .profile-form {
+   
+  }
+}
+@media (max-width: 767px) {
+  .profile_edit {
+    padding: 0px 30px 40px 30px;
+  }
+  .profile-form {
+    width: 100%;
+  }
+}
+
+.form-label {
+  margin-top: 10px;
+}
+input, textarea {
+  cursor: pointer;
+}
+
+.error{
+  border: 1px solid #842029;
+}
+.user {
+  margin-top: 30px;
+  margin-bottom: 80px;
+}
+
+/*.close - bootstrap перебивает свойства!*/
+.closes, .edit, .viev {
+  position: relative;
+  left: 0px;
+  top: 0;
+  text-align: center;
+}
+
+.closes:hover, .edit:hover, .viev:hover {
+  background-color: #f9a9a3;
+  color: white;
+  cursor: pointer;
+}
+
+.profile_orders {
+  margin-top: 30px;
+}
+
+
+@media (max-width: 470px) {
+
+}
+@media (max-width: 420px) {
+
+}

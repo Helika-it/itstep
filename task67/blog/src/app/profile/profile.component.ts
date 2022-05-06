@@ -51,7 +51,7 @@ export class ProfileComponent implements OnInit {
     
     this.userService.edit(this.user);
     this.myForm.reset();
-    this.router.navigate(["/user"]);
+    this.router.navigate(["/home"]);
 
   }
 

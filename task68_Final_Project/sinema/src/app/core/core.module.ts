@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FilmService, UserService } from './service';
+import { FilmService, OrderService, SessionService, UserService } from './service';
 
 
 
@@ -9,6 +9,11 @@ import { FilmService, UserService } from './service';
   imports: [
     CommonModule
   ],
-  providers: [UserService, FilmService]
+  providers: [
+    UserService, 
+    FilmService,
+    SessionService,
+    OrderService
+  ]
 })
 export class CoreModule { }

@@ -1,1 +1,49 @@
-<p>header works!</p>
+<header class="header">
+  <div class="navbar-container _container">
+  <a href="/">
+    <img src="../../../../assets/img/logo.svg" alt="Logo">
+  </a>
+  <nav class="nav">
+    <button class="m-menu" (click)="visibility($event)">
+      <svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <line y1="0.5" x2="15" y2="0.5" stroke="white" />
+        <line y1="5.5" x2="15" y2="5.5" stroke="white" />
+        <line y1="10.5" x2="15" y2="10.5" stroke="white" />
+      </svg>
+    </button>
+    <ul class="menu {{visible}}">
+      <li class="menu-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+        <a routerLink="/" class="menu-link">Главная</a>
+      </li>
+      <li class="menu-item" routerLinkActive="active">
+        <a [routerLink]="'/film'" class="menu-link">Фильмы</a>
+      </li>
+      <li class="menu-item" routerLinkActive="active">
+        <a [routerLink]="'/profile'" class="menu-link">Личный кабинет</a>
+      </li>
+      <li class="menu-item" routerLinkActive="active">
+        <a [routerLink]="'/user'" class="menu-link">Пользователи</a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="user">
+
+    <div class=" auth-block col-12">
+      <div *ngIf="!isAuth" class="auth-block_user-auth">
+        <a class="btn-auth" [routerLink]="'/auth/signIn'">Вход</a>
+        <a class="btn-auth" [routerLink]="'/auth/signUp'">Регистрация</a>
+      </div>
+      
+      <div *ngIf="isAuth">
+        <span class="">{{authUser}} </span>
+        <img class="avatar" src="../../../../assets/img/no_avatar.webp" alt="Аватар пользователя">
+      </div>
+
+    </div>
+
+    
+  </div>
+</div>
+</header>
+

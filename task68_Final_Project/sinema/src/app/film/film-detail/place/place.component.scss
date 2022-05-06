@@ -1,0 +1,80 @@
+@import "src/assets/styles/index";
+
+.scheme {
+  margin-bottom: 40px;
+  background: rgba(36, 36, 36, 0.18);
+  border-radius: 10px;
+}
+.scheme-svg {
+  max-width: 1170px;
+}
+.scheme path:not(.light) {
+  fill: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+}
+
+.scheme path:not(.light):hover {
+  fill: rgba(255, 255, 255, 0.5);
+}
+.scheme path.active,
+.scheme path.active:hover
+ {
+  fill: #fe8e05;
+}
+.scheme path.booked,
+.scheme path.booked:hover
+ {
+  fill: rgba(255, 255, 255, 0.05);
+  cursor: not-allowed;
+}
+.legend {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  max-width: 1024px;
+  width: 90%;
+  margin: auto;
+  padding-top: 22px;
+  padding-bottom: 38px;
+}
+.legend-label {
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+}
+.legend svg {
+  margin-right: 15px;
+}
+
+/*======*/
+
+.reserve {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.reserve-label {
+  
+  font-size: 18px;
+  line-height: 21px;
+}
+.reserve-tag {
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  font-size: 30px;
+  line-height: 61px;
+}
+.reserve__button {
+  display: block;
+  background: #fe8e05;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  padding: 24px 52px;
+  text-decoration: none;
+}

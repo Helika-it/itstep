@@ -1,0 +1,34 @@
+@import "src/assets/styles/index";
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  }
+
+.user-form{
+  width: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 60px;
+  padding: 20px;
+  background-color: $backgroundApp;
+  border: rgb(190, 190, 190) solid 1px;
+  box-shadow: 0 5px 10px 0px rgb(0 0 0 / 10%);
+  border-radius: 10px;
+}
+
+.password {
+	position: relative;
+}
+.password-control {
+  color: $black;
+	position: absolute;
+	top: 42px;
+	right: 6px;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+}

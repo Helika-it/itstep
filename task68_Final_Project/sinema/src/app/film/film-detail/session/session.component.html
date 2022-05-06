@@ -1,0 +1,13 @@
+<div class="page__session session">
+  <div class="session__container _container">
+    <hr>
+    <div class="session__body">
+      <div class="session-date-block" *ngFor="let session of session">
+        <div class="session-day-item">
+          <span class="session-item">{{getSession(film.id).session.date}} {{getSession(film.id).session.start}}</span>
+        </div>
+      </div>
+    </div>
+    <hr>
+  </div>
+</div>

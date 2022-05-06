@@ -1,0 +1,39 @@
+@import "src/assets/styles/index";
+
+table {
+  color: $appText;
+}
+
+.user-form{
+  background-color:rgb(255, 255, 255);
+  padding: 10px;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 10%);
+}
+.form-label {
+  margin-top: 10px;
+}
+input, textarea {
+  cursor: pointer;
+}
+
+.error{
+  border: 1px solid #842029;
+}
+.user {
+  margin-top: 30px;
+  margin-bottom: 80px;
+}
+
+/*.close - bootstrap перебивает свойства!*/
+.closes, .edit, .viev {
+  position: relative;
+  left: 0px;
+  top: 0;
+  text-align: center;
+}
+
+.closes:hover, .edit:hover, .viev:hover {
+  background-color: #f9a9a3;
+  color: white;
+  cursor: pointer;
+}

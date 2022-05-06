@@ -1,8 +1,11 @@
 export class Film {
-  // id: number;
-  // title: string;
-  // preview: string;
-  // duration: string;
-  // genre: string;
-  // sessionId: time;
+  id: number | undefined;
+  title: string | undefined;
+  genre: string | undefined;
+  duration: string | undefined;
+  age: string | undefined;
+  previev: string | undefined;
+  picture: string | undefined;
+  start: string | undefined;
+  //sessionId: time;
 }

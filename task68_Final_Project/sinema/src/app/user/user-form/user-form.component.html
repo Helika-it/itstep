@@ -1,1 +1,145 @@
-<p>user-form works!</p>
+<div class="page__user-form user-form">
+  <div class="user-form__container _container">
+      <!--ADD-->
+
+    
+        <div class="user-form user-form_add" *ngIf="(user.id == undefined)">
+        <div class="user-form__header header-block">
+          <h4 class=" header-block__title">Новый пользователь</h4>
+          <div class="header-block__sub-title">Вход от имени администратора</div>
+        </div>
+    <form [formGroup]="myForm" novalidate (ngSubmit)="addUser()">
+      <div class="row">
+
+        <div class="col-4">
+          <div class="mb-3">
+            <label for="user_name" class="form-label">Имя пользователя</label>
+            <input #newName [class.error]="myForm.controls['name'].invalid && myForm.controls['name'].touched"
+              type="text" class="form-control" id="user_name" placeholder="Имя" name="name" formControlName="name" />
+          </div>
+          <div *ngIf="myForm.controls['name'].invalid && myForm.controls['name'].touched" class="alert alert-danger">
+            <span *ngIf="myForm.controls['name'].errors?.['required']">Поле должно быть непустым</span>
+          </div>
+        </div>
+
+        <div class="col-4">
+          <div class="mb-3">
+            <label for="user_login" class="form-label">Логин</label>
+            <input #newLogin [class.error]="myForm.controls['login'].invalid && myForm.controls['login'].touched"
+              type="text" class="form-control" id="user_login" placeholder="Логин" name="login"
+              formControlName="login" />
+          </div>
+          <div *ngIf="myForm.controls['login'].invalid && myForm.controls['login'].touched" class="alert alert-danger">
+            <span *ngIf="myForm.controls['login'].errors?.['required']">Поле должно быть непустым</span>
+          </div>
+        </div>
+
+        <div class="col-4">
+          <div class="mb-3">
+            <label for="user_password" class="form-label">Пароль</label>
+            <input #newPassword
+              [class.error]="myForm.controls['password'].invalid && myForm.controls['password'].touched" type="text"
+              class="form-control" id="user_password" placeholder="Пароль" name="password" formControlName="password" />
+          </div>
+          <div *ngIf="myForm.controls['password'].invalid && myForm.controls['password'].touched"
+            class="alert alert-danger">
+            <span *ngIf="myForm.controls['password'].errors?.['required']">Поле должно быть непустым</span>
+          </div>
+        </div>
+
+        <div class="user__block-role block-role">
+          <p for="user_role" class="form-label">Роль</p>
+          <div class="block-role_items">
+            <div class="block-role_item">
+            <label><input type="radio" name="role" value="user" checked="checked" formControlName="role" /> user</label>
+          </div>
+          <div class="block-role_item">
+            <label><input type="radio" name="role" value="admin" formControlName="role" /> admin</label>
+          </div>
+          </div>
+        </div>
+
+        <div class="col-12">
+          <button type="submit" class="btn btn-default" [disabled]="myForm.invalid">Сохранить</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+
+
+  <!--EDIT-->
+
+    <div class="user-form user-form_edit" *ngIf="(user.id > 0)">
+    <div class="user-form__header header-block">
+        <h4 class=" header-block__title">Редактирование пользователя</h4>
+        <div class="header-block__sub-title">Вход от имени администратора</div>
+    </div>
+    <form [formGroup]="myForm" novalidate (ngSubmit)="editUser()">
+      <div class="row">
+
+        <div class="col-4">
+          <div class="mb-3">
+            <label for="user_name" class="form-label">Имя пользователя</label>
+            <input #newName [class.error]="myForm.controls['name'].invalid && myForm.controls['name'].touched"
+              type="text" class="form-control" id="user_name" placeholder="Имя" name="name" formControlName="name"
+              value={{user.name}} />
+          </div>
+          <div *ngIf="myForm.controls['name'].invalid && myForm.controls['name'].touched" class="alert alert-danger">
+            <span *ngIf="myForm.controls['name'].errors?.['required']">Поле должно быть непустым</span>
+          </div>
+        </div>
+
+        <div class="col-4">
+          <div class="mb-3">
+            <label for="user_login" class="form-label">Логин</label>
+            <input #newLogin [class.error]="myForm.controls['login'].invalid && myForm.controls['login'].touched"
+              type="text" class="form-control" id="user_login" placeholder="Логин" name="login" formControlName="login"
+              value={{user.login}} />
+          </div>
+          <div *ngIf="myForm.controls['login'].invalid && myForm.controls['login'].touched" class="alert alert-danger">
+            <span *ngIf="myForm.controls['login'].errors?.['required']">Поле должно быть непустым</span>
+          </div>
+        </div>
+
+        <div class="col-4">
+          <div class="mb-3">
+            <label for="user_password" class="form-label">Пароль</label>
+            <input #newPassword
+              [class.error]="myForm.controls['password'].invalid && myForm.controls['password'].touched" type="text"
+              class="form-control" id="user_password" placeholder="Пароль" name="password" formControlName="password"
+              value={{user.password}} />
+          </div>
+          <div *ngIf="myForm.controls['password'].invalid && myForm.controls['password'].touched"
+            class="alert alert-danger">
+            <span *ngIf="myForm.controls['password'].errors?.['required']">Поле должно быть непустым</span>
+          </div>
+        </div>
+
+        <div class="user__block-role block-role">
+          <p for="user_role" class="form-label">Роль</p>
+          <div class="block-role_items">
+            <div class="block-role_item">
+            <label><input type="radio" name="role" value="user" checked="checked" formControlName="role" /> user</label>
+          </div>
+          <div class="block-role_item">
+            <label><input type="radio" name="role" value="admin" formControlName="role" /> admin</label>
+          </div>
+          </div>
+        </div>
+
+
+        <div class="col-12">
+          <button type="submit" class="btn btn-default" [disabled]="myForm.invalid">Сохранить изменения</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+
+
+  </div>
+
+
+
+</div>

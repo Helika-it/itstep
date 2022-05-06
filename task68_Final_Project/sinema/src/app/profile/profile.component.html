@@ -1,1 +1,75 @@
-<p>profile works!</p>
+<div class="page__profile profile">
+  <div class="profile__container _container">
+
+    <div class="profile_edit">
+      <div class="profile__header header-block">
+        <h4 class=" header-block__title">Редактирование пользователя</h4>
+        <div class="header-block__sub-title">Личный кабинет</div>
+      </div>
+    
+    <form [formGroup]="myForm" novalidate (ngSubmit)="editUser()" class="profile-form">
+
+
+        <div class="profile-form_item">
+          <div class="mb-4">
+            <label for="user_name" class="form-label">Имя пользователя</label>
+            <input #newName [class.error]="myForm.controls['name'].invalid && myForm.controls['name'].touched"
+              type="text" class="form-control" id="user_name" placeholder="Имя" 
+              name="name" 
+              formControlName="this.user.name"
+              value={{user?.name}} />
+          </div>
+          <div *ngIf="myForm.controls['name'].invalid && myForm.controls['name'].touched" class="alert alert-danger">
+            <span *ngIf="myForm.controls['name'].errors?.['required']">Поле должно быть непустым</span>
+          </div>
+        </div>
+
+        <div class="profile-form_item">
+          <div class="mb-4">
+            <label for="user_login" class="form-label">Логин</label>
+            <input #newLogin [class.error]="myForm.controls['login'].invalid && myForm.controls['login'].touched"
+              type="text" class="form-control" id="user_login" placeholder="Логин" name="login" formControlName="login"
+              value={{user?.login}} />
+          </div>
+          <div *ngIf="myForm.controls['login'].invalid && myForm.controls['login'].touched" class="alert alert-danger">
+            <span *ngIf="myForm.controls['login'].errors?.['required']">Поле должно быть непустым</span>
+          </div>
+        </div>
+
+        <div class="profile-form_item">
+          <div class="mb-4">
+            <label for="user_password" class="form-label">Пароль</label>
+            <input #newPassword
+              [class.error]="myForm.controls['password'].invalid && myForm.controls['password'].touched" type="text"
+              class="form-control" id="user_password" placeholder="Пароль" name="password" formControlName="password"
+              value={{user?.password}} />
+          </div>
+          <div *ngIf="myForm.controls['password'].invalid && myForm.controls['password'].touched"
+            class="alert alert-danger">
+            <span *ngIf="myForm.controls['password'].errors?.['required']">Поле должно быть непустым</span>
+          </div>
+        </div>
+        <div class="profile-form_item">
+          <p>Роль: {{user?.role}}</p>
+        </div>
+        
+        <div class="col-12">
+          <button type="submit" class="btn btn-default" [disabled]="myForm.invalid">Сохранить изменения</button>
+        </div>
+
+    </form>
+  </div>
+
+  <div class="profile_orders">
+    <div class="profile__header header-block">
+      <h4 class=" header-block__title">Ваши заказы</h4>
+      <div class="header-block__sub-title"></div>
+    </div>
+  </div>
+
+
+
+</div>
+</div>
+
+

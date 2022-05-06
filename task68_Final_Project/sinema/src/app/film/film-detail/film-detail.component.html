@@ -1,1 +1,46 @@
-<p>film-detail works!</p>
+<div class="page__film film">
+  <div class="film__container _container">
+
+    <div class="film__header header-block">
+      <h2 class="header-block__title">Cмотрите в кинотеатре</h2>
+      <div class="header-block__sub-title">
+        С {{film?.start}}
+      </div>
+    </div>
+
+    <div class="film__body">
+      <div class="film__contant">
+        <h1 class="film-title">{{film.title}}</h1>
+        <p class="film-text">
+          {{film.previev}}
+        </p>
+        
+        <div class="film-details">
+          <div class="genre">
+            <p class="genre-text">{{film.genre}}</p>
+          </div>
+          <div class="time">
+            <img src="../../assets/img/home/time.png" alt="clock" class="time-icon">
+            <span class="time-counter">{{film.duration}}</span>
+          </div>
+          <div class="age">
+            <span class="age-counter">{{film.age}}</span>
+          </div>
+    
+        </div>
+      </div>
+
+
+        <div class="film_img">
+          <img src="{{film.picture}}" alt="{{film.title}}">
+        </div>
+
+    </div>
+
+    
+  </div>
+</div>
+        <app-session></app-session>
+        <app-place></app-place>
+
+
