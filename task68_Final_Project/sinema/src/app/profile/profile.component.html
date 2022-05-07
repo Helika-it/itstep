@@ -17,7 +17,7 @@
               type="text" class="form-control" id="user_name" placeholder="Имя" 
               name="name" 
               formControlName="this.user.name"
-              value={{user?.name}} />
+              value={{user.name}} />
           </div>
           <div *ngIf="myForm.controls['name'].invalid && myForm.controls['name'].touched" class="alert alert-danger">
             <span *ngIf="myForm.controls['name'].errors?.['required']">Поле должно быть непустым</span>
@@ -29,7 +29,7 @@
             <label for="user_login" class="form-label">Логин</label>
             <input #newLogin [class.error]="myForm.controls['login'].invalid && myForm.controls['login'].touched"
               type="text" class="form-control" id="user_login" placeholder="Логин" name="login" formControlName="login"
-              value={{user?.login}} />
+              value={{user.login}} />
           </div>
           <div *ngIf="myForm.controls['login'].invalid && myForm.controls['login'].touched" class="alert alert-danger">
             <span *ngIf="myForm.controls['login'].errors?.['required']">Поле должно быть непустым</span>
@@ -42,7 +42,7 @@
             <input #newPassword
               [class.error]="myForm.controls['password'].invalid && myForm.controls['password'].touched" type="text"
               class="form-control" id="user_password" placeholder="Пароль" name="password" formControlName="password"
-              value={{user?.password}} />
+              value={{user.password}} />
           </div>
           <div *ngIf="myForm.controls['password'].invalid && myForm.controls['password'].touched"
             class="alert alert-danger">
@@ -50,7 +50,7 @@
           </div>
         </div>
         <div class="profile-form_item">
-          <p>Роль: {{user?.role}}</p>
+          <p>Роль: {{user.role}}</p>
         </div>
         
         <div class="col-12">

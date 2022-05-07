@@ -73,9 +73,9 @@ ngOnInit(): void {
     } 
 
     this.userService.create(data).subscribe(
-      data => {
+      // data => {
         
-      }
+      // }
     );
     this.myForm.reset();
     this.router.navigate(["/user"]);

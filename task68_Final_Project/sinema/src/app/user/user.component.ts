@@ -26,15 +26,10 @@ export class UserComponent implements OnInit {
       console.log("Tекущий пользователь!!!")
       return
     }
-
-    // if (this.user.role == "admin"){
-    // console.log("Администратор!!!")
-    //   return
-    // }
     
     console.log(id)
     this.userService.remove(id).subscribe();
-    this.router.navigate(["/user"]);
+    this.router.navigate(["/user"]); 
   }
 
 }

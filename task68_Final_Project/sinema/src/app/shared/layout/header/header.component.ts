@@ -27,12 +27,13 @@ export class HeaderComponent implements OnInit {
 
     this.userService.isAuth.subscribe(
       (isAuth) => {
-        this.isAuth = !isAuth;
+        this.isAuth = isAuth;
       }
     
     )
   }
 
+  // бургер-меню
   visible = "!is-open"
 
   visibility(event: any){

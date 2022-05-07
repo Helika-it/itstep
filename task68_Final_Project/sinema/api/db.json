@@ -15,11 +15,11 @@
       "role": "user"
     },
     {
-      "name": "Юлийhh",
+      "id": 3,
+      "name": "Юлий",
       "login": "Yul222",
-      "password": "333333",
-      "role": "user",
-      "id": 3
+      "password": "111111",
+      "role": "user"
     },
     {
       "name": "Елена",

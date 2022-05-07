@@ -36,7 +36,7 @@ export class UserService {
   ]
 
 
-  currentUserId = 1; //ID активного пользователя
+  currentUserId = 4; //ID активного пользователя
 
   currentUserSubject = new BehaviorSubject<User>({} as User);//хранилище
   currentUser = this.currentUserSubject.asObservable();//подписчик
@@ -102,7 +102,7 @@ signUp(user: User){
 signIn(login:string, password:string):boolean{
   
  let index = this.data.findIndex(function(item:User){
-   return item.login == login && item.password == password;
+   return (item.login == login) && (item.password == password);
  });
 
 if(index !== -1){

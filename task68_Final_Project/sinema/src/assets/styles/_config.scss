@@ -1,11 +1,16 @@
 /*===цвета===*/
+// цвет темы приложения:
+$mainColor: #27526F;
+
+// 
 $appText: rgba(255, 255, 255, 0.8);
 $appTextHover: rgba(186, 186, 186, 0.8);
 $white: #fff;
 $black: #111111;
 $greyText: #737373;
 
-$backgroundApp: linear-gradient(180deg, #27272a, #511305 85.62%), no-repeat center top / cover;
+
+$backgroundApp: linear-gradient(180deg, #27272a, $mainColor 85.62%), no-repeat center top / cover;
 //$backgroundApp: #fff;
 $backgroundNav: #E1E1E1;
 $backgroundBtn: #E1E1E1;

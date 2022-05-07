@@ -7,23 +7,23 @@ const routes: Routes = [
     path: "",
     loadChildren: () => import ('./home/home.module').then(module => module.HomeModule)
   },
+    {
+    path: "auth",
+    loadChildren: () => import ('./auth/auth.module').then(module => module.AuthModule)
+  },
   {
     path: "film",
     loadChildren: () => import ('./film/film.module').then(module => module.FilmModule)
-  },
-
-  {
-    path: "user",
-    loadChildren: () => import ('./user/user.module').then(module => module.UserModule)
   },
     {
     path: "profile",
     loadChildren: () => import ('./profile/profile.module').then(module => module.ProfileModule)
   },
   {
-    path: "auth",
-    loadChildren: () => import ('./auth/auth.module').then(module => module.AuthModule)
+    path: "user",
+    loadChildren: () => import ('./user/user.module').then(module => module.UserModule)
   },
+
   {
     path: "order",
     loadChildren: () => import ('./order/order.module').then(module => module.OrderModule)
