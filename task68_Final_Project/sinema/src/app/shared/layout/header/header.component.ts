@@ -10,12 +10,24 @@ import { User, UserService } from 'src/app/core';
 export class HeaderComponent implements OnInit {
 
   constructor(private userService: UserService) { }
-
-  authUser = this.userService.getCurrentUserId();
-
-
+  
   user: User = {} as User;
   isAuth: boolean = false;
+
+  authUser = this.userService.signIn(this.user.login, this.user.password);
+
+    //   authUser(){
+    //   if(this.userService.getCurrentUserId() > 0){
+    //   this.isAuth = false;
+    //   return;
+    // } else {
+    //   this.isAuth = true;
+    //   return;
+    // }
+    // }
+
+
+
 
   ngOnInit(): void {
 
@@ -23,14 +35,13 @@ export class HeaderComponent implements OnInit {
       (userData) => {
         this.user = userData;
       }
-    )
+    );
 
     this.userService.isAuth.subscribe(
       (isAuth) => {
         this.isAuth = isAuth;
       }
-    
-    )
+    );
   }
 
   // бургер-меню

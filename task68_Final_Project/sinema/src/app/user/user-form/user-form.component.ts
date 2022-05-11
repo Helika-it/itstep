@@ -61,8 +61,6 @@ ngOnInit(): void {
       return;
     }
       
-
-
     let data = {
       
       name: this.myForm.controls["name"].value,

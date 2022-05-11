@@ -1,6 +1,6 @@
 import { Component, Input, OnInit, Output } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Film, FilmService, OrderService, SessionService } from 'src/app/core';
+import { Film, FilmService, OrderService, SessionService, User, UserService } from 'src/app/core';
 
 @Component({
   selector: 'app-film-detail',
@@ -9,12 +9,13 @@ import { Film, FilmService, OrderService, SessionService } from 'src/app/core';
 })
 export class FilmDetailComponent implements OnInit {
 
-  film: Film = {} as Film
+  film: Film = {} as Film;
 
   constructor(private route: ActivatedRoute, private filmService: FilmService, private sessionService: SessionService, private orderService: OrderService, private router: Router) { }
 
 
   ngOnInit(): void {
+
     this.filmService.getById(this.route.snapshot.params["id"]).subscribe(
       (data) => {
       this.film = data;
@@ -23,9 +24,7 @@ export class FilmDetailComponent implements OnInit {
     );
   }
 
-
-
-  get(filmId: number): any{
+    get(filmId: number): any{
     return this.filmService.getById(filmId);
   } 
 

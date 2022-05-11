@@ -1,3 +1,5 @@
+@import "src/assets/styles/index";
+
 .page__session {
 }
 .session {
@@ -8,24 +10,33 @@
 }
 .session-date-block {
   display: flex;
+  flex-direction: row;
+  align-items:center;
+  justify-content: space-around;
 }
 .session-day-item {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 5px;
   text-align: center;
-  width: 90px;
-  height: 90px;
+  width: 120px;
+  height: 40px;
   align-items: center;
   justify-content: center;
-  margin-right: 15px;
+  margin-bottom: 15px;
   transition: background-color 0.2s;
   cursor: pointer;
 }
 .session-day-item:hover {
   background-color: #fe8e05;
-  color: #621402;
+  color: $black;
+}
+session-date-block__day {
+  display: flex;
+  flex-direction: row;
+  align-items:center;
+  justify-content: space-between;
 }
 .session-item {
   font-size: 19px;

@@ -46,6 +46,25 @@
   margin-right: 15px;
 }
 
+@media (max-width: 768px) {
+  .legend {
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding-bottom: 22px;
+    
+    .legend-label {
+    margin: 10px;
+    }
+  }
+  svg.legend-armchair {
+    width: 17px;
+  }
+  .legend-text {
+    font-size: 14px;
+  }
+}
+
 /*======*/
 
 .reserve {

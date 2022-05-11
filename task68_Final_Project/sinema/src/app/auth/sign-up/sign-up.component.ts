@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { User, UserService } from 'src/app/core';
 
 @Component({
@@ -8,49 +8,53 @@ import { User, UserService } from 'src/app/core';
   templateUrl: './sign-up.component.html',
   styleUrls: ['./sign-up.component.scss']
 })
+
 export class SignUpComponent implements OnInit {
 
-  myForm: FormGroup; //определяем тип формы
+  signUpForm: FormGroup = {} as FormGroup; //определяем тип формы
   user: User = {} as User;
-  users: User[] = [];
+  
 
-  constructor(private userService: UserService, private router: Router) {
-
-    this.myForm = new FormGroup({
-            
-      "name": new FormControl("", [Validators.required]),
-      "login": new FormControl("", [Validators.required]),
-      "password": new FormControl("", [Validators.required]),
-  })
+  constructor(private userService: UserService, private router: Router, private route: ActivatedRoute) {
   
    }
   
 
-   ngOnInit(): void {
-    this.userService.get().subscribe(
-      ((data) => this.users = data)
-    );
+  ngOnInit(): void {
+    
+    this.signUpForm = new FormGroup({
+            
+      "name": new FormControl("", [Validators.required]),
+      "login": new FormControl("", [Validators.required]),
+      "password": new FormControl("", [Validators.required])      
+
+    })
   }
 
+  // ======================
 
   signUp(){
-    if(this.myForm.invalid)
-            return;
-            
-   // let newUserId = this.userService.getNewUserId();
-    // this.user = {
-    //   //id: newUserId,
-    //   name: this.myForm.controls["name"].value,
-    //   login: this.myForm.controls["login"].value,
-    //   password: this.myForm.controls["password"].value,
-    //   role: "user"
-    // }
+    if(this.signUpForm.invalid){
+      return;
+    }
 
-    this.userService.signUp(this.user);
-    this.myForm.reset();
+    let data = {
+      
+      name: this.signUpForm.controls["name"].value,
+      login: this.signUpForm.controls["login"].value,
+      password: this.signUpForm.controls["password"].value,
+      role: 'user'
+        
+      }
+
+    // this.userService.signUp(data);
+    this.userService.signUp(data)
+    this.signUpForm.reset();
     this.router.navigate(["/"]);
 
   }
+
+  // ======================
 
   //просмотр пароля
   eyeToggle: boolean = true;

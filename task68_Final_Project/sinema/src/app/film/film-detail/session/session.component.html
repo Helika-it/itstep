@@ -1,3 +1,4 @@
+<!--
 <div class="page__session session">
   <div class="session__container _container">
     <hr>
@@ -7,6 +8,53 @@
           <span class="session-item">{{getSession(film.id).session.date}} {{getSession(film.id).session.start}}</span>
         </div>
       </div>
+    </div>
+    <hr>
+  </div>
+</div>
+-->
+
+<div class="page__session session">
+  <div class="session__container _container">
+    <hr>
+    <div class="session__body">
+
+      <div class="session-date-block" >
+
+        <div class="session-date-block__day">
+          <p for="session-day" class="form-label">Дата</p>
+          <div class="block-day_items">
+            <div class="session-item">
+            <label><input type="radio" name="day" value="12.05.2022"  /> 12.05.2022</label>
+          </div>
+          <div class="session-item">
+            <label><input type="radio" name="day" value="13.05.2022"  /> 13.05.2022</label>
+          </div>
+          <div class="session-item">
+            <label><input type="radio" name="day" value="14.05.2022"  /> 14.05.2022</label>
+          </div>
+          </div>
+        </div>
+
+        <div class="session-date-block__time">
+          <p for="session-time" class="form-label">Сеанс</p>
+          <div class="block-time_items">
+            <div class="session-item">
+            <label><input type="radio" name="time" value="10:00"  /> 10:00</label>
+          </div>
+          <div class="session-item">
+            <label><input type="radio" name="time" value="14:00"  /> 14:00</label>
+          </div>
+          <div class="session-item">
+            <label><input type="radio" name="time" value="20:00"  /> 20:00</label>
+          </div>
+          </div>
+        </div>
+    
+
+      </div>
+
+
     </div>
     <hr>
   </div>

@@ -7,32 +7,32 @@
         <div class="header-block__sub-title">Личный кабинет</div>
       </div>
     
-    <form [formGroup]="myForm" novalidate (ngSubmit)="editUser()" class="profile-form">
+    <form [formGroup]="profileForm" novalidate (ngSubmit)="editProfile()" class="profile-form">
 
 
         <div class="profile-form_item">
           <div class="mb-4">
             <label for="user_name" class="form-label">Имя пользователя</label>
-            <input #newName [class.error]="myForm.controls['name'].invalid && myForm.controls['name'].touched"
+            <input #newName [class.error]="profileForm.controls['name'].invalid && profileForm.controls['name'].touched"
               type="text" class="form-control" id="user_name" placeholder="Имя" 
               name="name" 
-              formControlName="this.user.name"
-              value={{user.name}} />
+              formControlName="name"
+              value={{user?.name}} />
           </div>
-          <div *ngIf="myForm.controls['name'].invalid && myForm.controls['name'].touched" class="alert alert-danger">
-            <span *ngIf="myForm.controls['name'].errors?.['required']">Поле должно быть непустым</span>
+          <div *ngIf="profileForm.controls['name'].invalid && profileForm.controls['name'].touched" class="alert alert-danger">
+            <span *ngIf="profileForm.controls['name'].errors?.['required']">Поле должно быть непустым</span>
           </div>
         </div>
 
         <div class="profile-form_item">
           <div class="mb-4">
             <label for="user_login" class="form-label">Логин</label>
-            <input #newLogin [class.error]="myForm.controls['login'].invalid && myForm.controls['login'].touched"
+            <input #newLogin [class.error]="profileForm.controls['login'].invalid && profileForm.controls['login'].touched"
               type="text" class="form-control" id="user_login" placeholder="Логин" name="login" formControlName="login"
-              value={{user.login}} />
+              value={{user?.login}} />
           </div>
-          <div *ngIf="myForm.controls['login'].invalid && myForm.controls['login'].touched" class="alert alert-danger">
-            <span *ngIf="myForm.controls['login'].errors?.['required']">Поле должно быть непустым</span>
+          <div *ngIf="profileForm.controls['login'].invalid && profileForm.controls['login'].touched" class="alert alert-danger">
+            <span *ngIf="profileForm.controls['login'].errors?.['required']">Поле должно быть непустым</span>
           </div>
         </div>
 
@@ -40,25 +40,27 @@
           <div class="mb-4">
             <label for="user_password" class="form-label">Пароль</label>
             <input #newPassword
-              [class.error]="myForm.controls['password'].invalid && myForm.controls['password'].touched" type="text"
+              [class.error]="profileForm.controls['password'].invalid && profileForm.controls['password'].touched" type="text"
               class="form-control" id="user_password" placeholder="Пароль" name="password" formControlName="password"
-              value={{user.password}} />
+              value={{user?.password}} />
           </div>
-          <div *ngIf="myForm.controls['password'].invalid && myForm.controls['password'].touched"
+          <div *ngIf="profileForm.controls['password'].invalid && profileForm.controls['password'].touched"
             class="alert alert-danger">
-            <span *ngIf="myForm.controls['password'].errors?.['required']">Поле должно быть непустым</span>
+            <span *ngIf="profileForm.controls['password'].errors?.['required']">Поле должно быть непустым</span>
           </div>
         </div>
+
         <div class="profile-form_item">
-          <p>Роль: {{user.role}}</p>
+          <p>Роль: {{user?.role}}</p>
         </div>
         
         <div class="col-12">
-          <button type="submit" class="btn btn-default" [disabled]="myForm.invalid">Сохранить изменения</button>
+          <button type="submit" class="btn btn-default" [disabled]="profileForm.invalid">Сохранить изменения</button>
         </div>
 
     </form>
-  </div>
+    
+    </div>
 
   <div class="profile_orders">
     <div class="profile__header header-block">
@@ -69,7 +71,7 @@
 
 
 
-</div>
+  </div>
 </div>
 
 

@@ -1,18 +1,18 @@
 <div class="container text-center">
   <div class="signIn">
 
-    <form [formGroup]="myForm" novalidate (ngSubmit)="checkUser()">
+    <form [formGroup]="signInForm" novalidate (ngSubmit)="checkUser()">
       <h4>Вход</h4>
       <hr>
       <div class="col-12">
         <div class="mb-4">
           <label for="user_login" class="form-label">Логин</label>
-          <input #newLogin [class.error]="myForm.controls['login'].invalid && myForm.controls['login'].touched"
+          <input #newLogin [class.error]="signInForm.controls['login'].invalid && signInForm.controls['login'].touched"
             type="text" class="form-control" id="user_login" placeholder="Логин" name="login" formControlName="login" />
         </div>
 
-        <div *ngIf="myForm.controls['login'].invalid && myForm.controls['login'].touched" class="alert alert-danger">
-          <span *ngIf="myForm.controls['login'].errors?.['required']">Поле должно быть непустым</span>
+        <div *ngIf="signInForm.controls['login'].invalid && signInForm.controls['login'].touched" class="alert alert-danger">
+          <span *ngIf="signInForm.controls['login'].errors?.['required']">Поле должно быть непустым</span>
         </div>
 
 
@@ -22,15 +22,15 @@
       <div class="col-12">
         <div class="mb-4 password">
           <label for="user_password" class="form-label">Пароль</label>
-          <input #newPassword [class.error]="myForm.controls['password'].invalid && myForm.controls['password'].touched"
+          <input #newPassword [class.error]="signInForm.controls['password'].invalid && signInForm.controls['password'].touched"
             type="{{typePass}}" class="form-control" id="user_password" placeholder="Пароль" name="password"
             formControlName="password" />
           <div (click)="showPassword()" class="bi {{classEye}} password-control"></div>
         </div>
 
-        <div *ngIf="myForm.controls['password'].invalid && myForm.controls['password'].touched"
+        <div *ngIf="signInForm.controls['password'].invalid && signInForm.controls['password'].touched"
           class="alert alert-danger">
-          <span *ngIf="myForm.controls['password'].errors?.['required']">Поле должно быть непустым</span>
+          <span *ngIf="signInForm.controls['password'].errors?.['required']">Поле должно быть непустым</span>
         </div>
       </div>
 
@@ -40,7 +40,7 @@
 
 
       <div class="col-12 text-center">
-        <button type="submit" class="btn btn-default" [disabled]="myForm.invalid">Войти</button>
+        <button type="submit" class="btn btn-default" [disabled]="signInForm.invalid">Войти</button>
       </div>
 
     </form>

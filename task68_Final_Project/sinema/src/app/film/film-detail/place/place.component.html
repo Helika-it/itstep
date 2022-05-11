@@ -327,7 +327,7 @@
       <div class="legend">
         <div class="legend-free legend-label">
           <svg width="38" height="32" viewBox="0 0 38 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path class="free legend"
+            <path class="free legend-armchair"
               d="M5.5 7C5.5 4.23858 7.73858 2 10.5 2H26.5C29.2614 2 31.5 4.23858 31.5 7V20C31.5 22.7614 29.2614 25 26.5 25H10.5C7.73858 25 5.5 22.7614 5.5 20V7Z" />
             <path fill-rule="evenodd" clip-rule="evenodd"
               d="M0.00294554 24.5767C0.000982583 24.5512 0 24.5256 0 24.5V14H2V24.46C2.07957 25.4126 2.44021 26.8354 3.23706 27.9967C4.01754 29.1342 5.19125 30 7 30H29.4627C30.4694 29.9212 31.9964 29.499 33.2544 28.5034C34.486 27.5286 35.5 25.9782 35.5 23.5V14H37.5V23.5C37.5 26.6218 36.1806 28.7381 34.4956 30.0716C32.8511 31.3731 30.8985 31.9027 29.5712 31.9975C29.5475 31.9992 29.5238 32 29.5 32H7C4.40875 32 2.66579 30.6991 1.58794 29.1283C0.536755 27.5963 0.0963478 25.7909 0.00294554 24.5767ZM10.5 0H26.5C30.366 0 33.5 3.13401 33.5 7V20C33.5 23.866 30.366 27 26.5 27H10.5C6.63401 27 3.5 23.866 3.5 20V7C3.5 3.13401 6.63401 0 10.5 0ZM10.5 2C7.73858 2 5.5 4.23858 5.5 7V20C5.5 22.7614 7.73858 25 10.5 25H26.5C29.2614 25 31.5 22.7614 31.5 20V7C31.5 4.23858 29.2614 2 26.5 2H10.5Z" />
@@ -363,11 +363,14 @@
   <div class="reserve reserve__container">
       <div class="reserve-tag">
         <div class="reserve-label">Ваши билеты: {{amountTicket}}</div>
-        <div class="reserve-total">
+        <div class="reserve-total" >
           {{chooseTicket}}
         </div>
+        <!-- <div class="reserve-total" *ngFor="chooseTicket of chooseTickets">
+          {{chooseTicket}}
+        </div> -->
       </div>
-      <a href="#" (click)="toBook()" class="button reserve__button">Бронировать</a>
+      <a href="/profile" (click)="toBook()" class="button reserve__button">Бронировать</a>
   </div>
 
 </div>

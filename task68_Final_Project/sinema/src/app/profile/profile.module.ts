@@ -4,8 +4,8 @@ import { ProfileComponent } from './profile.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { ProfileRoutingModule } from './profile-routing.module';
-import { OrderModule } from '../order/order.module';
-import { UserRoutingModule } from '../user/user-routing.module';
+// import { OrderModule } from '../order/order.module';
+// import { UserRoutingModule } from '../user/user-routing.module';
 
 
 
@@ -16,12 +16,12 @@ import { UserRoutingModule } from '../user/user-routing.module';
   ],
   imports: [
     CommonModule,
-    UserRoutingModule,
     ProfileRoutingModule,
+    // UserRoutingModule,
     ReactiveFormsModule,
     FormsModule,
     RouterModule,
-    OrderModule
+    // OrderModule
   ],
   providers:[
     //UserResolverService, 

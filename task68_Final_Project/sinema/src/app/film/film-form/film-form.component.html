@@ -1,1 +1,115 @@
-<p>film-form works!</p>
+<div class="page__filmForm filmForm">
+  <div class="filmForm__container _container">
+
+    <div class="filmForm_add">
+      <div class="filmForm__header header-block">
+        <h4 class=" header-block__title">Новый фильм</h4>
+        <div class="header-block__sub-title">Вход от имени администратора</div>
+      </div>
+    
+    <form [formGroup]="filmAddForm" novalidate (ngSubmit)="addFilm()" class="filmForm-form">
+
+
+        <div class="filmForm-form_item">
+          <div class="mb-4">
+            <label for="film_title" class="form-label">Название фильма</label>
+            <input #newTitle [class.error]="filmAddForm.controls['title'].invalid && filmAddForm.controls['title'].touched"
+              type="text" class="form-control" id="film_title" placeholder="Название фильма" 
+              name="title" 
+              formControlName="title"
+              value={{film?.title}} />
+          </div>
+          <div *ngIf="filmAddForm.controls['title'].invalid && filmAddForm.controls['title'].touched" class="alert alert-danger">
+            <span *ngIf="filmAddForm.controls['title'].errors?.['required']">Поле должно быть непустым</span>
+          </div>
+        </div>
+
+        <div class="filmForm-form_item">
+          <div class="mb-4">
+            <label for="film_genre" class="form-label">Жанр</label>
+            <input #newGenre [class.error]="filmAddForm.controls['genre'].invalid && filmAddForm.controls['genre'].touched"
+              type="text" class="form-control" id="film_genre" placeholder="Жанр" name="genre" formControlName="genre"
+              value={{film?.genre}} />
+          </div>
+          <div *ngIf="filmAddForm.controls['genre'].invalid && filmAddForm.controls['genre'].touched" class="alert alert-danger">
+            <span *ngIf="filmAddForm.controls['genre'].errors?.['required']">Поле должно быть непустым</span>
+          </div>
+        </div>
+
+        <div class="filmForm-form_item">
+          <div class="mb-4">
+            <label for="film_duration" class="form-label">Длительность</label>
+            <input #newDuration [class.error]="filmAddForm.controls['duration'].invalid && filmAddForm.controls['duration'].touched"
+              type="text" class="form-control" id="film_duration" placeholder="**ч**мин" name="duration" formControlName="duration"
+              value={{film?.duration}} />
+          </div>
+          <div *ngIf="filmAddForm.controls['duration'].invalid && filmAddForm.controls['duration'].touched" class="alert alert-danger">
+            <span *ngIf="filmAddForm.controls['duration'].errors?.['required']">Поле должно быть непустым</span>
+          </div>
+        </div>
+
+        <div class="filmForm-form_item">
+          <div class="mb-4">
+            <label for="film_age" class="form-label">Возрастное ограничение</label>
+            <input #newAge [class.error]="filmAddForm.controls['age'].invalid && filmAddForm.controls['age'].touched"
+              type="text" class="form-control" id="film_age" placeholder="18+" name="age" formControlName="age"
+              value={{film?.age}} />
+          </div>
+          <div *ngIf="filmAddForm.controls['age'].invalid && filmAddForm.controls['age'].touched" class="alert alert-danger">
+            <span *ngIf="filmAddForm.controls['age'].errors?.['required']">Поле должно быть непустым</span>
+          </div>
+        </div>
+
+        <div class="filmForm-form_item">
+          <div class="mb-4">
+            <label for="film_previev" class="form-label">Превью</label>
+            <input #newPreviev [class.error]="filmAddForm.controls['previev'].invalid && filmAddForm.controls['previev'].touched"
+              type="text" class="form-control" id="film_previev" placeholder="Превью" name="previev" formControlName="previev"
+              value={{film?.previev}} />
+          </div>
+          <div *ngIf="filmAddForm.controls['previev'].invalid && filmAddForm.controls['previev'].touched" class="alert alert-danger">
+            <span *ngIf="filmAddForm.controls['previev'].errors?.['required']">Поле должно быть непустым</span>
+          </div>
+        </div>
+
+        <div class="filmForm-form_item">
+          <div class="mb-4">
+            <label for="film_picture" class="form-label">Ссылка на изображение</label>
+            <input #newPicture [class.error]="filmAddForm.controls['picture'].invalid && filmAddForm.controls['picture'].touched"
+              type="text" class="form-control" id="film_picture" placeholder="https://" name="picture" formControlName="picture"
+              value={{film?.picture}} />
+          </div>
+          <div *ngIf="filmAddForm.controls['picture'].invalid && filmAddForm.controls['picture'].touched" class="alert alert-danger">
+            <span *ngIf="filmAddForm.controls['picture'].errors?.['required']">Поле должно быть непустым</span>
+          </div>
+        </div>
+
+        <div class="filmForm-form_item">
+          <div class="mb-4">
+            <label for="film_start" class="form-label">Старт показа</label>
+            <input #newStart [class.error]="filmAddForm.controls['start'].invalid && filmAddForm.controls['start'].touched"
+              type="text" class="form-control" id="film_start" placeholder="5 мая 2022" name="start" formControlName="start"
+              value={{film?.start}} />
+          </div>
+          <div *ngIf="filmAddForm.controls['start'].invalid && filmAddForm.controls['start'].touched" class="alert alert-danger">
+            <span *ngIf="filmAddForm.controls['start'].errors?.['required']">Поле должно быть непустым</span>
+          </div>
+        </div>
+
+        
+        <div class="col-12">
+          <button type="submit" class="btn btn-default" [disabled]="filmAddForm.invalid">Сохранить</button>
+        </div>
+
+
+        <!-- <div class="col-12">
+          <button type="submit" class="btn btn-default">Сохранить</button>
+        </div> -->
+
+    </form>
+    
+    </div>
+
+
+  </div>
+</div>

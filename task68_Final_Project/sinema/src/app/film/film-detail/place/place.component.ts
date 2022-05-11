@@ -17,7 +17,7 @@ export class PlaceComponent implements OnInit {
 
   chooseTicket: string = "0"
   amountTicket: number = 0;
-  // chooseTicketArr: [] = [];
+  chooseTickets:string [] = [];
 
   choose(event: any){
 
@@ -31,8 +31,12 @@ export class PlaceComponent implements OnInit {
         this.amountTicket--
       }
 
-      console.log(event.target)
       return this.chooseTicket = event.target.getAttribute("value")
+
+      // this.chooseTicket = event.target.getAttribute("value");
+      // this.chooseTickets.push(this.chooseTicket);
+
+      // return this.chooseTickets
     }
   }
 
@@ -53,7 +57,7 @@ export class PlaceComponent implements OnInit {
 
     // this.elem.add.class('booked');
     // this.elem.remove.class('active');
-    this.router.navigate(["/profile"]);
+    //this.router.navigate(["/profile"]);
   }
  
 } 

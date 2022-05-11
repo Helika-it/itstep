@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FilmService, OrderService, SessionService, UserService } from './service';
+import { AuthGuard } from './guard/auth.guard';
+import { AdminGuard } from './guard/admin.guard';
 
 
 
@@ -13,7 +15,9 @@ import { FilmService, OrderService, SessionService, UserService } from './servic
     UserService, 
     FilmService,
     SessionService,
-    OrderService
+    OrderService,
+    AuthGuard,
+    AdminGuard
   ]
 })
 export class CoreModule { }

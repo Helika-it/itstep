@@ -13,7 +13,7 @@ import { User, UserService } from '../core';
 
 export class ProfileComponent implements OnInit {
 
-  myForm: FormGroup = {} as FormGroup; //определяем тип формы
+  profileForm: FormGroup = {} as FormGroup; //определяем тип формы
   user: User = {} as User;
 
 
@@ -26,10 +26,10 @@ export class ProfileComponent implements OnInit {
     this.userService.getById(this.userService.getCurrentUserId()).subscribe(
 
       (data) => {
-
+        console.log("profile1");
       this.user = data;
 
-      this.myForm = new FormGroup({
+      this.profileForm = new FormGroup({
               
         "name": new FormControl(this.user.name, [Validators.required]),
         "login": new FormControl(this.user.login, [Validators.required]),
@@ -41,22 +41,23 @@ export class ProfileComponent implements OnInit {
     );
   }
 
-  
 
-  editUser(){
-    if(this.myForm.invalid)
+  editProfile(){
+    if(this.profileForm.invalid)
       return;
             
     this.user = {
       id: this.user.id,
-      name: this.myForm.controls["name"].value,
-      login: this.myForm.controls["login"].value,
-      password: this.myForm.controls["password"].value,
-      role: this.myForm.controls["role"].value
+      name: this.profileForm.controls["name"].value,
+      login: this.profileForm.controls["login"].value,
+      password: this.profileForm.controls["password"].value,
+      role: this.profileForm.controls["role"].value
     }
     
+    console.log("profile2");
+
     this.userService.edit(this.user).subscribe();
-    this.myForm.reset();
+    this.profileForm.reset();
     this.router.navigate(["/"]);
 
   }

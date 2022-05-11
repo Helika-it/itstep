@@ -21,15 +21,22 @@ export class UserComponent implements OnInit {
     );
   }
 
+  
+  redirectTo(url:string){
+    this.router.navigateByUrl('/', {skipLocationChange: true}).then(()=>
+    this.router.navigate([url]));
+ }
+
+  currentUserId = this.userService.currentUserId;
   delete(id: number){
-    if (id == this.userService.currentUserId){
+    if (id == this.currentUserId){
       console.log("Tекущий пользователь!!!")
       return
     }
     
     console.log(id)
     this.userService.remove(id).subscribe();
-    this.router.navigate(["/user"]); 
+    this.redirectTo('/user');
   }
 
 }

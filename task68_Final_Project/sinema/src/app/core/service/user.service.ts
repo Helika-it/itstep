@@ -19,24 +19,43 @@ export class UserService {
 
 
   data: Array<User> = [
-    // {
-    //   id: 1,
-    //   name: 'Макс',
-    //   login: "Maks111",
-    //   password: "12345",
-    //   role: 'admin',
-    // },
-    // {
-    //   id: 2,
-    //   name: 'Ангелина',
-    //   login: "Angel222",
-    //   password: "23456",
-    //   role: "user",
-    // },
+    {
+      id: 1,
+      name: 'Макс',
+      login: "Maks111",
+      password: "123456",
+      role: 'admin',
+    },
+    {
+      id: 2,
+      name: 'Анатолий',
+      login: "Tol111",
+      password: "111111",
+      role: "user",
+    },    {
+      id: 3,
+      name: 'Юлий',
+      login: "Yul111",
+      password: "111111",
+      role: "user",
+    },    {
+      id: 4,
+      name: 'Елена',
+      login: "Len111",
+      password: "111111",
+      role: "user",
+    },
+    {
+      id: 5,
+      name: 'Ангелина',
+      login: "Angel111",
+      password: "23456",
+      role: "user",
+    },
   ]
 
 
-  currentUserId = 4; //ID активного пользователя
+  currentUserId = 0; //ID активного пользователя
 
   currentUserSubject = new BehaviorSubject<User>({} as User);//хранилище
   currentUser = this.currentUserSubject.asObservable();//подписчик
@@ -55,6 +74,8 @@ export class UserService {
   getCurrentUser(){
     return this.getById(this.currentUserId); // метод выводит объект с id активного пользователя
   }
+
+
 
   get():Observable<any>{
     return this.http​.get("/api/users")
@@ -93,26 +114,51 @@ export class UserService {
 
 
 //!Регистрация
-signUp(user: User){
-  this.create(user);
+signUp(user: any):any{
+  this.create(user).subscribe(
+          data => {
+        //console.log(data);
+      }
+  );
 
 };
 
 //!Авторизация
+// signIn(login:string, password:string):boolean{
+
+//   //! нужно переписать так, чтобы перебирал не локальный массив данных, а api!
+//  let index = this.data.findIndex(function(item:User){
+//    return (item.login == login) && (item.password == password);
+//  });
+
+//   if(index !== -1){
+//   this.currentUserId = this.data[index].id;
+//   this.currentUserSubject.next(this.data[index]); //!обновление данных в хранилище
+//   this.isAuthSubject.next(true); //!обновление данных в хранилище
+//   return true;
+//   }
+
+// return false;
+// };
+
+
+//=====================
 signIn(login:string, password:string):boolean{
-  
+
+  //! нужно переписать так, чтобы перебирал не локальный массив данных, а api!
  let index = this.data.findIndex(function(item:User){
    return (item.login == login) && (item.password == password);
  });
 
-if(index !== -1){
- this.currentUserId = this.data[index].id;
- this.currentUserSubject.next(this.data[index]); //!обновление данных в хранилище
- this.isAuthSubject.next(true); //!обновление данных в хранилище
- return true;
-}
+  if(index !== -1){
+  this.currentUserId = this.data[index].id;
+  this.currentUserSubject.next(this.data[index]); //!обновление данных в хранилище
+  this.isAuthSubject.next(true); //!обновление данных в хранилище
+  return true;
+  }
 
 return false;
 };
 
+//=========================
 }

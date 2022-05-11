@@ -6,7 +6,7 @@ import { OrderComponent } from './order.component';
 
 const routes: Routes = [
   {
-    path: "", component: OrderComponent, pathMatch: 'full'
+    path: "", component: OrderComponent
   },
 
 ];

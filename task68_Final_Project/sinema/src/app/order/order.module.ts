@@ -5,6 +5,7 @@ import { FilmRoutingModule } from '../film/film-routing.module';
 import { UserRoutingModule } from '../user/user-routing.module';
 import { RouterModule } from '@angular/router';
 import { OrderRoutingModule } from './order-routing.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -14,9 +15,11 @@ import { OrderRoutingModule } from './order-routing.module';
   ],
   imports: [
     CommonModule,
+    OrderRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
     FilmRoutingModule,
     UserRoutingModule,
-    OrderRoutingModule,
     RouterModule
   ]
 })

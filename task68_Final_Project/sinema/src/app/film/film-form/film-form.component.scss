@@ -1,1 +1,72 @@
 @import "src/assets/styles/index";
+
+.filmForm{
+  padding: 80px 0px 100px 0px;
+}
+
+.filmForm_add{
+  padding: 30px;
+  box-shadow: rgb(0 0 0 / 50%) 0px 10px 30px;
+}
+.filmAddForm{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+ 
+}
+
+@media (max-width: 993px) {
+  .filmForm_add {
+    padding: 40px 30px 80px 30px;
+  }
+  .filmAddForm {
+   
+  }
+}
+@media (max-width: 767px) {
+  .filmForm_add {
+    padding: 0px 30px 40px 30px;
+  }
+  .filmAddForm {
+    width: 100%;
+  }
+}
+
+.form-label {
+  margin-top: 10px;
+}
+input, textarea {
+  cursor: pointer;
+}
+
+.error{
+  border: 1px solid #842029;
+}
+// .user {
+//   margin-top: 30px;
+//   margin-bottom: 80px;
+// }
+
+/*.close - bootstrap перебивает свойства!*/
+.closes, .edit, .viev {
+  position: relative;
+  left: 0px;
+  top: 0;
+  text-align: center;
+}
+
+.closes:hover, .edit:hover, .viev:hover {
+  background-color: #f9a9a3;
+  color: white;
+  cursor: pointer;
+}
+
+
+
+
+@media (max-width: 470px) {
+
+}
+@media (max-width: 420px) {
+
+}

@@ -20,7 +20,6 @@
   font-size: 18px;
   text-decoration:none;
   display: block;
-  
   color: $white;
 }
 .btn-auth:hover{
@@ -28,3 +27,32 @@
   display: block;
   text-decoration-line: underline;
 }
+
+// === + ===
+
+a.button30 {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  width: 1.3em;
+  height: 1.3em;
+  line-height: 1.3em;
+  vertical-align: middle;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 1px 1px rgba(255,255,255,.3);
+  font-size: 300%;
+  font-weight: 900;
+  color: rgb(57, 57, 57);
+  border-radius: 100%;
+  background: #D4DCE2 linear-gradient(#D4DCE2, #6d7377);
+  box-shadow:
+   inset 0 -2px 1px rgba(108, 108, 108, 0.5),
+   inset 0 2px 1px rgba(255,255,255,.9),
+   0 4px 4px rgba(73, 73, 73, 0.9);
+}
+a.button30:hover {
+  background: #6d7377 linear-gradient(#6d7377, #D4DCE2);
+}
+
+//=======

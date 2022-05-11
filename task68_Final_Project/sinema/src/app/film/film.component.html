@@ -19,7 +19,7 @@
             </div>
           </div>
           <a [routerLink]="['/film', film.id]" class="item-films__image _ibg">
-            <img src="{{film.picture}}" alt="Первый Оскар">
+            <img src="{{film.picture}}" alt="{{film.title}}">
           </a>
         </article>
       </div>
@@ -27,5 +27,9 @@
 
 
     </div>
+    <div class="film-add"  *ngIf="true">
+      <a href="/film/add" class="button30">+</a>
+    </div>
+    
   </div>
 </div>

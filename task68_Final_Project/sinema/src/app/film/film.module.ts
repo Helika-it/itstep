@@ -27,8 +27,8 @@ import { OrderModule } from '../order/order.module';
     UserRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    RouterModule, 
-    OrderModule
+    OrderModule,
+    RouterModule 
   ],
   providers:[]
 })

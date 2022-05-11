@@ -7,6 +7,7 @@ import { User, UserService } from 'src/app/core';
   templateUrl: './user-detail.component.html',
   styleUrls: ['./user-detail.component.scss']
 })
+
 export class UserDetailComponent implements OnInit {
 
 

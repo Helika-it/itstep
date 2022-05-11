@@ -8,7 +8,7 @@ import { UserComponent } from './user.component';
 
 const routes: Routes = [
   {
-    path: "", component: UserComponent, pathMatch: 'full'
+    path: "", component: UserComponent
   },
   {
     path: "add", component: UserFormComponent, pathMatch: 'full'

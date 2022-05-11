@@ -1,48 +1,48 @@
 <div class="container text-center">
   <div class="user-form ">
 
-    <form [formGroup]="myForm" novalidate (ngSubmit)="signUp()">
+    <form [formGroup]="signUpForm" novalidate (ngSubmit)="signUp()">
       <h4>Регистрация</h4>
       <hr>
       <div class="col-12">
         <div class="mb-4">
           <label for="user_name" class="form-label">Имя пользователя</label>
-          <input #newName [class.error]="myForm.controls['name'].invalid && myForm.controls['name'].touched" type="text"
+          <input #newName [class.error]="signUpForm.controls['name'].invalid && signUpForm.controls['name'].touched" type="text"
             class="form-control" id="user_name" placeholder="Имя" name="name" formControlName="name" />
         </div>
-        <div *ngIf="myForm.controls['name'].invalid && myForm.controls['name'].touched" class="alert alert-danger">
-          <span *ngIf="myForm.controls['name'].errors?.['required']">Поле должно быть непустым</span>
+        <div *ngIf="signUpForm.controls['name'].invalid && signUpForm.controls['name'].touched" class="alert alert-danger">
+          <span *ngIf="signUpForm.controls['name'].errors?.['required']">Поле должно быть непустым</span>
         </div>
       </div>
 
       <div class="col-12">
         <div class="mb-4">
           <label for="user_login" class="form-label">Логин</label>
-          <input #newLogin [class.error]="myForm.controls['login'].invalid && myForm.controls['login'].touched"
+          <input #newLogin [class.error]="signUpForm.controls['login'].invalid && signUpForm.controls['login'].touched"
             type="text" class="form-control" id="user_login" placeholder="Логин" name="login" formControlName="login" />
         </div>
-        <div *ngIf="myForm.controls['login'].invalid && myForm.controls['login'].touched" class="alert alert-danger">
-          <span *ngIf="myForm.controls['login'].errors?.['required']">Поле должно быть непустым</span>
+        <div *ngIf="signUpForm.controls['login'].invalid && signUpForm.controls['login'].touched" class="alert alert-danger">
+          <span *ngIf="signUpForm.controls['login'].errors?.['required']">Поле должно быть непустым</span>
         </div>
       </div>
 
       <div class="col-12">
         <div class="mb-4 password">
           <label for="user_password" class="form-label">Пароль</label>
-          <input #newPassword [class.error]="myForm.controls['password'].invalid && myForm.controls['password'].touched"
+          <input #newPassword [class.error]="signUpForm.controls['password'].invalid && signUpForm.controls['password'].touched"
             type="{{typePass}}" class="form-control" id="user_password" placeholder="Пароль" name="password"
             formControlName="password" />
             <div (click)="showPassword()" class="bi {{classEye}} password-control"></div>
         </div>
 
-        <div *ngIf="myForm.controls['password'].invalid && myForm.controls['password'].touched"
+        <div *ngIf="signUpForm.controls['password'].invalid && signUpForm.controls['password'].touched"
           class="alert alert-danger">
-          <span *ngIf="myForm.controls['password'].errors?.['required']">Поле должно быть непустым</span>
+          <span *ngIf="signUpForm.controls['password'].errors?.['required']">Поле должно быть непустым</span>
         </div>
       </div>
 
       <div class="col-12 text-center">
-        <button type="submit" class="btn btn-default" [disabled]="myForm.invalid">Сохранить</button>
+        <button type="submit" class="btn btn-default" [disabled]="signUpForm.invalid">Сохранить</button>
       </div>
 
     </form>
