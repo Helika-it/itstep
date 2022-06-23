@@ -39,8 +39,8 @@
       "name": "Сёма",
       "login": "Sem111",
       "password": "111111",
-      "role": "user",
-      "id": 6
+      "role": "admin",
+      "id": 8
     }
   ],
   "films": [
@@ -153,20 +153,12 @@
       "filmId": 3
     }
   ],
-  "orders": [
+  "orders": [],
+  "places": [
     {
       "id": 1,
-      "userId": 1,
-      "filmId": 1,
-      "sessionId": 2,
-      "chooseTicket": "ряд 1 место 9"
-    },
-    {
-      "id": 2,
-      "userId": 1,
-      "filmId": 1,
-      "sessionId": 2,
-      "chooseTicket": "ряд 1 место 10"
+      "value": "ряд 1 место 1",
+      "status": "free"
     }
   ]
 }

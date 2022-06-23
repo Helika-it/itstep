@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
+import { Router } from '@angular/router';
 import { User, UserService } from 'src/app/core';
 
 @Component({
@@ -9,7 +11,11 @@ import { User, UserService } from 'src/app/core';
 
 export class HeaderComponent implements OnInit {
 
-  constructor(private userService: UserService) { }
+  constructor(
+    private userService: UserService,
+    private router: Router,
+    private fb: FormBuilder
+    ) { }
   
   user: User = {} as User;
   isAuth: boolean = false;
@@ -42,6 +48,13 @@ export class HeaderComponent implements OnInit {
         this.isAuth = isAuth;
       }
     );
+  }
+
+  // logout
+  logout() {
+    this.isAuth = false;
+    this.userService.purgeAuth();
+    this.router.navigate(["/"]);
   }
 
   // бургер-меню

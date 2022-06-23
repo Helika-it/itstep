@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { OrderService, UserService } from 'src/app/core';
+import { FilmService, OrderService, UserService } from 'src/app/core';
 
 @Component({
   selector: 'app-place',
@@ -9,7 +9,7 @@ import { OrderService, UserService } from 'src/app/core';
 })
 export class PlaceComponent implements OnInit {
 
-  constructor(private router: Router, private order: OrderService, private userService: UserService, private route: ActivatedRoute) { }
+  constructor(private router: Router, private order: OrderService, private userService: UserService, private route: ActivatedRoute, private film: FilmService) { }
 
   ngOnInit(): void {
     
@@ -26,6 +26,7 @@ export class PlaceComponent implements OnInit {
       if (event.target.classList.contains("active")){
         this.amountTicket++
         
+        this.chooseTickets.push()
 
       }else {
         this.amountTicket--
@@ -50,9 +51,10 @@ export class PlaceComponent implements OnInit {
 /*?*/
      let order = {
     userId: this.userService.currentUserId,
-    filmId: "Название фильма",
-    sessionId: "Выбранный сеанс",
-    chooseTicket: "Место"
+    filmId: this.film.currentFilm,
+    dateId: "Выбранная дата",
+    startId: "Выбранное время",
+    chooseTicket: this.chooseTicket
     }
 
     // this.elem.add.class('booked');

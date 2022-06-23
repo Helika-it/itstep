@@ -16,10 +16,14 @@
 .scheme path:not(.light):hover {
   fill: rgba(255, 255, 255, 0.5);
 }
-.scheme path.active,
+.scheme path.active
+ {
+  fill: #FAAA12;
+}
+
 .scheme path.active:hover
  {
-  fill: #fe8e05;
+  fill: #faa912cd;
 }
 .scheme path.booked,
 .scheme path.booked:hover

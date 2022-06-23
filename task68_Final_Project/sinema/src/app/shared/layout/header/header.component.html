@@ -31,13 +31,16 @@
 
     <div class=" auth-block col-12">
       <div *ngIf="!isAuth" class="auth-block_user-auth">
-        <a class="btn-auth" [routerLink]="'/auth/signIn'">Вход</a>
-        <a class="btn-auth" [routerLink]="'/auth/signUp'">Регистрация</a>
+        <a class="button8" [routerLink]="'/auth/signIn'">Вход</a>
       </div>
       
       <div *ngIf="isAuth">
-        <span class="">{{user.name}} </span>
+
+        <a [routerLink]="'/profile'" class="name_link"><span class="">{{user.name}} </span></a>
         <img class="avatar" src="../../../../assets/img/no_avatar.webp" alt="Аватар пользователя">
+        <a class="button8" (click)="logout()">Выход </a>
+
+        
       </div>
 
     </div>

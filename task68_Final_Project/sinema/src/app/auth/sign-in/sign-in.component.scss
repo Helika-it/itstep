@@ -4,6 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 .signIn {
   width: 320px;
@@ -11,7 +12,7 @@
   align-items: center;
   justify-content: center;
   margin-top: 30px;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
   padding: 20px;
   background-color: $backgroundApp;
   border: rgb(190, 190, 190) solid 1px;
@@ -35,4 +36,8 @@
 .text-center {
   display: flex;
   justify-content: center;
+}
+
+.signUp {
+  margin-bottom: 60px;
 }

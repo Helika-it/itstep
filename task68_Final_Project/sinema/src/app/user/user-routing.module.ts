@@ -17,10 +17,10 @@ const routes: Routes = [
     path: "edit", component: UserFormComponent, pathMatch: 'full'
   }, 
     {
-    path: "edit/:id", component: UserFormComponent, /*resolve: { user: UserResolverService }*/
+    path: "edit/:id", component: UserFormComponent, 
   },
     {
-    path: ":id", component: UserDetailComponent, /* resolve: { user: UserResolverService }*/
+    path: ":id", component: UserDetailComponent, 
   },
 ];
 
